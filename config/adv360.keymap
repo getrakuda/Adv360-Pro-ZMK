@@ -205,12 +205,6 @@
                 , <&macro_release &kp LEFT_ALT>
                 ;
         };
-        CommentOut: CommentOut {
-           label = "CommentOut";
-           compatible = "zmk,behavior-macro";
-           #binding-cells = <0>;
-           bindings = <&macro_tap &kp LCTRL &kp LEFT_SHIFT &kp SLASH>;
-        };
                 
         BackBlankLine: BackBlankLine {
            label = "BackBlankLine";
