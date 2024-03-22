@@ -12,7 +12,7 @@
 #define FN_LAYER 6
 #define GAME_BASE 7
 #define GAME_LOWER 8
-#define BLT_LAYER 11
+#define BLT_LAYER 9
 
 
 / {
