@@ -564,7 +564,7 @@
             #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LSHIFT &kp LCTRL>
-                , <&macro_tap &kp FSLASH>
+                , <&macro_tap &kp FSLH>
                 , <&macro_release &kp LSHIFT &kp LCTRL>
                 ;
         };
@@ -650,7 +650,7 @@
               <&macro_tap &kp MINUS &kp MINUS>,
               <&macro_tap &kp ENTER>,
               <&macro_tap &kp ENTER>,
-              <&macro_tap &kp FSLASH &kp P &kp R &kp I &kp N &kp T &kp S &kp E &kp E &kp D &kp S>,
+              <&macro_tap &kp FSLH &kp P &kp R &kp I &kp N &kp T &kp S &kp E &kp E &kp D &kp S>,
               <&macro_tap &kp ENTER>
               ;
       };
@@ -885,7 +885,7 @@ keymap {
         layer_Raise {
             bindings = <
     &trans           &trans          &trans     &trans             &trans         &trans            &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-    &trans        &kp TILDE  &kp UNDERSCORE  &kp MINUS           &kp PLUS  &kp AMPERSAND            &trans                                                  &trans  &kp PIPE   &ArrowBracketsStart  &kp FSLASH  &ArrowBracketsEnd  &none  &kp TAB
+    &trans        &kp TILDE  &kp UNDERSCORE  &kp MINUS           &kp PLUS  &kp AMPERSAND            &trans                                                  &trans  &kp PIPE   &ArrowBracketsStart  &kp FSLH  &ArrowBracketsEnd  &none  &kp TAB
     &trans  &kp EXCLAMATION     &kp AT_SIGN   &kp HASH  &kp DOUBLE_QUOTES      &kp COLON            &trans  &trans  &trans                  &trans  &trans  &trans  &kp SEMICOLON  &kp LEFT_PARENTHESIS  &kp ASTERISK  &kp RIGHT_PARENTHESIS  &kp EQUAL  &trans
     &trans        &kp CARET          &trans     &trans   &kp SINGLE_QUOTE     &kp DLLR            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp PRCNT  &kp LBKT  &trans   &kp RBKT  &kp BSLH  &trans
     &trans           &trans          &trans     &trans      &trans    &mt LSHIFT SPACE    &InstantSearch   &trans                  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
