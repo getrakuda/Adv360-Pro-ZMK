@@ -24,9 +24,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LEFT_ALT>
+                = <&macro_press &kp LALT>
                 , <&macro_tap &kp N1>
-                , <&macro_release &kp LEFT_ALT>
+                , <&macro_release &kp LALT>
                 ;
         };
         alt_shift_1: alt_shift_1 {
@@ -34,9 +34,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LEFT_ALT &kp LCTRL>
+                = <&macro_press &kp LALT &kp LCTRL>
                 , <&macro_tap &kp N1>
-                , <&macro_release &kp LEFT_ALT &kp LCTRL>
+                , <&macro_release &kp LALT &kp LCTRL>
                 ;
         };
         CtrlM_S: CtrlM_S {
@@ -74,9 +74,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LCTRL &kp LEFT_ALT &kp LEFT_SHIFT>
+                = <&macro_press &kp LCTRL &kp LALT &kp LSHIFT>
                 , <&macro_tap &kp LEFT_BRACKET>
-                , <&macro_release &kp LCTRL &kp LEFT_ALT &kp LEFT_SHIFT>
+                , <&macro_release &kp LCTRL &kp LALT &kp LSHIFT>
                 ;
         };
         SelectCodeCaretDown: SelectCodeCaretDown {
@@ -84,9 +84,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LCTRL &kp LEFT_ALT &kp LEFT_SHIFT>
+                = <&macro_press &kp LCTRL &kp LALT &kp LSHIFT>
                 , <&macro_tap &kp RIGHT_BRACKET>
-                , <&macro_release &kp LCTRL &kp LEFT_ALT &kp LEFT_SHIFT>
+                , <&macro_release &kp LCTRL &kp LALT &kp LSHIFT>
                 ;
         };
         KillApp: KillApp {
@@ -94,9 +94,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LEFT_ALT>
+                = <&macro_press &kp LALT>
                 , <&macro_tap &kp F4>
-                , <&macro_release &kp LEFT_ALT>
+                , <&macro_release &kp LALT>
                 ;
         };
         MoveCaret: MoveCaret {
@@ -114,9 +114,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LCTRL &kp LEFT_SHIFT>
+                = <&macro_press &kp LCTRL &kp LSHIFT>
                 , <&macro_tap &kp F>
-                , <&macro_release &kp LCTRL &kp LEFT_SHIFT>
+                , <&macro_release &kp LCTRL &kp LSHIFT>
                 ;
         };
         CloseTab: CloseTab {
@@ -134,25 +134,25 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LCTRL &kp LEFT_SHIFT &kp LEFT_ALT>
+                = <&macro_press &kp LCTRL &kp LSHIFT &kp LALT>
                 , <&macro_tap &kp E>
-                , <&macro_release &kp LCTRL &kp LEFT_SHIFT &kp LEFT_ALT>
+                , <&macro_release &kp LCTRL &kp LSHIFT &kp LALT>
                 ;
         };
         AllSearch: AllSearch {
             label = "AllSearch";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp LEFT_SHIFT &kp LEFT_SHIFT>;
+            bindings = <&macro_tap &kp LSHIFT &kp LSHIFT>;
         };
         ExchangeArrowMoveUp: ExchangeArrowMoveUp{
             label = "ExchangeArrowMoveUp";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LEFT_SHIFT &kp LCTRL &kp LEFT_ALT>
-                , <&macro_tap &kp UP_ARROW>
-                , <&macro_release &kp LEFT_SHIFT &kp LCTRL &kp LEFT_ALT>
+                = <&macro_press &kp LSHIFT &kp LCTRL &kp LALT>
+                , <&macro_tap &kp UP>
+                , <&macro_release &kp LSHIFT &kp LCTRL &kp LALT>
                 ;
         }; 
         ExchangeArrowMoveDown: ExchangeArrowMoveDown{
@@ -160,9 +160,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LEFT_SHIFT &kp LCTRL &kp LEFT_ALT>
-                , <&macro_tap &kp DOWN_ARROW>
-                , <&macro_release &kp LEFT_SHIFT &kp LCTRL &kp LEFT_ALT>
+                = <&macro_press &kp LSHIFT &kp LCTRL &kp LALT>
+                , <&macro_tap &kp DOWN>
+                , <&macro_release &kp LSHIFT &kp LCTRL &kp LALT>
                 ;
         };
         InstantSearch: InstantSearch {
@@ -180,9 +180,9 @@
            compatible = "zmk,behavior-macro";
            #binding-cells = <0>;
            bindings
-               = <&macro_press &kp LCTRL &kp LEFT_SHIFT>
+               = <&macro_press &kp LCTRL &kp LSHIFT>
                 , <&macro_tap &kp BACKSPACE>
-                , <&macro_release &kp LCTRL &kp LEFT_SHIFT>
+                , <&macro_release &kp LCTRL &kp LSHIFT>
                 ;
         };
         EditHistoryNext: EditHistoryNext {
@@ -190,9 +190,9 @@
            compatible = "zmk,behavior-macro";
            #binding-cells = <0>;
            bindings
-               = <&macro_press &kp LCTRL &kp LEFT_SHIFT &kp LEFT_ALT>
+               = <&macro_press &kp LCTRL &kp LSHIFT &kp LALT>
                , <&macro_tap &kp 2>
-               , <&macro_release &kp LCTRL &kp LEFT_SHIFT &kp LEFT_ALT>
+               , <&macro_release &kp LCTRL &kp LSHIFT &kp LALT>
                ;
         };
         GitWindow: GitWindow {
@@ -200,9 +200,9 @@
            compatible = "zmk,behavior-macro";
            #binding-cells = <0>;
            bindings
-                = <&macro_press &kp LEFT_ALT>
+                = <&macro_press &kp LALT>
                 , <&macro_tap &kp N9>
-                , <&macro_release &kp LEFT_ALT>
+                , <&macro_release &kp LALT>
                 ;
         };
                 
@@ -211,9 +211,9 @@
            compatible = "zmk,behavior-macro";
            #binding-cells = <0>;
            bindings
-                = <&macro_press &kp LCTRL &kp LEFT_SHIFT>
+                = <&macro_press &kp LCTRL &kp LSHIFT>
                 , <&macro_tap &kp M>
-                , <&macro_release &kp LCTRL &kp LEFT_SHIFT>
+                , <&macro_release &kp LCTRL &kp LSHIFT>
                 ;
         };
         TabSplitToRight: TabSplitToRight {
@@ -221,9 +221,9 @@
            compatible = "zmk,behavior-macro";
            #binding-cells = <0>;
            bindings
-                = <&macro_press &kp LCTRL &kp LEFT_SHIFT &kp LEFT_ALT>
+                = <&macro_press &kp LCTRL &kp LSHIFT &kp LALT>
                 , <&macro_tap &kp J>
-                , <&macro_release &kp LCTRL &kp LEFT_SHIFT &kp LEFT_ALT>
+                , <&macro_release &kp LCTRL &kp LSHIFT &kp LALT>
                 ;
         };
         ForWordBlankLine: ForWordBlankLine {
@@ -231,9 +231,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LCTRL &kp LEFT_SHIFT>
+                = <&macro_press &kp LCTRL &kp LSHIFT>
                 , <&macro_tap &kp Y>
-                , <&macro_release &kp LCTRL &kp LEFT_SHIFT>
+                , <&macro_release &kp LCTRL &kp LSHIFT>
                 ;
         };
         UnitTest: UnitTest {
@@ -241,9 +241,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LEFT_ALT>
+                = <&macro_press &kp LALT>
                 , <&macro_tap &kp N8>
-                , <&macro_release &kp LEFT_ALT>
+                , <&macro_release &kp LALT>
                 ;
         };
         FindWindow: FindWindow {
@@ -251,9 +251,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LEFT_ALT>
+                = <&macro_press &kp LALT>
                 , <&macro_tap &kp N3>
-                , <&macro_release &kp LEFT_ALT>
+                , <&macro_release &kp LALT>
                 ;
         };
         PrevTab: PrevTab {
@@ -261,9 +261,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LCTRL &kp LEFT_ALT &kp LEFT_SHIFT>
+                = <&macro_press &kp LCTRL &kp LALT &kp LSHIFT>
                 , <&macro_tap &kp N2>
-                , <&macro_release &kp LCTRL &kp LEFT_ALT &kp LEFT_SHIFT>
+                , <&macro_release &kp LCTRL &kp LALT &kp LSHIFT>
                 ;
         };
         Ctrl_ArrowLeft:  Ctrl_ArrowLeft {
@@ -272,7 +272,7 @@
             #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp LEFT_ARROW>
+                , <&macro_tap &kp LEFT>
                 , <&macro_release &kp LCTRL>
                 ;
         };
@@ -281,9 +281,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LEFT_ALT &kp LEFT_SHIFT>
+                = <&macro_press &kp LALT &kp LSHIFT>
                 , <&macro_tap &kp G>
-                , <&macro_release &kp LEFT_ALT &kp LEFT_SHIFT>
+                , <&macro_release &kp LALT &kp LSHIFT>
                 ;
         };
         Ctrl_ArrowRight:  Ctrl_ArrowRight {
@@ -292,7 +292,7 @@
             #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp RIGHT_ARROW>
+                , <&macro_tap &kp RIGHT>
                 , <&macro_release &kp LCTRL>
                 ;
         };
@@ -302,7 +302,7 @@
             #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp UP_ARROW>
+                , <&macro_tap &kp UP>
                 , <&macro_release &kp LCTRL>
                 ;
         };
@@ -312,7 +312,7 @@
             #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp DOWN_ARROW>
+                , <&macro_tap &kp DOWN>
                 , <&macro_release &kp LCTRL>
                 ;
         };
@@ -321,9 +321,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LEFT_ALT>
+                = <&macro_press &kp LALT>
                 , <&macro_tap &kp N4>
-                , <&macro_release &kp LEFT_ALT>
+                , <&macro_release &kp LALT>
                 ;
         };
         ErrorWindow: ErrorWindow {
@@ -331,9 +331,9 @@
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings
-                    = <&macro_press &kp LEFT_ALT>
+                    = <&macro_press &kp LALT>
                     , <&macro_tap &kp N6>
-                    , <&macro_release &kp LEFT_ALT>
+                    , <&macro_release &kp LALT>
                     ;
             };
         BuildWindow: BuildWindow{
@@ -341,9 +341,9 @@
                compatible = "zmk,behavior-macro";
                #binding-cells = <0>;
                bindings
-                   = <&macro_press &kp LEFT_ALT>
+                   = <&macro_press &kp LALT>
                    , <&macro_tap &kp N0>
-                   , <&macro_release &kp LEFT_ALT>
+                   , <&macro_release &kp LALT>
                    ;
         };
         ReOpenTab: ReOpenTab {
@@ -351,9 +351,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LCTRL &kp LEFT_SHIFT &kp LEFT_ALT>
+                = <&macro_press &kp LCTRL &kp LSHIFT &kp LALT>
                 , <&macro_tap &kp F4>
-                , <&macro_release &kp LCTRL &kp LEFT_SHIFT &kp LEFT_ALT>
+                , <&macro_release &kp LCTRL &kp LSHIFT &kp LALT>
                 ;
         };
         NextError: NextError {
@@ -361,9 +361,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LEFT_ALT>
+                = <&macro_press &kp LALT>
                 , <&macro_tap &kp PAGE_DOWN>
-                , <&macro_release &kp LEFT_ALT>
+                , <&macro_release &kp LALT>
                 ;
         };
         PrevError: PrevError {
@@ -371,9 +371,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LEFT_ALT>
+                = <&macro_press &kp LALT>
                 , <&macro_tap &kp PAGE_UP>
-                , <&macro_release &kp LEFT_ALT>
+                , <&macro_release &kp LALT>
                 ;
         };
         NextTab: NextTab {
@@ -381,9 +381,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LCTRL &kp LEFT_ALT &kp LEFT_SHIFT>
+                = <&macro_press &kp LCTRL &kp LALT &kp LSHIFT>
                 , <&macro_tap &kp N3>
-                , <&macro_release &kp LCTRL &kp LEFT_ALT &kp LEFT_SHIFT>
+                , <&macro_release &kp LCTRL &kp LALT &kp LSHIFT>
                 ;
         };
         PrevMethod: PrevMethod {
@@ -391,9 +391,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LEFT_ALT>
-                , <&macro_tap &kp UP_ARROW>
-                , <&macro_release &kp LEFT_ALT>
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp UP>
+                , <&macro_release &kp LALT>
                 ;
         };
         NextMethod: NextMethod {
@@ -401,9 +401,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LEFT_ALT>
-                , <&macro_tap &kp DOWN_ARROW>
-                , <&macro_release &kp LEFT_ALT>
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp DOWN>
+                , <&macro_release &kp LALT>
                 ;
         };
         OpenBookMark: OpenBookMark {
@@ -411,9 +411,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LEFT_ALT>
+                = <&macro_press &kp LALT>
                 , <&macro_tap &kp N2>
-                , <&macro_release &kp LEFT_ALT>
+                , <&macro_release &kp LALT>
                 ;
         };
         SearchFile: SearchFile {
@@ -421,9 +421,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LCTRL &kp LEFT_SHIFT>
+                = <&macro_press &kp LCTRL &kp LSHIFT>
                 , <&macro_tap &kp T>
-                , <&macro_release &kp LCTRL &kp LEFT_SHIFT>
+                , <&macro_release &kp LCTRL &kp LSHIFT>
                 ;
         };
         CtrlDown: CtrlDown {
@@ -432,7 +432,7 @@
             #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp DOWN_ARROW>
+                , <&macro_tap &kp DOWN>
                 , <&macro_release &kp LCTRL>
                 ;
         };
@@ -442,7 +442,7 @@
             #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp UP_ARROW>
+                , <&macro_tap &kp UP>
                 , <&macro_release &kp LCTRL>
                 ;
         };
@@ -451,9 +451,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LCTRL &kp LEFT_SHIFT>
+                = <&macro_press &kp LCTRL &kp LSHIFT>
                 , <&macro_tap &kp B>
-                , <&macro_release &kp LCTRL &kp LEFT_SHIFT>
+                , <&macro_release &kp LCTRL &kp LSHIFT>
                 ;
         };
         
@@ -473,9 +473,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LEFT_SHIFT>
+                = <&macro_press &kp LSHIFT>
                 , <&macro_tap &kp F5>
-                , <&macro_release &kp LEFT_SHIFT>
+                , <&macro_release &kp LSHIFT>
                 ;
         };
         AppSwitch_1: AppSwitch_1 {
@@ -563,9 +563,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LEFT_SHIFT &kp LCTRL>
-                , <&macro_tap &kp SLASH>
-                , <&macro_release &kp LEFT_SHIFT &kp LCTRL>
+                = <&macro_press &kp LSHIFT &kp LCTRL>
+                , <&macro_tap &kp FSLASH>
+                , <&macro_release &kp LSHIFT &kp LCTRL>
                 ;
         };
         ShadowPlaySS: ShadowPlaySS {
@@ -573,9 +573,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LEFT_ALT>
+                = <&macro_press &kp LALT>
                 , <&macro_tap &kp F1>
-                , <&macro_release &kp LEFT_ALT>
+                , <&macro_release &kp LALT>
                 ;
         };
         ShadowPlayIR: ShadowPlayIR {
@@ -583,9 +583,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LEFT_ALT>
+                = <&macro_press &kp LALT>
                 , <&macro_tap &kp F10>
-                , <&macro_release &kp LEFT_ALT>
+                , <&macro_release &kp LALT>
                 ;
         };
         DiviOpenLoadOut: DiviOpenLoadOut {
@@ -635,9 +635,9 @@
           #binding-cells = <0>;
           bindings
                =
-               <&macro_press &kp LCTRL &kp LEFT_SHIFT>,
+               <&macro_press &kp LCTRL &kp LSHIFT>,
                <&macro_tap &kp W>,
-               <&macro_release &kp LCTRL &kp LEFT_SHIFT>
+               <&macro_release &kp LCTRL &kp LSHIFT>
                ;
        };
        ValheimPrint: ValheimPrint {
@@ -650,7 +650,7 @@
               <&macro_tap &kp MINUS &kp MINUS>,
               <&macro_tap &kp ENTER>,
               <&macro_tap &kp ENTER>,
-              <&macro_tap &kp SLASH &kp P &kp R &kp I &kp N &kp T &kp S &kp E &kp E &kp D &kp S>,
+              <&macro_tap &kp FSLASH &kp P &kp R &kp I &kp N &kp T &kp S &kp E &kp E &kp D &kp S>,
               <&macro_tap &kp ENTER>
               ;
       };
@@ -661,9 +661,9 @@
             #binding-cells = <0>;
             bindings
                  =
-                 <&macro_press &kp LCTRL &kp LEFT_SHIFT &kp LEFT_ALT>,
+                 <&macro_press &kp LCTRL &kp LSHIFT &kp LALT>,
                  <&macro_tap &kp Y>,
-                 <&macro_release &kp LCTRL &kp LEFT_SHIFT &kp LEFT_ALT>
+                 <&macro_release &kp LCTRL &kp LSHIFT &kp LALT>
                  ;
          };
      SelectParagraphBack: SelectParagraphBack {
@@ -672,9 +672,9 @@
          #binding-cells = <0>;
          bindings
               =
-              <&macro_press &kp LCTRL &kp LEFT_SHIFT &kp LEFT_ALT>,
+              <&macro_press &kp LCTRL &kp LSHIFT &kp LALT>,
               <&macro_tap &kp S>,
-              <&macro_release &kp LCTRL &kp LEFT_SHIFT &kp LEFT_ALT>                    
+              <&macro_release &kp LCTRL &kp LSHIFT &kp LALT>                    
               ;
       };
       QuickDefinition: QuickDefinition {
@@ -683,9 +683,9 @@
            #binding-cells = <0>;
            bindings
                 =
-                <&macro_press &kp LCTRL &kp LEFT_ALT &kp LEFT_SHIFT>,
+                <&macro_press &kp LCTRL &kp LALT &kp LSHIFT>,
                 <&macro_tap &kp Z>,
-                <&macro_release &kp LCTRL &kp LEFT_ALT &kp LEFT_SHIFT>                    
+                <&macro_release &kp LCTRL &kp LALT &kp LSHIFT>                    
                 ;
         };
         
@@ -695,9 +695,9 @@
            #binding-cells = <0>;
            bindings
                 =
-                <&macro_press &kp LCTRL &kp LEFT_ALT>,
+                <&macro_press &kp LCTRL &kp LALT>,
                 <&macro_tap &kp K>,
-                <&macro_release &kp LCTRL &kp LEFT_ALT>                    
+                <&macro_release &kp LCTRL &kp LALT>                    
                 ;
         };
         
@@ -707,9 +707,9 @@
            #binding-cells = <0>;
            bindings
                 =
-                <&macro_press &kp LCTRL &kp LEFT_ALT>,
+                <&macro_press &kp LCTRL &kp LALT>,
                 <&macro_tap &kp F>,
-                <&macro_release &kp LCTRL &kp LEFT_ALT>                    
+                <&macro_release &kp LCTRL &kp LALT>                    
                 ;
         };
                 
@@ -719,9 +719,9 @@
            #binding-cells = <0>;
            bindings
                 =
-                <&macro_press &kp LCTRL &kp LEFT_ALT &kp LEFT_SHIFT>,
+                <&macro_press &kp LCTRL &kp LALT &kp LSHIFT>,
                 <&macro_tap &kp T>,
-                <&macro_release &kp LCTRL &kp LEFT_ALT &kp LEFT_SHIFT>                    
+                <&macro_release &kp LCTRL &kp LALT &kp LSHIFT>                    
                 ;
         };
         
@@ -731,9 +731,9 @@
               #binding-cells = <0>;
               bindings
                    =
-                   <&macro_press &kp LEFT_ALT &kp LCTRL>,
+                   <&macro_press &kp LALT &kp LCTRL>,
                    <&macro_tap &kp N2>,
-                   <&macro_release &kp LEFT_ALT &kp LCTRL>                    
+                   <&macro_release &kp LALT &kp LCTRL>                    
                    ; 
         };
         
@@ -743,9 +743,9 @@
             #binding-cells = <0>;
             bindings
                 =
-                <&macro_press &kp LEFT_ALT &kp LCTRL &kp LEFT_SHIFT>,
+                <&macro_press &kp LALT &kp LCTRL &kp LSHIFT>,
                 <&macro_tap &kp N2>,
-                <&macro_release &kp LEFT_ALT &kp LCTRL &kp LEFT_SHIFT>
+                <&macro_release &kp LALT &kp LCTRL &kp LSHIFT>
                 ;
         };
         
@@ -766,9 +766,9 @@
             #binding-cells = <0>;
             bindings
                 =
-                <&macro_press &kp LEFT_SHIFT>,
+                <&macro_press &kp LSHIFT>,
                 <&macro_tap &kp COMMA>,
-                <&macro_release &kp LEFT_SHIFT>
+                <&macro_release &kp LSHIFT>
                 ;
         };
 
@@ -778,9 +778,9 @@
             #binding-cells = <0>;
             bindings
                 =
-                <&macro_press &kp LEFT_SHIFT>,
+                <&macro_press &kp LSHIFT>,
                 <&macro_tap &kp DOT>,
-                <&macro_release &kp LEFT_SHIFT>
+                <&macro_release &kp LSHIFT>
                 ;
         };
         
@@ -790,9 +790,9 @@
             #binding-cells = <0>;
             bindings
                 =
-                <&macro_press &kp LCTRL &kp LEFT_ALT>,
+                <&macro_press &kp LCTRL &kp LALT>,
                 <&macro_tap &kp N2>,
-                <&macro_release &kp LCTRL &kp LEFT_ALT>
+                <&macro_release &kp LCTRL &kp LALT>
                 ;
         };
         
@@ -802,9 +802,9 @@
             #binding-cells = <0>;
             bindings
                 =
-                <&macro_press &kp LEFT_ALT &kp LEFT_SHIFT> ,
+                <&macro_press &kp LALT &kp LSHIFT> ,
                 <&macro_tap &kp F9>,
-                <&macro_release &kp LEFT_ALT &kp LEFT_SHIFT>
+                <&macro_release &kp LALT &kp LSHIFT>
                 ;
         };
        
@@ -814,9 +814,9 @@
             #binding-cells = <0>;
             bindings
                 =
-                <&macro_press &kp LEFT_ALT> ,
+                <&macro_press &kp LALT> ,
                 <&macro_tap &kp N5>,
-                <&macro_release &kp LEFT_ALT>
+                <&macro_release &kp LALT>
                 ;
         };
         
@@ -826,9 +826,9 @@
             #binding-cells = <0>;
             bindings
                 =
-                <&macro_press &kp LEFT_ALT &kp LEFT_SHIFT &kp LCTRL> ,
+                <&macro_press &kp LALT &kp LSHIFT &kp LCTRL> ,
                 <&macro_tap &kp J>,
-                <&macro_release &kp LEFT_ALT &kp LEFT_SHIFT &kp LCTRL>              
+                <&macro_release &kp LALT &kp LSHIFT &kp LCTRL>              
                 ;
         };
     };
@@ -866,9 +866,9 @@ keymap {
             bindings = <
                 &none &kp N1  &kp N2   &kp N3   &kp N4  &kp N5                           &tog GAME_BASE                                                                        &tog BLT_LAYER  &kp N6   &kp N7     &kp N8   &kp N9     &kp N0    &kp MINUS
                 &none   &kp Q   &kp W    &kp E    &kp R   &kp T                           &tog HITMAN_BASE                                                                         &none   &kp Y    &kp U      &kp I    &kp O  &mo JB_FUNC    &CommentOut
-                &kp GRAVE   &kp A   &kp S  &lt LOWER D  &lt RAISE F   &kp G                    &kp LEFT_ALT         &kp LCTRL  &kp F13                    &none  &kp LCTRL     &kp LSHIFT   &kp H  &lt RAISE J    &lt LOWER_SUB K    &kp L   &kp P  &InstantSearch
-                &mo 6   &kp Z   &kp X    &kp C    &kp V   &kp B                           &none             &none    &none   &none   &none  &kp F16      &none          &none   &kp N    &lt 5 M  &kp COMMA  &mt LCTRL DOT    &none   &mo 6
-                &none   &none   &none    &none &LoopPrevShowEditor             &mt LEFT_SHIFT SPACE  &mt LEFT_ALT  ESC  &none                  &kp F17  &kp ENTER  &kp BACKSPACE            &kp TAB      &none    &none      &none    &none
+                &kp GRAVE   &kp A   &kp S  &lt LOWER D  &lt RAISE F   &kp G                    &kp LALT         &kp LCTRL  &kp F13                    &none  &ScrollToCenter     &kp LSHIFT   &kp H  &lt RAISE J    &lt LOWER_SUB K    &kp L   &kp P  &InstantSearch
+                &mo 6   &kp Z   &kp X    &kp C    &kp V   &kp B                           &none             &none    &none   &none   &none  &kp F16      &none          &none   &kp N    &lt APP_SWITCH M  &kp COMMA  &mt LCTRL DOT    &none   &mo 6
+                &none   &none   &none    &none &LoopPrevShowEditor             &mt LSHIFT SPACE  &mt LALT  ESC  &none                  &kp F17  &kp ENTER  &kp BACKSPACE            &kp TAB      &none    &none      &none    &none
             >;
         };
        
@@ -876,19 +876,19 @@ keymap {
             bindings = <
      &none   &none   &none   &none   &none   &none   &none                                     &none   &none   &none   &none   &none   &none   &none
      &none   &SelectCodeCaretUp  &alt_1   &none   &alt_shift_1   &OpenSearchStructure   &none                             &none  &none &AllSearch &OpenSearchSymbols   &kp F12   &SelectCodeCaretDown   &none
-     &trans   &kp HOME   &kp LEFT_ARROW   &none   &kp RIGHT_ARROW   &CtrlK_I   &none   &kp LCTRL   &kp F13          &none   &kp LCTRL   &SameWordsSelector   &CloseTab   &kp DOWN_ARROW   &ExchangeArrowMoveUp   &kp UP_ARROW   &kp END   &kp K_APPLICATION
+     &trans   &kp HOME   &kp LEFT   &none   &kp RIGHT   &CtrlK_I   &none   &kp LCTRL   &kp F13          &none   &kp LCTRL   &SameWordsSelector   &CloseTab   &kp DOWN   &ExchangeArrowMoveUp   &kp UP   &kp END   &kp K_APPLICATION
      &kp LEFT_WIN   &CtrlM_S &KillApp  &none  &MoveCaret  &SearchInFiles   &none   &none   &none   &none   &none   &none  &none   &none   &SearchText   &EditHistoryPrev   &ExchangeArrowMoveDown   &MoveEditNextLocation   &CtrlM_E   &none
-     &none   &none   &none   &none   &none   &mt LEFT_SHIFT SPACE   &kp LEFT_ALT   &none          &none   &kp ENTER  &kp DELETE  &trans   &none   &none   &none   &none
+     &none   &none   &none   &none   &none   &mt LSHIFT SPACE   &kp LALT   &none          &none   &kp ENTER  &kp DEL  &trans   &none   &none   &none   &none
             >;
         };
 
         layer_Raise {
             bindings = <
     &trans           &trans          &trans     &trans             &trans         &trans            &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-    &trans        &kp TILDE  &kp UNDERSCORE  &kp MINUS           &kp PLUS  &kp AMPERSAND            &trans                                                  &trans  &kp PIPE   &ArrowBracketsStart  &kp SLASH  &ArrowBracketsEnd  &none  &kp TAB
+    &trans        &kp TILDE  &kp UNDERSCORE  &kp MINUS           &kp PLUS  &kp AMPERSAND            &trans                                                  &trans  &kp PIPE   &ArrowBracketsStart  &kp FSLASH  &ArrowBracketsEnd  &none  &kp TAB
     &trans  &kp EXCLAMATION     &kp AT_SIGN   &kp HASH  &kp DOUBLE_QUOTES      &kp COLON            &trans  &trans  &trans                  &trans  &trans  &trans  &kp SEMICOLON  &kp LEFT_PARENTHESIS  &kp ASTERISK  &kp RIGHT_PARENTHESIS  &kp EQUAL  &trans
-    &trans        &kp CARET          &trans     &trans   &kp SINGLE_QUOTE     &kp DOLLAR            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp PERCENT  &kp LEFT_BRACKET  &trans   &kp RIGHT_BRACKET  &kp BACKSLASH  &trans
-    &trans           &trans          &trans     &trans      &trans    &mt LEFT_SHIFT SPACE    &InstantSearch   &trans                  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+    &trans        &kp CARET          &trans     &trans   &kp SINGLE_QUOTE     &kp DLLR            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp PRCNT  &kp LBKT  &trans   &kp RBKT  &kp BSLH  &trans
+    &trans           &trans          &trans     &trans      &trans    &mt LSHIFT SPACE    &InstantSearch   &trans                  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -898,7 +898,7 @@ keymap {
     &none &TabSplitToRight &BackBlankLine &SelectParagraphForward &ForWordBlankLine &UnitTest &none                                &none &ErrorWindow &FindWindow  &none &QuickDefinition  &none &none
     &none &kp PG_UP &Ctrl_ArrowLeft &MultiCaret &Ctrl_ArrowRight &RunWindow  &none         &none &none &none &none                  &none &ReOpenTab  &Ctrl_ArrowDown &none &Ctrl_ArrowUp &kp PG_DN &none
     &none &SelectMultipleOccurence &PrevMethod &SelectParagraphBack &NextMethod &BuildWindow         &none   &none &none &none &none &none &none  &none     &none &ShowDebug &none &none &none &none
-    &none &none &none &none &none &mt LEFT_SHIFT SPACE &mt LEFT_ALT ESC &none                                                      &none &none &none &none &none &none &none &none
+    &none &none &none &none &none &mt LSHIFT SPACE &mt LALT ESC &none                                                      &none &none &none &none &none &none &none &none
             >;
         };
         
@@ -933,8 +933,8 @@ keymap {
          layer_game_base { 
               bindings = <
       &kp F2 &kp ESC &kp N1 &kp N2 &kp N3 &kp N4 &tog GAME_BASE                                                         &none &none &none &none &none &none &none
-      &kp LEFT_ALT &kp TAB &kp Q &kp W &kp E &kp R &kp Y                                                         &none &kp Y &kp U &kp I &kp O &none &none
-      &kp T &kp LEFT_SHIFT &kp A &kp S &kp D &kp F &kp G         &kp B &kp F13             &none &none             &none &kp H &kp J &kp K &kp L &kp P &none
+      &kp LALT &kp TAB &kp Q &kp W &kp E &kp R &kp Y                                                         &none &kp Y &kp U &kp I &kp O &none &none
+      &kp T &kp LSHIFT &kp A &kp S &kp D &kp F &kp G         &kp B &kp F13             &none &none             &none &kp H &kp J &kp K &kp L &kp P &none
       &kp F1 &kp LCTRL &kp Z &kp X &kp C &kp V        &kp B  &none &kp ENTER &none &none &none &none  &none            &none &kp N &kp M &kp COMMA &kp DOT &none
       &none &ShadowPlaySS &ShadowPlayIR &none &kp N5 &kp SPACE &mo GAME_LOWER &kp N7                                             &none &none &none &none &none &none &none &none
               >;
@@ -942,7 +942,7 @@ keymap {
           layer_game_lower { 
                 bindings = <
        &none &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &none                                                         &none &none &none &none &none &none &none
-       &kp LEFT_ALT &kp LEFT_ARROW &kp UP_ARROW &kp RIGHT_ARROW &kp DOWN_ARROW &kp ENTER &none                                                         &none &none &none &none &none &none &none
+       &kp LALT &kp LEFT &kp UP &kp RIGHT &kp DOWN &kp ENTER &none                                                         &none &none &none &none &none &none &none
        &none &kp BACKSPACE &DiviOpenSocial &DiviOpenLoadOut &none &none &none         &none &none             &none &none             &none &none &none &none &none &none &none
        &none &none &none &none &DiviBuyMacro &ValheimPrint  &none  &none &none &none &none &none &none  &none            &none &none &none &none &none &none
        &none &none &none &none &none &none &none &none                                             &none &none &none &none &none &none &none &none
@@ -951,8 +951,8 @@ keymap {
            layer_hitman_base { 
                  bindings = <
          &none &kp ESC &kp N1 &kp N2 &kp N3 &kp N5 &none                                                         &none &none &none &none &none &none &none
-         &kp LEFT_ALT &kp TAB &kp Q &kp W &kp E &kp R &tog HITMAN_BASE                                                         &none &none &none &none &none &none &none
-         &kp T &kp LEFT_SHIFT &kp A &kp S &kp D &kp F &kp G         &kp B &kp F13             &none &none             &none &none &none &none &none &none &none
+         &kp LALT &kp TAB &kp Q &kp W &kp E &kp R &tog HITMAN_BASE                                                         &none &none &none &none &none &none &none
+         &kp T &kp LSHIFT &kp A &kp S &kp D &kp F &kp G         &kp B &kp F13             &none &none             &none &none &none &none &none &none &none
          &kp F1 &kp LCTRL &kp Z &kp X &kp C &kp V        &kp B  &none &kp F16 &none &none &none &none  &none            &none &none &none &none &none &none
          &none &ShadowPlaySS &ShadowPlayIR &none &kp N4 &mo HITMAN_LOWER &kp SPACE &kp F17                                             &none &none &none &none &none &none &none &none
                  >;
@@ -973,7 +973,7 @@ keymap {
                 &none &none &none &none &none &none &none                                                         &tog BLT_LAYER &none &none &none &none &none &none
                 &none &none &none &none &none &none &none                                                         &none &none &none &none &none &none &none
                 &none &none &bt BT_PRV &none &bt BT_NXT &none &none         &none &none             &none &none             &none &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &none
-                &none &none &none &bt BT_CLR &none &none        &none  &none &none &none &none &none &none  &none            &none &none &none &none &none &none
+                &none &none &none &bt BT_CLR &bt BT_CLR_ALL &none        &none  &none &none &none &none &none &none  &none            &none &none &none &none &none &none
                 &none &none &none &none &none &none &none &none                                             &none &none &none &none &none &none &none &none
             >;
         };
