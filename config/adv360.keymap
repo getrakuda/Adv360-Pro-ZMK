@@ -12,8 +12,6 @@
 #define FN_LAYER 6
 #define GAME_BASE 7
 #define GAME_LOWER 8
-#define HITMAN_BASE 9
-#define HITMAN_LOWER 10
 #define BLT_LAYER 11
 
 
@@ -181,7 +179,7 @@
            #binding-cells = <0>;
            bindings
                = <&macro_press &kp LCTRL &kp LSHIFT>
-                , <&macro_tap &kp BACKSPACE>
+                , <&macro_tap &kp BSPC>
                 , <&macro_release &kp LCTRL &kp LSHIFT>
                 ;
         };
@@ -865,10 +863,10 @@ keymap {
         default_layer {
             bindings = <
                 &none &kp N1  &kp N2   &kp N3   &kp N4  &kp N5                           &tog GAME_BASE                                                                        &tog BLT_LAYER  &kp N6   &kp N7     &kp N8   &kp N9     &kp N0    &kp MINUS
-                &none   &kp Q   &kp W    &kp E    &kp R   &kp T                           &tog HITMAN_BASE                                                                         &none   &kp Y    &kp U      &kp I    &kp O  &mo JB_FUNC    &CommentOut
+                &none   &kp Q   &kp W    &kp E    &kp R   &kp T                           &none                                                                         &none   &kp Y    &kp U      &kp I    &kp O  &mo JB_FUNC    &CommentOut
                 &kp GRAVE   &kp A   &kp S  &lt LOWER D  &lt RAISE F   &kp G                    &kp LALT         &kp LCTRL  &kp F13                    &none  &ScrollToCenter     &kp LSHIFT   &kp H  &lt RAISE J    &lt LOWER_SUB K    &kp L   &kp P  &InstantSearch
-                &mo 6   &kp Z   &kp X    &kp C    &kp V   &kp B                           &none             &none    &none   &none   &none  &kp F16      &none          &none   &kp N    &lt APP_SWITCH M  &kp COMMA  &mt LCTRL DOT    &none   &mo 6
-                &none   &none   &none    &none &LoopPrevShowEditor             &mt LSHIFT SPACE  &mt LALT  ESC  &none                  &kp F17  &kp ENTER  &kp BACKSPACE            &kp TAB      &none    &none      &none    &none
+                &mo 6   &kp Z   &kp X    &kp C    &kp V   &kp B                           &kp 16  &none                                                                            &kp N    &lt APP_SWITCH M  &kp COMMA  &mt LCTRL DOT    &none   &mo 6
+                &none   &none   &none    &none &LoopPrevShowEditor             &mt LSHIFT SPACE  &mt LALT  ESC  &none                  &kp F17  &kp ENTER  &kp BSPC            &kp TAB      &none    &none      &none    &none
             >;
         };
        
@@ -877,7 +875,7 @@ keymap {
      &none   &none   &none   &none   &none   &none   &none                                     &none   &none   &none   &none   &none   &none   &none
      &none   &SelectCodeCaretUp  &alt_1   &none   &alt_shift_1   &OpenSearchStructure   &none                             &none  &none &AllSearch &OpenSearchSymbols   &kp F12   &SelectCodeCaretDown   &none
      &trans   &kp HOME   &kp LEFT   &none   &kp RIGHT   &CtrlK_I   &none   &kp LCTRL   &kp F13          &none   &kp LCTRL   &SameWordsSelector   &CloseTab   &kp DOWN   &ExchangeArrowMoveUp   &kp UP   &kp END   &kp K_APPLICATION
-     &kp LEFT_WIN   &CtrlM_S &KillApp  &none  &MoveCaret  &SearchInFiles   &none   &none   &none   &none   &none   &none  &none   &none   &SearchText   &EditHistoryPrev   &ExchangeArrowMoveDown   &MoveEditNextLocation   &CtrlM_E   &none
+     &kp LEFT_WIN   &CtrlM_S &KillApp  &none  &MoveCaret  &SearchInFiles   &none   &none   &SearchText   &EditHistoryPrev   &ExchangeArrowMoveDown   &MoveEditNextLocation   &CtrlM_E   &none
      &none   &none   &none   &none   &none   &mt LSHIFT SPACE   &kp LALT   &none          &none   &kp ENTER  &kp DEL  &trans   &none   &none   &none   &none
             >;
         };
@@ -887,7 +885,7 @@ keymap {
     &trans           &trans          &trans     &trans             &trans         &trans            &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
     &trans        &kp TILDE  &kp UNDERSCORE  &kp MINUS           &kp PLUS  &kp AMPERSAND            &trans                                                  &trans  &kp PIPE   &ArrowBracketsStart  &kp FSLH  &ArrowBracketsEnd  &none  &kp TAB
     &trans  &kp EXCLAMATION     &kp AT_SIGN   &kp HASH  &kp DOUBLE_QUOTES      &kp COLON            &trans  &trans  &trans                  &trans  &trans  &trans  &kp SEMICOLON  &kp LEFT_PARENTHESIS  &kp ASTERISK  &kp RIGHT_PARENTHESIS  &kp EQUAL  &trans
-    &trans        &kp CARET          &trans     &trans   &kp SINGLE_QUOTE     &kp DLLR            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp PRCNT  &kp LBKT  &trans   &kp RBKT  &kp BSLH  &trans
+    &trans        &kp CARET          &trans     &trans   &kp SINGLE_QUOTE     &kp DLLR            &none  &none  &kp PRCNT  &kp LBKT  &trans   &kp RBKT  &kp BSLH  &trans
     &trans           &trans          &trans     &trans      &trans    &mt LSHIFT SPACE    &InstantSearch   &trans                  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
@@ -897,7 +895,7 @@ keymap {
     &none &none &none &none &none &none &none                                                                                      &none &none &none &none &none &none &none
     &none &TabSplitToRight &BackBlankLine &SelectParagraphForward &ForWordBlankLine &UnitTest &none                                &none &ErrorWindow &FindWindow  &none &QuickDefinition  &none &none
     &none &kp PG_UP &Ctrl_ArrowLeft &MultiCaret &Ctrl_ArrowRight &RunWindow  &none         &none &none &none &none                  &none &ReOpenTab  &Ctrl_ArrowDown &none &Ctrl_ArrowUp &kp PG_DN &none
-    &none &SelectMultipleOccurence &PrevMethod &SelectParagraphBack &NextMethod &BuildWindow         &none   &none &none &none &none &none &none  &none     &none &ShowDebug &none &none &none &none
+    &none &SelectMultipleOccurence &PrevMethod &SelectParagraphBack &NextMethod &BuildWindow         &none   &none  &none &ShowDebug &none &none &none &none
     &none &none &none &none &none &mt LSHIFT SPACE &mt LALT ESC &none                                                      &none &none &none &none &none &none &none &none
             >;
         };
@@ -907,7 +905,7 @@ keymap {
             &none &none &none &none &none &none &none                                                         &none &none &none &none &none &none &none
             &none &none &JB_Rider_Build &JB_Rider_Run &JB_Rider_Stop &RiderDebug &none                              &none &none &none &none &none &none &none
             &none &none &none &ToggleDistractionMode &GitCommit &GitWindow &none         &none &none             &none &none             &none &none &none &none &none &none &none
-            &none &none &none &none &none &none        &none  &none &none &none &none &none &none  &none            &none &none &none &none &none &none
+            &none &none &none &none &none &none        &none  &none            &none &none &none &none &none &none
             &none &none &none &none &none &none &none &none                                             &none &none &none &none &none &none &none &none
                     >;
                 };
@@ -916,7 +914,7 @@ keymap {
             &none &none &none &none &none &none &none                                                         &none &none &none &none &none &none &none
             &none &none &PrevError &SelectWord &NextError &none &none                                                         &none &none &none &none &none &none &none
             &none &AppSwitch_1 &AppSwitch_2 &AppSwitch_3 &AppSwitch_4 &AppSwitch_5 &none         &none &none             &none &none  &none &none &none &none &ScrollToCenter &none &none
-            &none &none &none &none &none &none        &none  &none &none &none &none &none &none  &none            &none &none &none &none &none &none
+            &none &none &none &none &none &none        &none  &none             &none &none &none &none &none &none
             &none &none &none &none &none &none &none &none                                             &none &none &none &none &none &none &none &none
                     >;
                 };
@@ -925,7 +923,7 @@ keymap {
              &none &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &none                                                         &none &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11
              &none &none &none &none &none &none &none                                                         &none &none &none &none &none &none &none
              &none &none &none &none &none &none &none         &none &none             &none &none             &none &none &none &none &none &none &none
-             &mo 6 &none &none &none &none &none        &none  &none &none &none &none &none &none  &none            &none &none &none &none &none &mo 6
+             &mo 6 &none &none &none &none &none        &none  &none           &none &none &none &none &none &mo 6
              &none &none &none &none &none &none &none &none                                             &none &none &none &none &none &none &none &none
                      >;
                  };
@@ -935,7 +933,7 @@ keymap {
       &kp F2 &kp ESC &kp N1 &kp N2 &kp N3 &kp N4 &tog GAME_BASE                                                         &none &none &none &none &none &none &none
       &kp LALT &kp TAB &kp Q &kp W &kp E &kp R &kp Y                                                         &none &kp Y &kp U &kp I &kp O &none &none
       &kp T &kp LSHIFT &kp A &kp S &kp D &kp F &kp G         &kp B &kp F13             &none &none             &none &kp H &kp J &kp K &kp L &kp P &none
-      &kp F1 &kp LCTRL &kp Z &kp X &kp C &kp V        &kp B  &none &kp ENTER &none &none &none &none  &none            &none &kp N &kp M &kp COMMA &kp DOT &none
+      &kp F1 &kp LCTRL &kp Z &kp X &kp C &kp V        &kp B  &kp ENTER            &none &kp N &kp M &kp COMMA &kp DOT &none
       &none &ShadowPlaySS &ShadowPlayIR &none &kp N5 &kp SPACE &mo GAME_LOWER &kp N7                                             &none &none &none &none &none &none &none &none
               >;
           };
@@ -943,50 +941,21 @@ keymap {
                 bindings = <
        &none &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &none                                                         &none &none &none &none &none &none &none
        &kp LALT &kp LEFT &kp UP &kp RIGHT &kp DOWN &kp ENTER &none                                                         &none &none &none &none &none &none &none
-       &none &kp BACKSPACE &DiviOpenSocial &DiviOpenLoadOut &none &none &none         &none &none             &none &none             &none &none &none &none &none &none &none
-       &none &none &none &none &DiviBuyMacro &ValheimPrint  &none  &none &none &none &none &none &none  &none            &none &none &none &none &none &none
+       &none &kp BSPC &DiviOpenSocial &DiviOpenLoadOut &none &none &none         &none &none             &none &none             &none &none &none &none &none &none &none
+       &none &none &none &none &DiviBuyMacro &ValheimPrint  &none &none  &none            &none &none &none &none &none &none
        &none &none &none &none &none &none &none &none                                             &none &none &none &none &none &none &none &none
                >;
            };
-           layer_hitman_base { 
-                 bindings = <
-         &none &kp ESC &kp N1 &kp N2 &kp N3 &kp N5 &none                                                         &none &none &none &none &none &none &none
-         &kp LALT &kp TAB &kp Q &kp W &kp E &kp R &tog HITMAN_BASE                                                         &none &none &none &none &none &none &none
-         &kp T &kp LSHIFT &kp A &kp S &kp D &kp F &kp G         &kp B &kp F13             &none &none             &none &none &none &none &none &none &none
-         &kp F1 &kp LCTRL &kp Z &kp X &kp C &kp V        &kp B  &none &kp F16 &none &none &none &none  &none            &none &none &none &none &none &none
-         &none &ShadowPlaySS &ShadowPlayIR &none &kp N4 &mo HITMAN_LOWER &kp SPACE &kp F17                                             &none &none &none &none &none &none &none &none
-                 >;
-             };
-             
-             layer_hitman_lower { 
-                 bindings = <
-        &none &none &none &none &none &none &none                                                         &none &none &none &none &none &none &none
-        &none &none &kp Y &kp U &kp I &kp O &none                                                         &none &none &none &none &none &none &none
-        &none &kp ENTER &kp H &kp J &kp K &kp L &none         &none &none             &none &none             &none &none &none &none &none &none &none
-        &none &none &none &none &none &DiviBuyMacro        &none  &none &none &none &none &none &none  &none            &none &none &none &none &none &none
-        &none &none &none &none &none &none &none &none                                             &none &none &none &none &none &none &none &none
-                >;
-            };
             
         layer_bluetooth_base { 
              bindings = <
                 &none &none &none &none &none &none &none                                                         &tog BLT_LAYER &none &none &none &none &none &none
                 &none &none &none &none &none &none &none                                                         &none &none &none &none &none &none &none
                 &none &none &bt BT_PRV &none &bt BT_NXT &none &none         &none &none             &none &none             &none &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &none
-                &none &none &none &bt BT_CLR &bt BT_CLR_ALL &none        &none  &none &none &none &none &none &none  &none            &none &none &none &none &none &none
+                &none &none &none &bt BT_CLR &bt BT_CLR_ALL &none        &none  &none             &none &none &none &none &none &none
                 &none &none &none &none &none &none &none &none                                             &none &none &none &none &none &none &none &none
             >;
         };
-            
-        layer_unUsed_lower { 
-                 bindings = <
-        &none &none &none &none &none &none &none                                                         &none &none &none &none &none &none &none
-        &none &none &none &none &none &none &none                                                         &none &none &none &none &none &none &none
-        &none &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &none         &none &none             &none &none             &none &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &none
-        &none &none &none &none &none &none        &none  &none &none &none &none &none &none  &none            &none &none &none &none &none &none
-        &none &none &none &none &none &none &none &none                                             &none &none &none &none &none &none &none &none
-                >;
-            };
     };
 
   };
