@@ -940,7 +940,7 @@ keymap {
           layer_game_lower { 
                 bindings = <
        &none &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &none                                                         &none &none &none &none &none &none &none
-       &kp LALT &kp LEFT &kp UP &kp RIGHT &kp DOWN &kp ENTER &none                                                         &none &none &none &none &none &none &none
+       &kp LALT &kp J &kp N6 &kp N7 &kp N8 &kp ENTER &none                                                         &none &none &none &none &none &none &none
        &none &kp BSPC &DiviOpenSocial &DiviOpenLoadOut &none &none &none         &none &none             &none &none             &none &none &none &none &none &none &none
        &none &none &none &none &DiviBuyMacro &ValheimPrint  &none &none  &none            &none &none &none &none &none &none
        &none &none &none &none &none &none &none &none                                             &none &none &none &none &none &none &none &none
