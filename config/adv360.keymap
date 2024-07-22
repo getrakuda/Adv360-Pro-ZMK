@@ -866,7 +866,7 @@ keymap {
                 &none   &kp Q   &kp W    &kp E    &kp R   &kp T                           &none                                                                         &none   &kp Y    &kp U      &kp I    &kp O  &mo JB_FUNC    &CommentOut
                 &kp GRAVE   &kp A   &kp S  &lt LOWER D  &lt RAISE F   &kp G                    &kp LALT         &kp LCTRL  &kp F13                    &none  &ScrollToCenter     &kp LSHIFT   &kp H  &lt RAISE J    &lt LOWER_SUB K    &kp L   &kp P  &InstantSearch
                 &mo 6   &kp Z   &kp X    &kp C    &kp V   &kp B                           &kp 16  &none                                                                            &kp N    &lt APP_SWITCH M  &kp COMMA  &mt LCTRL DOT    &none   &mo 6
-                &none   &none   &none    &none &LoopPrevShowEditor             &mt LSHIFT SPACE  &mt LALT  ESC  &none                  &kp F17  &kp ENTER  &kp BSPC            &kp TAB      &none    &none      &none    &none
+                &none   &none   &kp COLON    &none &LoopPrevShowEditor             &mt LSHIFT SPACE  &mt LALT  ESC  &none                  &kp F17  &kp ENTER  &kp BSPC            &kp TAB      &none    &kp SEMICOLON      &none    &none
             >;
         };
        
