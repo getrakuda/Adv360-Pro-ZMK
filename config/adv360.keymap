@@ -859,8 +859,8 @@
     		&none	&kp PG_UP	&Option_ArrowLeft	&MultiCaret	&Option_ArrowRight	&RunWindow	&none			&none	&none		&none	&none			&none	&ReOpenTab	&Option_ArrowDown	&none	&Option_ArrowUp	&kp PG_DN	&none
     		&none	&SelectMultipleOccurence	&PrevMethod	&SelectParagraphBack	&NextMethod	&BuildWindow					&none		&none					&none	&none	&none	&none	&none	&none
     		&none	&none	&none	&none	&none				&none	&none	&none		&none	&none	&none				&none	&none	&none	&none	&none
-    	>;		>;																					
-    };		};																						
+    	>;																			
+    };																				
     																								
     jb_func {																								
     	bindings = <																							
@@ -879,8 +879,8 @@
     		&none	&AppSwitch_1	&AppSwitch_2	&AppSwitch_3	&AppSwitch_4	&AppSwitch_5	&none			&none	&none		&none	&none			&none	&none	&none	&none	&ScrollToCenter	&none	&none
     		&none	&none	&none	&none	&none	&none					&none		&none					&none	&none	&none	&none	&none	&none
     		&none	&none	&none	&none	&none				&none	&none	&none		&none	&none	&none				&none	&none	&none	&none	&none
-    	>;		>;																					
-    };		};																						
+    	>;																		
+    };																		
     																								
     fn {																								
     	bindings = <																							
