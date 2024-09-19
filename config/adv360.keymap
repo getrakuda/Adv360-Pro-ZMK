@@ -340,9 +340,9 @@
               compatible = "zmk,behavior-macro";
               #binding-cells = <0>;
               bindings
-                  = <&macro_press &kp LALT>
-                  , <&macro_tap &kp PG_DN>
-                  , <&macro_release &kp LALT>
+                  = <&macro_press &kp LCTRL &kp LSHIFT>
+                  , <&macro_tap &kp N1>
+                  , <&macro_release &kp LCTRL &kp LSHIFT>
                   ;
           };
           PrevError: PrevError {
@@ -350,9 +350,9 @@
               compatible = "zmk,behavior-macro";
               #binding-cells = <0>;
               bindings
-                  = <&macro_press &kp LALT>
-                  , <&macro_tap &kp PG_UP>
-                  , <&macro_release &kp LALT>
+                  = <&macro_press &kp LCTRL &kp LSHIFT>
+                    , <&macro_tap &kp N2>
+                    , <&macro_release &kp LCTRL &kp LSHIFT>
                   ;
           };
           NextTab: NextTab {
