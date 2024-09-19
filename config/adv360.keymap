@@ -251,9 +251,8 @@
                   , <&macro_tap &kp G>
                   , <&macro_release &kp LALT &kp LSHIFT>
                   ;
-          }
-          
-          
+          };
+
           Option_ArrowLeft:  Option_ArrowLeft {
                 label = " Option_ArrowLeft";
                 compatible = "zmk,behavior-macro";
