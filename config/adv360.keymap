@@ -89,9 +89,9 @@
               compatible = "zmk,behavior-macro";
               #binding-cells = <0>;
               bindings
-                  = <&macro_press &kp LALT>
-                  , <&macro_tap &kp F4>
-                  , <&macro_release &kp LALT>
+                  = <&macro_press &kp LEFT_COMMAND>
+                  , <&macro_tap &kp Q>
+                  , <&macro_release &kp LEFT_COMMAND>
                   ;
           };
           MoveCaret: MoveCaret {
@@ -827,7 +827,7 @@
     		&none	&kp N1	&kp N2	&kp N3	&kp N4	&kp N5	&none										&tog bluetooth	&kp N6	&kp N7	&kp N8	&kp N9	&kp N0	&kp MINUS
     		&none	&kp Q	&kp W	&kp E	&kp R	&kp T	&kp C_PLAY_PAUSE										&kp C_VOL_UP	&kp Y	&kp U	&kp I	&kp O	&mo jb_func	&CommentOut
     		&kp CAPS	&kp A	&kp S	&lt lower D	&lt raise F	&kp G	&kp C_AC_SEARCH			&kp LEFT_COMMAND	&kp F13		&none	&kp RIGHT_COMMAND			&kp C_VOL_DN	&kp H	&lt raise J	&lt lower_sub K	&kp L	&kp P	&InstantSearch
-    		&kp LCTRL	&kp Z	&kp X	&kp C	&kp V	&kp B					&none		&none					&kp N6	&lt app_switch M	&kp COMMA	&kp DOT	&kp FSLH	&kp LCTRL
+    		&kp LCTRL	&kp Z	&kp X	&kp C	&kp V	&kp B					&none		&none					&kp N	&lt app_switch M	&kp COMMA	&mt LEFT_COMMAND DOT	&kp FSLH	&kp LCTRL
     		&mo fn	&none	&none	&none	&none				&mt LSHIFT SPACE	&mt ESC LALT	&none		&none	&kp ENTER	&kp BSPC				&kp TAB	&none	&none	&none	&mo fn
     	>;																							
     };																								
