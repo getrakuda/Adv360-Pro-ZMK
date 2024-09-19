@@ -119,9 +119,9 @@
               compatible = "zmk,behavior-macro";
               #binding-cells = <0>;
               bindings
-                  = <&macro_press &kp LCTRL>
-                  , <&macro_tap &kp F4>
-                  , <&macro_release &kp LCTRL>
+                  = <&macro_press $LEFT_COMMAND &kp LCTRL>
+                  , <&macro_tap &kp N0>
+                  , <&macro_release &kp LEFT_COMMAND &kp LCTRL>
                   ;
           };
           SearchText: SearchText {
@@ -258,9 +258,9 @@
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings
-                    = <&macro_press &kp LALT>
+                    = <&macro_press &kp LEFT_COMMAND &kp LALT>
                     , <&macro_tap &kp LEFT>
-                    , <&macro_release &kp LALT>
+                    , <&macro_release &kp LEFT_COMMAND &kp LALT>
                     ;
             };
           Option_ArrowRight:  Option_ArrowRight {
@@ -268,9 +268,9 @@
               compatible = "zmk,behavior-macro";
               #binding-cells = <0>;
               bindings
-                  = <&macro_press &kp LALT>
+                  = <&macro_press &kp LEFT_COMMAND &kp LALT>
                   , <&macro_tap &kp RIGHT>
-                  , <&macro_release &kp LALT>
+                  , <&macro_release &kp LEFT_COMMAND &kp LALT>
                   ;
           };
           Option_ArrowUp:  Option_ArrowUp {
