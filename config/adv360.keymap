@@ -439,85 +439,76 @@
                   ;
           };
           AppSwitch_1: AppSwitch_1 {
-              label = "AppSwitch_1";
-              compatible = "zmk,behavior-macro";
-              #binding-cells = <0>;
-              bindings
-                  = <&macro_press &kp LEFT_WIN>
-                  , <&macro_tap &kp N1>
-                  , <&macro_release &kp LEFT_WIN>
-                  ;
+            label = "AppSwitch_1";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LEFT_WIN>, <&macro_tap &kp N1>, <&macro_release &kp LEFT_WIN>;
           };
+          
           AppSwitch_2: AppSwitch_2 {
-              label = "AppSwitch_2";
-              compatible = "zmk,behavior-macro";
-              #binding-cells = <0>;
-              bindings
-                  = <&macro_press &kp LEFT_WIN>
-                  , <&macro_tap &kp N2>
-                  , <&macro_release &kp LEFT_WIN>
-                  ;
+            label = "AppSwitch_2";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LEFT_WIN>, <&macro_tap &kp N2>, <&macro_release &kp LEFT_WIN>;
           };
+          
           AppSwitch_3: AppSwitch_3 {
-              label = "AppSwitch_3";
-              compatible = "zmk,behavior-macro";
-              #binding-cells = <0>;
-              bindings
-                  = <&macro_press &kp LEFT_WIN>
-                  , <&macro_tap &kp N3>
-                  , <&macro_release &kp LEFT_WIN>
-                  ;
+            label = "AppSwitch_3";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LEFT_WIN>, <&macro_tap &kp N3>, <&macro_release &kp LEFT_WIN>;
           };
+          
           AppSwitch_4: AppSwitch_4 {
-              label = "AppSwitch_4";
-              compatible = "zmk,behavior-macro";
-              #binding-cells = <0>;
-              bindings
-                  = <&macro_press &kp LEFT_WIN>
-                  , <&macro_tap &kp N4>
-                  , <&macro_release &kp LEFT_WIN>
-                  ;
+            label = "AppSwitch_4";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LEFT_WIN>, <&macro_tap &kp N4>, <&macro_release &kp LEFT_WIN>;
           };
+          
           AppSwitch_5: AppSwitch_5 {
-              label = "AppSwitch_5";
-              compatible = "zmk,behavior-macro";
-              #binding-cells = <0>;
-              bindings
-                  = <&macro_press &kp LEFT_WIN>
-                  , <&macro_tap &kp N5>
-                  , <&macro_release &kp LEFT_WIN>
-                  ;
+            label = "AppSwitch_5";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LEFT_WIN>, <&macro_tap &kp N5>, <&macro_release &kp LEFT_WIN>;
           };
+          
           AppSwitch_6: AppSwitch_6 {
-              label = "AppSwitch_6";
-              compatible = "zmk,behavior-macro";
-              #binding-cells = <0>;
-              bindings
-                  = <&macro_press &kp LEFT_WIN>
-                  , <&macro_tap &kp N6>
-                  , <&macro_release &kp LEFT_WIN>
-                  ;
+            label = "AppSwitch_6";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LEFT_WIN>, <&macro_tap &kp N6>, <&macro_release &kp LEFT_WIN>;
           };
+          
           AppSwitch_7: AppSwitch_7 {
-              label = "AppSwitch_7";
-              compatible = "zmk,behavior-macro";
-              #binding-cells = <0>;
-              bindings
-                  = <&macro_press &kp LEFT_WIN>
-                  , <&macro_tap &kp N7>
-                  , <&macro_release &kp LEFT_WIN>
-                  ;
+            label = "AppSwitch_7";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LEFT_WIN>, <&macro_tap &kp N7>, <&macro_release &kp LEFT_WIN>;
           };
-          AppSwitch_1to3: AppSwitch_1to3 {
-              label = "AppSwitch_1to3";
-              compatible = "zmk,behavior-macro";
-              #binding-cells = <0>;
-              bindings
-                  = <&macro_press &kp LEFT_WIN>
-                  , <&macro_tap &kp N1 &kp N3>
-                  , <&macro_release &kp LEFT_WIN>
-                  ;
+          
+          
+          AppSwitch_8: AppSwitch_8 {
+            label = "AppSwitch_8";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LEFT_WIN>, <&macro_tap &kp N8>, <&macro_release &kp LEFT_WIN>;
           };
+                    
+          AppSwitch_9: AppSwitch_9 {
+            label = "AppSwitch_9";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LEFT_WIN>, <&macro_tap &kp N9>, <&macro_release &kp LEFT_WIN>;
+          };
+          
+          OsSearch: OsSearch {
+            label = "OsSearch";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LEFT_COMMAND>, <&macro_tap &kp SPACE>, <&macro_release &kp LEFT_COMMAND>;
+          };
+                    
           CommentOut: CommentOut {
               label = "CommentOut";
               compatible = "zmk,behavior-macro";
@@ -814,7 +805,18 @@
                   <&macro_tap &kp RIGHT>,
                   <&macro_release &kp LEFT_COMMAND>              
                   ;
-            };
+          };
+          CtxMenu: CtxMenu{
+            label = "JumpLastRightWithCmd";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                =
+                <&macro_press &kp LEFT_COMMAND &LSHIFT> ,
+                <&macro_tap &kp H>,
+                <&macro_release &kp LEFT_COMMAND &LSHIFT>              
+                ;          
+          }
       };
 };
 
@@ -860,9 +862,9 @@
     	bindings = <																							
     		&none	&none	&none	&none	&none	&none	&none										&none	&none	&none	&none	&none	&none	&none
     		&none	&none	&alt_1	&none	&alt_shift_1	&OpenSearchStructure	&none										&none	&none	&AllSearch	&OpenSearchSymbols	&kp F12	&none	&none
-    		&none	&kp HOME	&kp LEFT	&none	&kp RIGHT	&CtrlK_I	&none			&kp LEFT_COMMAND	&kp F13		&none	&kp RIGHT_COMMAND			&none	&CloseTab	&kp DOWN	&none	&kp UP	&kp END	&kp K_APPLICATION
-    		&trans	&CtrlM_S	&KillApp	&none	&MoveCaret	&SearchInFiles				&none		&none					&SearchText	&EditHistoryPrev	&none	&MoveEditNextLocation	&CtrlM_E	&none
-    		&none	&none	&none	&none	&none				&mt LSHIFT SPACE	&kp LALT	&none		&none	&kp ENTER	&kp DEL				&none	&none	&none	&none	&none
+    		&none	&kp HOME	&kp LEFT	&none	&kp RIGHT	&CtrlK_I	&none			&OsSearch	&kp F13		&none	&kp RIGHT_COMMAND			&none	&CloseTab	&kp DOWN	&none	&kp UP	&kp END	&CtxMenu
+    		&none	&CtrlM_S	&none	&none	&none				&mt LSHIFT SPACE	&kp LALT	&none		&none	&kp ENTER	&kp DEL				&none	&none	&none	&CtrlM_E	&none
+    		&none &none &none &none &none &none &none &none                                             &none &none &none &none &none &none &none &none
     	>;																							
     };																								
     																								
@@ -899,10 +901,10 @@
     app_switch {																								
     	bindings = <																							
     		&none	&none	&none	&none	&none	&none	&none										&none	&none	&none	&none	&none	&none	&none
-    		&none	&none  &PrevError &none &NextError &none	&none										&none	&none	&none	&none	&none	&none	&none
-    		&none	&AppSwitch_1	&AppSwitch_2	&AppSwitch_3	&AppSwitch_4	&AppSwitch_5	&none			&none	&none		&none	&none			&none	&none	&none	&none	&ScrollToCenter	&none	&none
-    		&none	&none	&none	&none	&none	&none					&none		&none					&none	&none	&none	&none	&none	&none
-    		&none	&none	&none	&none	&none				&none	&none	&none		&none	&none	&none				&none	&none	&none	&none	&none
+            &none	&none	&PrevError	&none	&NextError	&none	&none										&none	&none	&none	&none	&none	&none	&none
+            &none	&AppSwitch_1	&AppSwitch_2	&AppSwitch_3	&AppSwitch_4	&AppSwitch_5	&none			&none	&none		&none	&none			&none	&none	&none	&none	&ScrollToCenter	&none	&none
+            &none	&none	&none	&none	&AppSwitch_6	&AppSwitch_7					&none		&none					&none	&none	&none	&none	&none	&none
+            &none	&none	&none	&none	&AppSwitch_8				&AppSwitch_9	&none	&none		&none	&none	&none				&none	&none	&none	&none	&none
     	>;																		
     };																		
     																								
