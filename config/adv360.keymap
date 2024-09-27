@@ -258,9 +258,9 @@
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings
-                    = <&macro_press &kp LALT>
+                    = <&macro_press &kp LALT &kp LEFT_COMMAND>
                     , <&macro_tap &kp LEFT>
-                    , <&macro_release &kp LALT>
+                    , <&macro_release &kp LALT &kp LEFT_COMMAND>
                     ;
             };
             
@@ -269,9 +269,9 @@
               compatible = "zmk,behavior-macro";
               #binding-cells = <0>;
               bindings
-                  = <&macro_press &kp LALT>
+                  = <&macro_press &kp LALT &kp LEFT_COMMAND>
                   , <&macro_tap &kp RIGHT>
-                  , <&macro_release &kp LALT>
+                  , <&macro_release &kp LALT &kp LEFT_COMMAND>
                   ;
           };
           
@@ -808,7 +808,7 @@
                   ;
           };
           CtxMenu: CtxMenu{
-            label = "JumpLastRightWithCmd";
+            label = "CtxMenu";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -862,10 +862,10 @@
     lower {																								
     	bindings = <																							
     		&none	&none	&none	&none	&none	&none	&none										&none	&none	&none	&none	&none	&none	&none
-    		&none	&none	&alt_1	&none	&alt_shift_1	&OpenSearchStructure	&none										&none	&none	&AllSearch	&OpenSearchSymbols	&kp F12	&none	&none
-    		&none	&kp HOME	&kp LEFT	&none	&kp RIGHT	&CtrlK_I	&none			&OsSearch	&kp F13		&none	&kp RIGHT_COMMAND			&none	&CloseTab	&kp DOWN	&none	&kp UP	&kp END	&CtxMenu
-    		&none	&CtrlM_S	&none	&none	&none				&mt LSHIFT SPACE	&kp LALT	&none		&none	&kp ENTER	&kp DEL				&none	&none	&none	&CtrlM_E	&none
-    		&none &none &none &none &none &none &none &none                                             &none &none &none &none &none &none &none &none
+        &none	&none	&alt_1	&none	&alt_shift_1	&OpenSearchStructure	&none										&none	&none	&AllSearch	&OpenSearchSymbols	&kp F12	&none	&none
+        &none	&kp HOME	&kp LEFT	&none	&kp RIGHT	&CtrlK_I	&none			&OsSearch	&kp F13		&none	&kp RIGHT_COMMAND			&none	&CloseTab	&kp DOWN	&none	&kp UP	&kp END &CtxMenu
+        &none	&CtrlM_S	&none	&none	&MoveCaret	&SearcInFiles					&none		&none					&SearchText	&EditHistoryPrev	&none	&MoveEditNextLocation	&CtrlM_E	&none
+        &none	&none	&none	&none	&none				&trans	&kp LALT	&none		&none	&kp ENTER	&kp DEL				&none	&none	&none	&none	&none
     	>;																							
     };																								
     																								
