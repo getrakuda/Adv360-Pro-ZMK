@@ -271,9 +271,10 @@
               bindings
                   = <&macro_press &kp LALT>
                   , <&macro_tap &kp RIGHT>
-                  , <&macro_release &kp &kp LALT>
+                  , <&macro_release &kp LALT>
                   ;
           };
+          
           Option_ArrowUp:  Option_ArrowUp {
               label = "Option_ArrowUp";
               compatible = "zmk,behavior-macro";
