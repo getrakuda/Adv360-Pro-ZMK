@@ -258,19 +258,20 @@
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings
-                    = <&macro_press &kp LEFT_COMMAND &kp LALT>
+                    = <&macro_press &kp LALT>
                     , <&macro_tap &kp LEFT>
-                    , <&macro_release &kp LEFT_COMMAND &kp LALT>
+                    , <&macro_release &kp LALT>
                     ;
             };
+            
           Option_ArrowRight:  Option_ArrowRight {
               label = "Option_ArrowRight";
               compatible = "zmk,behavior-macro";
               #binding-cells = <0>;
               bindings
-                  = <&macro_press &kp LEFT_COMMAND &kp LALT>
+                  = <&macro_press &kp LALT>
                   , <&macro_tap &kp RIGHT>
-                  , <&macro_release &kp LEFT_COMMAND &kp LALT>
+                  , <&macro_release &kp &kp LALT>
                   ;
           };
           Option_ArrowUp:  Option_ArrowUp {
@@ -442,64 +443,63 @@
             label = "AppSwitch_1";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LEFT_WIN>, <&macro_tap &kp N1>, <&macro_release &kp LEFT_WIN>;
+            bindings = <&macro_press &kp LEFT_WIN &LSHIFT &LCTRL &LEFT_COMMAND &LALT>, <&macro_tap &kp N1>, <&macro_release &kp LEFT_WIN &LSHIFT &LCTRL &LEFT_COMMAND &LALT>;
           };
           
           AppSwitch_2: AppSwitch_2 {
             label = "AppSwitch_2";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LEFT_WIN>, <&macro_tap &kp N2>, <&macro_release &kp LEFT_WIN>;
+            bindings = <&macro_press &kp LEFT_WIN &LSHIFT &LCTRL &LEFT_COMMAND &LALT>, <&macro_tap &kp N2>, <&macro_release &kp LEFT_WIN &LSHIFT &LCTRL &LEFT_COMMAND &LALT>;
           };
           
           AppSwitch_3: AppSwitch_3 {
             label = "AppSwitch_3";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LEFT_WIN>, <&macro_tap &kp N3>, <&macro_release &kp LEFT_WIN>;
+            bindings = <&macro_press &kp LEFT_WIN &LSHIFT &LCTRL &LEFT_COMMAND &LALT>, <&macro_tap &kp N3>, <&macro_release &kp LEFT_WIN &LSHIFT &LCTRL &LEFT_COMMAND &LALT>;
           };
           
           AppSwitch_4: AppSwitch_4 {
             label = "AppSwitch_4";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LEFT_WIN>, <&macro_tap &kp N4>, <&macro_release &kp LEFT_WIN>;
+            bindings = <&macro_press &kp LEFT_WIN &LSHIFT &LCTRL &LEFT_COMMAND &LALT>, <&macro_tap &kp N4>, <&macro_release &kp LEFT_WIN &LSHIFT &LCTRL &LEFT_COMMAND &LALT>;
           };
           
           AppSwitch_5: AppSwitch_5 {
             label = "AppSwitch_5";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LEFT_WIN>, <&macro_tap &kp N5>, <&macro_release &kp LEFT_WIN>;
+            bindings = <&macro_press &kp LEFT_WIN &LSHIFT &LCTRL &LEFT_COMMAND &LALT>, <&macro_tap &kp N5>, <&macro_release &kp LEFT_WIN &LSHIFT &LCTRL &LEFT_COMMAND &LALT>;
           };
           
           AppSwitch_6: AppSwitch_6 {
             label = "AppSwitch_6";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LEFT_WIN>, <&macro_tap &kp N6>, <&macro_release &kp LEFT_WIN>;
+            bindings = <&macro_press &kp LEFT_WIN &LSHIFT &LCTRL &LEFT_COMMAND &LALT>, <&macro_tap &kp N6>, <&macro_release &kp LEFT_WIN &LSHIFT &LCTRL &LEFT_COMMAND &LALT>;
           };
           
           AppSwitch_7: AppSwitch_7 {
             label = "AppSwitch_7";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LEFT_WIN>, <&macro_tap &kp N7>, <&macro_release &kp LEFT_WIN>;
+            bindings = <&macro_press &kp LEFT_WIN &LSHIFT &LCTRL &LEFT_COMMAND &LALT>, <&macro_tap &kp N7>, <&macro_release &kp LEFT_WIN &LSHIFT &LCTRL &LEFT_COMMAND &LALT>;
           };
-          
           
           AppSwitch_8: AppSwitch_8 {
             label = "AppSwitch_8";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LEFT_WIN>, <&macro_tap &kp N8>, <&macro_release &kp LEFT_WIN>;
+            bindings = <&macro_press &kp LEFT_WIN &LSHIFT &LCTRL &LEFT_COMMAND &LALT>, <&macro_tap &kp N8>, <&macro_release &kp LEFT_WIN &LSHIFT &LCTRL &LEFT_COMMAND &LALT>;
           };
                     
           AppSwitch_9: AppSwitch_9 {
             label = "AppSwitch_9";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LEFT_WIN>, <&macro_tap &kp N9>, <&macro_release &kp LEFT_WIN>;
+            bindings = <&macro_press &kp LEFT_WIN &LSHIFT &LCTRL &LEFT_COMMAND &LALT>, <&macro_tap &kp N9>, <&macro_release &kp LEFT_WIN &LSHIFT &LCTRL &LEFT_COMMAND &LALT>;
           };
           
           OsSearch: OsSearch {
@@ -812,9 +812,9 @@
             #binding-cells = <0>;
             bindings
                 =
-                <&macro_press &kp LEFT_COMMAND &LSHIFT> ,
+                <&macro_press &kp LEFT_COMMAND &kp LSHIFT> ,
                 <&macro_tap &kp H>,
-                <&macro_release &kp LEFT_COMMAND &LSHIFT>              
+                <&macro_release &kp LEFT_COMMAND &kp LSHIFT>              
                 ;          
           }
       };
