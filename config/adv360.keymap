@@ -11,6 +11,8 @@
 #define app_switch 5
 #define fn 6
 #define bluetooth 7
+#define game 8
+#define game_lower 9
 
 / {
   macros {
@@ -818,6 +820,30 @@
                 <&macro_release &kp LEFT_COMMAND &kp LSHIFT>              
                 ;          
           };
+          
+          CaretMoveToHome: CaretMoveToHome{
+            label = "CaretMoveToHome";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                =
+                <&macro_press &kp LEFT_COMMAND> ,
+                <&macro_tap &kp LEFT>,
+                <&macro_release &kp LEFT_COMMAND>              
+                ;          
+          };
+          
+          CaretMoveToEnd: CaretMoveToEnd{
+            label = "CaretMoveToEnd";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                =
+                <&macro_press &kp LEFT_COMMAND> ,
+                <&macro_tap &kp RIGHT>,
+                <&macro_release &kp LEFT_COMMAND>              
+                ;          
+          };
       };
 };
 
@@ -863,7 +889,7 @@
     	bindings = <																							
     		&none	&none	&none	&none	&none	&none	&none										&none	&none	&none	&none	&none	&none	&none
         &none	&none	&alt_1	&none	&alt_shift_1	&OpenSearchStructure	&none										&none	&none	&AllSearch	&OpenSearchSymbols	&kp F12	&none	&none
-        &none	&kp HOME	&kp LEFT	&none	&kp RIGHT	&CtrlK_I	&none			&OsSearch	&kp F13		&none	&kp RIGHT_COMMAND			&none	&CloseTab	&kp DOWN	&none	&kp UP	&kp END &CtxMenu
+        &none	&CaretMoveToHome	&kp LEFT	&none	&kp RIGHT	&CtrlK_I	&none			&OsSearch	&kp F13		&none	&kp RIGHT_COMMAND			&none	&CloseTab	&kp DOWN	&none	&kp UP	&CaretMoveToEnd &CtxMenu
         &none	&CtrlM_S	&none	&none	&MoveCaret	&none					&none		&none					&SearchText	&EditHistoryPrev	&none	&MoveEditNextLocation	&CtrlM_E	&none
         &none	&none	&none	&none	&none				&trans	&kp LALT	&none		&none	&kp ENTER	&kp DEL				&none	&none	&none	&none	&none
     	>;																							
@@ -928,5 +954,25 @@
             &none &none &none &none &none &none &none &none                                             &none &none &none &none &none &none &none &none
         >;
     };
+    
+    game {																								
+    	bindings = <																							
+    		&none	&none	&none	&none	&none	&none	&none										&none	&none	&none	&none	&none	&none	&none
+    		&none	&none	&none	&none	&none	&none	&none										&none	&none	&none	&none	&none	&none	&none
+    		&none	&none	&none	&none	&none	&none	&none			&none	&none		&none	&none			&none	&none	&none	&none	&none	&none	&none
+    		&none	&none	&none	&none	&none	&none					&none		&none					&none	&none	&none	&none	&none	&none
+    		&none	&none	&none	&none	&none				&none	&none	&none	&none	&none	&none				&none	&none	&none	&none	&none
+    	>;																							
+    };																								
+    
+    game_lower {																								
+    	bindings = <																							
+    		&none	&none	&none	&none	&none	&none	&none										&none	&none	&none	&none	&none	&none	&none
+    		&none	&none	&none	&none	&none	&none	&none										&none	&none	&none	&none	&none	&none	&none
+    		&none	&none	&none	&none	&none	&none	&none			&none	&none		&none	&none			&none	&none	&none	&none	&none	&none	&none
+    		&none	&none	&none	&none	&none	&none					&none		&none					&none	&none	&none	&none	&none	&none
+    		&none	&none	&none	&none	&none				&none	&none	&none		&none	&none	&none				&none	&none	&none	&none	&none
+    	>;																							
+    };																								
   };
 };
