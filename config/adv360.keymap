@@ -848,7 +848,7 @@
             label = "SingleShot";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings=<&macro_tap &kp RIGHT>;          
+            bindings=<&macro_tap &kp K>;          
           };
       };
 };
