@@ -844,6 +844,12 @@
                 <&macro_release &kp LEFT_COMMAND>              
                 ;          
           };
+          SingleShot: SingleShot{
+            label = "SingleShot";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings=<&macro_tap &kp RIGHT>;          
+          };
       };
 };
 
@@ -959,7 +965,7 @@
             bindings = <
     &kp F2 &kp ESC &kp N1 &kp N2 &kp N3 &kp N4 &tog game                                                         &none &none &none &none &none &none &none
     &kp LALT &kp TAB &kp Q &kp W &kp E &kp R &kp Y                                                         &none &kp Y &kp U &kp I &kp O &none &none
-    &kp T &kp LSHIFT &kp A &kp S &kp D &kp F &kp G         &kp B &kp F13             &none &none             &none &kp H &kp J &kp K &kp L &kp P &none
+    &kp T &kp LSHIFT &kp A &kp S &kp D &kp F &SingleShot         &kp B &kp F13             &none &none             &none &kp H &kp J &kp K &kp L &kp P &none
     &kp F1 &kp LCTRL &kp Z &kp X &kp C &kp V        &kp B  &kp ENTER            &none &kp N &kp M &kp COMMA &kp DOT &none
     &none &ShadowPlaySS &ShadowPlayIR &none &kp N5 &kp SPACE &mo game_lower &kp N7                                             &none &none &none &none &none &none &none &none
             >;
@@ -967,7 +973,7 @@
     game_lower { 
         bindings = <
           &none &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &none                                                         &none &none &none &none &none &none &none
-          &kp LALT &kp J &kp N6 &kp N7 &kp N8 &kp ENTER &none                                                         &none &none &none &none &none &none &none
+          &kp LALT &kp J &kp G &kp N6 &kp N7 &kp ENTER &none                                                         &none &none &none &none &none &none &none
           &none &kp BSPC &DiviOpenSocial &DiviOpenLoadOut &none &none &none         &none &none             &none &none             &none &none &none &none &none &none &none
           &none &none &none &none &DiviBuyMacro &ValheimPrint  &none &none  &none            &none &none &none &none &none &none
           &none &none &none &none &none &none &none &none                                             &none &none &none &none &none &none &none &none
