@@ -901,7 +901,7 @@
     	bindings = <																							
     		&none	&kp N1	&kp N2	&kp N3	&kp N4	&kp N5	&tog game										&tog bluetooth	&kp N6	&kp N7	&kp N8	&kp N9	&kp N0	&kp MINUS
     		&none	&kp Q	&kp W	&kp E	&kp R	&kp T	&kp C_PLAY_PAUSE										&kp C_VOL_UP	&kp Y	&kp U	&kp I	&kp O	&mo jb_func	&CommentOut
-    		&kp CAPS	&kp A	&kp S	&lt lower D	&lt raise F	&kp G	&kp C_AC_SEARCH			&kp LEFT_COMMAND	&kp F13		&none	&kp RIGHT_COMMAND			&kp C_VOL_DN	&kp H	&lt raise J	&lt lower_sub K	&kp L	&kp P	&InstantSearch
+    		&tog lower	&kp A	&kp S	&kp D	&lt raise F	&kp G	&kp C_AC_SEARCH			&kp LEFT_COMMAND	&kp F13		&none	&kp RIGHT_COMMAND			&kp C_VOL_DN	&kp H	&lt raise J	&lt lower_sub K	&kp L	&kp P	&InstantSearch
     		&kp LCTRL	&kp Z	&kp X	&kp C	&kp V	&kp B					&none		&none					&kp N	&lt app_switch M	&kp COMMA	&mt LEFT_COMMAND DOT	&kp FSLH	&kp LCTRL
     		&mo fn	&none	&none	&none	&none				&mt LSHIFT SPACE	&mt LALT ESC	&none		&none	&kp ENTER	&kp BSPC				&kp TAB	&none	&none	&none	&mo fn
     	>;																							
@@ -911,7 +911,7 @@
     	bindings = <																							
     		&none	&none	&none	&none	&none	&none	&none										&none	&none	&none	&none	&none	&none	&none
         &none	&none	&alt_1	&none	&alt_shift_1	&OpenSearchStructure	&none										&none	&none	&AllSearch	&OpenSearchSymbols	&kp F12	&none	&none
-        &none	&CaretMoveToHome	&kp LEFT	&none	&kp RIGHT	&CtrlK_I	&none			&OsSearch	&kp F13		&none	&kp RIGHT_COMMAND			&none	&CloseTab	&kp DOWN	&none	&kp UP	&CaretMoveToEnd &CtxMenu
+        &tog base_layer	&CaretMoveToHome	&kp LEFT	&none	&kp RIGHT	&CtrlK_I	&none			&OsSearch	&kp F13		&none	&kp RIGHT_COMMAND			&none	&CloseTab	&kp DOWN	&none	&kp UP	&CaretMoveToEnd &CtxMenu
         &none	&CtrlM_S	&none	&none	&MoveCaret	&none					&none		&none					&SearchText	&EditHistoryPrev	&none	&MoveEditNextLocation	&CtrlM_E	&none
         &none	&none	&none	&none	&none				&trans	&kp LALT	&none		&none	&kp ENTER	&kp DEL				&none	&none	&none	&none	&none
     	>;																							
@@ -921,7 +921,7 @@
     	bindings = <																							
     		&none	&none	&none	&none	&none	&none	&none										&none	&none	&none	&none	&none	&none	&none
     		&none	&kp TILDE	&kp UNDERSCORE	&kp MINUS	&kp PLUS	&kp AMPERSAND	&none										&none	&kp PIPE	&ArrowBracketsStart	&kp FSLH	&ArrowBracketsEnd	&none	&none
-    		&kp GRAVE	&kp EXCLAMATION	&kp AT_SIGN	&kp HASH	&kp DOUBLE_QUOTES	&kp COLON	&none			&kp LEFT_COMMAND	&kp F13		&none	&kp RIGHT_COMMAND			&none	&kp SEMICOLON	&kp LEFT_PARENTHESIS	&kp ASTERISK	&kp RIGHT_PARENTHESIS	&kp EQUAL	&none
+    		&kp CAPS	&kp EXCLAMATION	&kp AT_SIGN	&kp HASH	&kp DOUBLE_QUOTES	&kp COLON	&none			&kp LEFT_COMMAND	&kp F13		&none	&kp RIGHT_COMMAND			&none	&kp SEMICOLON	&kp LEFT_PARENTHESIS	&kp ASTERISK	&kp RIGHT_PARENTHESIS	&kp EQUAL	&kp GRAVE
     		&none	&kp CARET	&none	&none	&kp SINGLE_QUOTE	&kp DLLR					&none		&none				    &kp PRCNT	&kp LBKT	&none	&kp RBKT &none &none
     		&none	&none	&none	&none	&none				&mt LSHIFT SPACE	&mt ESC LALT	&none		&none	&kp ENTER	&kp BSPC				&none	&none	&none	&none	&none
     	>;																							
