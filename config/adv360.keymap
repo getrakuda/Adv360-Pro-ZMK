@@ -14,11 +14,6 @@
 #define game 8
 #define game_lower 9
 
-&led_strip {
-    status = "disabled";
-};
-
-
 / {
   macros {
           alt_1: alt_1 {
@@ -965,7 +960,7 @@
     fn {																								
     	bindings = <																							
     		&none	&kp F1	&kp F2	&kp F3	&kp F4	&kp F5	&none										&none	&kp F6	&kp F7	&kp F8	&kp F9	&kp F10	&kp F11
-    		&none	&none	&none	&none	&none	&none	&none										&none	&none	&none	&none	&none	&none	&none
+    		&none	&rgb_ug RGB_TOG	&none	&none	&none	&none	&none										&none	&none	&none	&none	&none	&none	&none
     		&none	&none	&none	&none	&none	&none	&none			&none	&none		&none	&none			&none	&none	&none	&none	&none	&none	&none
     		&none	&none	&none	&none	&none	&none					&none		&none					&none	&none	&none	&none	&none	&none
     		&none	&none	&none	&none	&none				&none	&none	&none		&none	&none	&none				&none	&none	&none	&none	&none
