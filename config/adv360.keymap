@@ -14,7 +14,7 @@
 #define game 8
 #define game_lower 9
 
-&key_switch_led {
+&led_strip {
     status = "disabled";
 };
 
