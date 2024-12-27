@@ -14,6 +14,11 @@
 #define game 8
 #define game_lower 9
 
+&key_switch_led {
+    status = "disabled";
+};
+
+
 / {
   macros {
           alt_1: alt_1 {
