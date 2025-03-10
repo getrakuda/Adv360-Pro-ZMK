@@ -873,8 +873,8 @@
                 ;          
           };
                     
-          GoToSymbol: GoToSymbol{
-            label = "GoToSymbol";
+          FindUsagesWindow: FindUsagesWindow{
+            label = "FindUsagesWindow";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -907,8 +907,8 @@
                   ;
           };
           
-          FindUsage: FindUsage {
-             label = "FindUsage";
+          GoToSymbol: GoToSymbol {
+             label = "GoToSymbol";
              compatible = "zmk,behavior-macro";
              #binding-cells = <0>;
              bindings
@@ -962,9 +962,9 @@
     lower {																								
     	bindings = <																							
     		&none	&none	&none	&none	&none	&none	&none										&none	&none	&none	&none	&none	&none	&none
-        &none	&none	&alt_1	&none	&alt_shift_1	&FindUsage	&none										&none	&CaretHistoryBack	&AllSearch	&GoToSymbol	&kp F12	&CaretHistoryNext	&none
+        &none	&none	&alt_1	&none	&alt_shift_1	&GoToSymbol	&none										&none	&CaretHistoryBack	&AllSearch	&FindUsagesWindow	&kp F12	&CaretHistoryNext	&none
         &none	&CaretMoveToHome	&kp LEFT	&none	&kp RIGHT	&CtrlK_I	&none			&OsSearch	&kp F13		&none	&kp RIGHT_COMMAND			&none	&CloseTab	&kp DOWN	&none	&kp UP	&CaretMoveToEnd &CtxMenu
-        &none	&CtrlM_S	&none	&none	&MoveCaret	&OpenSearchStructure					&none		&none					&SearchText	&EditHistoryPrev	&none	&MoveEditNextLocation	&CtrlM_E	&none
+        &none	&CtrlM_S	&none	&none	&&OpenSearchStructure	&none					&none		&none					&SearchText	&EditHistoryPrev	&none	&MoveEditNextLocation	&CtrlM_E	&none
         &none	&none	&none	&none	&none				&trans	&kp LALT	&none		&none	&kp ENTER	&kp DEL				&none	&none	&none	&none	&none
     	>;																							
     };																								
@@ -977,12 +977,12 @@
     		&none	&kp CARET	&none	&none	&kp SINGLE_QUOTE	&kp DLLR					&none		&none				    &kp PRCNT	&kp LBKT	&none	&kp RBKT &kp BSLH &none
     		&none	&none	&none	&none	&none				&mt LSHIFT SPACE	&mt ESC LALT	&none		&none	&kp ENTER	&kp BSPC				&none	&none	&none	&none	&none
     	>;																							
-    };																								
+    };
     																								
     lower_sub {																								
     	bindings = <																							
     		&none	&none	&none	&none	&none	&none	&none										&none	&none	&none	&none	&none	&none	&none
-    		&none	&none	&BackBlankLine	&SelectParagraphForward	&ForWordBlankLine	&UnitTest	&none										&none	&ErrorWindow	&FindWindow	&none	&QuickDefinition	&none	&none
+    		&none	&none	&BackBlankLine	&SelectParagraphForward	&ForWordBlankLine	&UnitTest	&none										&none	&ErrorWindow	&FindWindow	&none	&QuickDefinition	&none	&none§
     		&none	&kp PG_UP	&Option_ArrowLeft	&MultiCaret	&Option_ArrowRight	&RunWindow	&none			&none	&none		&none	&none			&none	&ReOpenTab	&Option_ArrowDown	&none	&Option_ArrowUp	&kp PG_DN	&none
     		&none	&SelectMultipleOccurence	&PrevMethod	&SelectParagraphBack	&NextMethod	&BuildWindow					&none		&none					&none	&none	&none	&none	&none	&none
     		&none	&none	&none	&none	&none				&none	&none	&none		&none	&none	&none				&none	&none	&none	&none	&none
@@ -1002,7 +1002,7 @@
     app_switch {																								
     	bindings = <																							
     		&none	&none	&none	&none	&none	&none	&none										&none	&none	&none	&none	&none	&none	&none
-            &none	&none	&PrevError	&none	&NextError	&none	&none										&none	&none	&none	&AppSwitch_10	&AppSwitch_11	&none	&none
+            &none	&none	&PrevError	&&ErrorWindow	&NextError	&none	&none										&none	&none	&none	&AppSwitch_10	&AppSwitch_11	&none	&none
             &none	&AppSwitch_1	&AppSwitch_2	&AppSwitch_3	&AppSwitch_4	&AppSwitch_5	&none			&none	&none		&none	&none			&none	&none	&none	&none	&ScrollToCenter	&none	&none
             &none	&none	&none	&none	&AppSwitch_6	&AppSwitch_7					&none		&none					&none	&none	&none	&none	&none	&none
             &none	&none	&none	&none	&AppSwitch_8				&AppSwitch_9	&none	&none		&none	&none	&none				&none	&none	&none	&none	&none
