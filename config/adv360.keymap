@@ -918,6 +918,30 @@
                   <&macro_release &kp LEFT_COMMAND &kp LCTRL &kp LSHIFT>                    
                   ;
           };
+          
+          OpenAiWindow: OpenAiWindow {
+             label = "OpenAiWindow";
+             compatible = "zmk,behavior-macro";
+             #binding-cells = <0>;
+             bindings
+                  =
+                  <&macro_press &kp LCTRL &kp LSHIFT>,
+                  <&macro_tap &kp S>,
+                  <&macro_release &kp LCTRL &kp LSHIFT>                    
+                  ;
+          };
+          
+          AskAiAssistant: AskAiAssistant {
+             label = "AskAiAssistant";
+             compatible = "zmk,behavior-macro";
+             #binding-cells = <0>;
+             bindings
+                  =
+                  <&macro_press &kp LCTRL &kp LSHIFT>,
+                    <&macro_tap &kp A>,
+                  <&macro_release &kp LCTRL &kp LSHIFT>                    
+                  ;
+          };
       };
 };
 
@@ -993,7 +1017,7 @@
     	bindings = <																							
     		&none	&none	&none	&none	&none	&none	&none										&none	&none	&none	&none	&none	&none	&none
     		&none	&none	&JB_Rider_Build	&JB_Rider_Run	&JB_Rider_Stop	&OpenSearchSymbols	&none										&none	&none	&none	&none	&none	&none	&none
-    		&none	&none	&none	&ToggleDistractionMode	&GitCommit	&GitWindow	&none			&none	&none		&none	&none			&none	&none	&none	&none	&none	&none	&none
+    		&none	&OpenAiWindow	&AskAiAssistant	&ToggleDistractionMode	&GitCommit	&GitWindow	&none			&none	&none		&none	&none			&none	&none	&none	&none	&none	&none	&none
     		&none	&none	&none	&none	&none	&none					&none		&none					&none	&none	&none	&none	&none	&none
     		&none	&none	&none	&none	&none				&none	&none	&none		&none	&none	&none				&none	&none	&none	&none	&none
     	>;
