@@ -13,7 +13,6 @@
 #define bluetooth 7
 #define game 8
 #define game_lower 9
-#define layout_sw_layer 10
 
 / {
   macros {
@@ -977,7 +976,7 @@
     base_layer {																								
     	bindings = <																							
     		&none	&kp N1	&kp N2	&kp N3	&kp N4	&kp N5	&tog game										&tog bluetooth	&kp N6	&kp N7	&kp N8	&kp N9	&kp N0	&kp MINUS
-    		&ShowApps	&kp Q	&kp W	&kp E	&kp R	&kp T	&kp C_PLAY_PAUSE										&kp C_VOL_UP	&kp Y	&kp U	&kp I	&kp O	&mo jb_func	&lt layout_sw_layer CommentOut
+    		&ShowApps	&kp Q	&kp W	&kp E	&kp R	&kp T	&kp C_PLAY_PAUSE										&kp C_VOL_UP	&kp Y	&kp U	&kp I	&kp O	&mo jb_func	&CommentOut
     		&kp CAPS	&kp A	&kp S	&lt lower D	&lt raise F	&kp G	&kp C_AC_SEARCH			&kp LEFT_COMMAND	&kp F13		&none	&kp RIGHT_COMMAND			&kp C_VOL_DN	&kp H	&lt raise J	&lt lower_sub K	&kp L	&kp P	&InstantSearch
     		&kp LCTRL	&kp Z	&kp X	&kp C	&kp V	&kp B					&none		&none					&kp N	&lt app_switch M	&kp COMMA	&mt LEFT_COMMAND DOT	&kp FSLH	&kp LCTRL
     		&mo fn	&none	&none	&none	&none				&mt LSHIFT SPACE	&mt LALT ESC	&none		&none	&kp ENTER	&kp BSPC				&kp TAB	&none	&none	&none	&mo fn
@@ -1072,15 +1071,5 @@
           &none &none &none &none &none &none &none &none                                             &none &none &none &none &none &none &none &none
         >;
     };																								
-    
-    layout_sw_layer { 
-        bindings = <
-          &none &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &none                                                         &none &none &none &none &none &none &none
-          &kp LALT &kp J &kp N6 &kp N7 &kp N8 &kp ENTER &none                                                         &none &none &none &none &none &none &none
-          &none &kp BSPC &DiviOpenSocial &DiviOpenLoadOut &none &none &none         &none &none             &none &none             &none &none &none &none &none &none &none
-          &none &none &none &none &DiviBuyMacro &ValheimPrint  &none &none  &none            &none &none &none &none &none &none
-          &none &none &none &none &none &none &none &none                                             &none &none &none &none &none &none &none &none
-        >;
-    };
   };
 };
