@@ -989,7 +989,7 @@
                   <&macro_tap &kp N2>,
                   <&macro_release &kp LEFT_COMMAND &kp LSHIFT &kp LALT>                    
                 ;
-          }
+          };
           
           ToolWindowStretchDown: ToolWindowStretchDown {
             label = "ToolWindowStretchDown";
@@ -1001,7 +1001,7 @@
                   <&macro_tap &kp N1>,
                   <&macro_release &kp LEFT_COMMAND &kp LSHIFT &kp LALT>                    
                 ;
-          }
+          };
           
           EditorStretchRight: EditorStretchRight {
               label = "EditorStretchRight";
@@ -1013,7 +1013,7 @@
                     <&macro_tap &kp N3>,
                     <&macro_release &kp LEFT_COMMAND &kp LSHIFT &kp LALT>                    
                   ;
-            }
+            };
                     
           EditorStretchLeft: EditorStretchLeft {
               label = "EditorStretchLeft";
@@ -1025,7 +1025,7 @@
                     <&macro_tap &kp N4>,
                     <&macro_release &kp LEFT_COMMAND &kp LSHIFT &kp LALT>                    
                   ;
-            }
+            };
       };
 };
 
