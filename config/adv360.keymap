@@ -942,6 +942,90 @@
                   <&macro_release &kp LCTRL &kp LSHIFT>                    
                   ;
           };
+          
+          SplitToRightTab: SplitToRightTab {
+             label = "SplitToRightTab";
+             compatible = "zmk,behavior-macro";
+             #binding-cells = <0>;
+             bindings
+                  =
+                  <&macro_press &kp LEFT_COMMAND &kp LSHIFT &kp LALT>,
+                    <&macro_tap &kp Z>,
+                  <&macro_release &kp LEFT_COMMAND &kp LSHIFT &kp LALT>                    
+                  ;
+          };
+          
+          MoveLeftTab: MoveLeftTab {
+             label = "MoveLeftTab";
+             compatible = "zmk,behavior-macro";
+             #binding-cells = <0>;
+             bindings
+                  =
+                  <&macro_press &kp LEFT_COMMAND &kp LSHIFT &kp LALT>,
+                    <&macro_tap &kp J>,
+                  <&macro_release &kp LEFT_COMMAND &kp LSHIFT &kp LALT>                    
+                  ;
+          };
+          
+          MoveRightTab: MoveRightTab {
+             label = "MoveRightTab";
+             compatible = "zmk,behavior-macro";
+             #binding-cells = <0>;
+             bindings
+                  =
+                  <&macro_press &kp LEFT_COMMAND &kp LSHIFT &kp LALT>,
+                    <&macro_tap &kp L>,
+                  <&macro_release &kp LEFT_COMMAND &kp LSHIFT &kp LALT>                    
+                  ;
+          };
+          
+          ToolWindowStretchTop: ToolWindowStretchTop {
+            label = "ToolWindowStretchTop";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                 =
+                  <&macro_press &kp LEFT_COMMAND &kp LSHIFT &kp LALT>,
+                  <&macro_tap &kp N2>,
+                  <&macro_release &kp LEFT_COMMAND &kp LSHIFT &kp LALT>                    
+                ;
+          }
+          
+          ToolWindowStretchDown: ToolWindowStretchDown {
+            label = "ToolWindowStretchDown";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                 =
+                  <&macro_press &kp LEFT_COMMAND &kp LSHIFT &kp LALT>,
+                  <&macro_tap &kp N1>,
+                  <&macro_release &kp LEFT_COMMAND &kp LSHIFT &kp LALT>                    
+                ;
+          }
+          
+          EditorStretchRight: EditorStretchRight {
+              label = "EditorStretchRight";
+              compatible = "zmk,behavior-macro";
+              #binding-cells = <0>;
+              bindings
+                   =
+                    <&macro_press &kp LEFT_COMMAND &kp LSHIFT &kp LALT>,
+                    <&macro_tap &kp N3>,
+                    <&macro_release &kp LEFT_COMMAND &kp LSHIFT &kp LALT>                    
+                  ;
+            }
+                    
+          EditorStretchLeft: EditorStretchLeft {
+              label = "EditorStretchLeft";
+              compatible = "zmk,behavior-macro";
+              #binding-cells = <0>;
+              bindings
+                   =
+                    <&macro_press &kp LEFT_COMMAND &kp LSHIFT &kp LALT>,
+                    <&macro_tap &kp N4>,
+                    <&macro_release &kp LEFT_COMMAND &kp LSHIFT &kp LALT>                    
+                  ;
+            }
       };
 };
 
@@ -988,7 +1072,7 @@
     		&none	&none	&none	&none	&none	&none	&none										&none	&none	&none	&none	&none	&none	&none
         &none	&none	&alt_1	&none	&alt_shift_1	&GoToSymbol	&none										&none	&CaretHistoryBack	&AllSearch	&FindUsagesWindow	&kp F12	&CaretHistoryNext	&none
         &none	&CaretMoveToHome	&kp LEFT &none	&kp RIGHT	&CtrlK_I	&none			&OsSearch	&kp F13		&none	&kp RIGHT_COMMAND			&none	&CloseTab	&kp DOWN	&none	&kp UP	&CaretMoveToEnd &CtxMenu
-        &none	&CtrlM_S	&none	&none	&OpenSearchStructure	&none					&none		&none					&SearchText	&EditHistoryPrev	&none	&MoveEditNextLocation	&CtrlM_E	&none
+        &none	&CtrlM_S	&none	&none	&OpenSearchStructure	&SplitToRightTab					&none		&none					&SearchText	&EditHistoryPrev	&none	&MoveEditNextLocation	&CtrlM_E	&none
         &none	&none	&none	&none	&none				&trans	&kp LALT	&none		&none	&kp ENTER	&kp DEL				&none	&none	&none	&none	&none
     	>;																							
     };																								
@@ -1007,8 +1091,8 @@
     	bindings = <																							
     		&none	&none	&none	&none	&none	&none	&none										&none	&none	&none	&none	&none	&none	&none
     		&none	&none	&BackBlankLine	&SelectParagraphForward	&ForWordBlankLine	&UnitTest	&none										&none	&ErrorWindow	&FindWindow	&none	&QuickDefinition	&none	&none
-    		&none	&kp PG_UP	&Option_ArrowLeft	&MultiCaret	&Option_ArrowRight	&RunWindow	&none			&none	&none		&none	&none			&none	&ReOpenTab	&Option_ArrowDown	&none	&Option_ArrowUp	&kp PG_DN	&none
-    		&none	&SelectMultipleOccurence	&PrevMethod	&SelectParagraphBack	&NextMethod	&BuildWindow					&none		&none					&none	&none	&none	&none	&none	&none
+    		&none	&kp PG_UP	&Option_ArrowLeft	&MultiCaret	&Option_ArrowRight	&RunWindow	&none			&none	&none		&none	&none			&none	&ReOpenTab	&MoveLeftTab	&none	&MoveRightTab	&kp PG_DN	&none
+    		&none	&none	&PrevMethod	&SelectParagraphBack	&NextMethod	&BuildWindow					&none		&none					&none	&none	&none	&none	&none	&none
     		&none	&none	&none	&none	&none				&none	&none	&none		&none	&none	&none				&none	&none	&none	&none	&none
     	>;																			
     };																				
@@ -1016,8 +1100,8 @@
     jb_func {																								
     	bindings = <																							
     		&none	&none	&none	&none	&none	&none	&none										&none	&none	&none	&none	&none	&none	&none
-    		&none	&none	&JB_Rider_Build	&JB_Rider_Run	&JB_Rider_Stop	&OpenSearchSymbols	&none										&none	&none	&none	&none	&none	&none	&none
-    		&none	&OpenAiWindow	&AskAiAssistant	&ToggleDistractionMode	&GitCommit	&GitWindow	&none			&none	&none		&none	&none			&none	&none	&none	&none	&none	&none	&none
+    		&none	&none	&JB_Rider_Build	&JB_Rider_Run	&JB_Rider_Stop	&OpenSearchSymbols	&none										&none	&none	&EditorStretchLeft	&ToolWindowStretchTop	&EditorStretchRight	&none	&none
+    		&none	&OpenAiWindow	&AskAiAssistant	&ToggleDistractionMode	&GitCommit	&GitWindow	&none			&none	&none		&none	&none			&none	&none	&none	&ToolWindowStretchDown	&none	&none	&none
     		&none	&none	&none	&none	&none	&none					&none		&none					&none	&none	&none	&none	&none	&none
     		&none	&none	&none	&none	&none				&none	&none	&none		&none	&none	&none				&none	&none	&none	&none	&none
     	>;
