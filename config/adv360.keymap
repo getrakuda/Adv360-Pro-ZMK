@@ -956,7 +956,7 @@
                #binding-cells = <0>;
                bindings
                     =
-                    <&macro_press &kp LEFT_CTRL &kp &kp LALT>,
+                    <&macro_press &kp LCTRL &kp &kp LALT>,
                       <&macro_tap &kp P>,
                     <&macro_release &kp LCTRL &kp &kp LALT>                    
                     ;
