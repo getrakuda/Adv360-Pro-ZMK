@@ -1058,6 +1058,30 @@
                     <&macro_release &kp LEFT_COMMAND &kp LSHIFT &kp LALT>                    
                   ;
             };
+            
+            ClosePj: ClosePj {
+              label = "ClosePj";
+              compatible = "zmk,behavior-macro";
+              #binding-cells = <0>;
+              bindings
+                   =
+                    <&macro_press &kp LEFT_COMMAND &kp LSHIFT>,
+                    <&macro_tap &kp N6>,
+                    <&macro_release &kp LEFT_COMMAND &kp LSHIFT>                    
+                  ;
+            };
+                        
+            OpenRecent: OpenRecent {
+              label = "OpenRecent";
+              compatible = "zmk,behavior-macro";
+              #binding-cells = <0>;
+              bindings
+                   =
+                    <&macro_press &kp LEFT_COMMAND &kp LSHIFT>,
+                    <&macro_tap &kp N7>,
+                    <&macro_release &kp LEFT_COMMAND &kp LSHIFT>                    
+                  ;
+            };
       };
 };
 
@@ -1134,7 +1158,7 @@
     		&none	&none	&none	&none	&none	&none	&none										&none	&none	&none	&none	&none	&none	&none
     		&none	&none	&JB_Rider_Build	&JB_Rider_Run	&JB_Rider_Stop	&OpenSearchSymbols	&none										&none	&none	&EditorStretchLeft	&ToolWindowStretchTop	&EditorStretchRight	&none	&none
     		&none	&OpenAiWindow	&AskAiAssistant	&ToggleDistractionMode	&GitCommit	&GitWindow	&none			&none	&none		&none	&none			&none	&none	&none	&ToolWindowStretchDown	&none	&none	&none
-    		&none	&none	&none	&none	&none	&none					&none		&none					&none	&none	&none	&none	&none	&none
+    		&none	&none	&none	&none	&ClosePj	&OpenRecent					&none		&none					&none	&none	&none	&none	&none	&none
     		&none	&none	&none	&none	&none				&none	&none	&none		&none	&none	&none				&none	&none	&none	&none	&none
     	>;
     };																								
