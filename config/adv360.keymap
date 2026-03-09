@@ -153,8 +153,8 @@
                    , <&macro_release &kp LCTRL>
                    ;
            };
-          LastEditLocation: LastEditLocation {
-             label = "LastEditLocation";
+          PrevOccurrence: PrevOccurrence {
+             label = "PrevOccurrence";
              compatible = "zmk,behavior-macro";
              #binding-cells = <0>;
              bindings
@@ -163,16 +163,18 @@
                   , <&macro_release &kp LCTRL &kp LSHIFT>
                   ;
           };
-          NextEditLocation: NextEditLocation {
-             label = "NextEditLocation";
+          
+          NextOccurrence: NextOccurrence {
+             label = "NextOccurrence";
              compatible = "zmk,behavior-macro";
              #binding-cells = <0>;
              bindings
-                 = <&macro_press &kp LCTRL &kp LSHIFT &kp LALT>
+                 = <&macro_press &kp LEFT_COMMAND &kp LSHIFT>
                  , <&macro_tap &kp 2>
-                 , <&macro_release &kp LCTRL &kp LSHIFT &kp LALT>
+                 , <&macro_release &kp LEFT_COMMAND &kp LSHIFT>
                  ;
           };
+          
           GitWindow: GitWindow {
              label = "GitWindow";
              compatible = "zmk,behavior-macro";
@@ -1102,7 +1104,7 @@
     		&none	&none	&none	&none	&none	&none	&none										&none	&none	&none	&none	&none	&none	&none
         &none	&none	&alt_1	&none	&alt_shift_1	&GoToSymbol	&none										&none	&CaretHistoryBack	&AllSearch	&FindUsagesWindow	&kp F12	&GoToImplementation	&none
         &none	&CaretMoveToHome	&kp LEFT &none	&kp RIGHT	&CtrlK_I	&none			&OsSearch	&kp F13		&none	&kp RIGHT_COMMAND			&none	&CloseTab	&kp DOWN	&none	&kp UP	&CaretMoveToEnd &CtxMenu
-        &none	&CtrlM_S	&none	&none	&OpenSearchStructure	&none					&none		&none					&CaretHistoryNext	&LastEditLocation	&none	&NextEditLocation &CtrlM_E	&none
+        &none	&CtrlM_S	&none	&none	&OpenSearchStructure	&none					&none		&none					&CaretHistoryNext	&PrevOccurrence	&none	&NextOccurrence &CtrlM_E	&none
         &none	&none	&none	&none	&none				&trans	&kp LALT	&none		&none	&kp ENTER	&kp DEL				&none	&none	&none	&none	&none
     	>;																							
     };																								
