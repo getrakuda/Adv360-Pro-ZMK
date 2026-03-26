@@ -50,7 +50,7 @@
       label = "ArrowBracketsStart";
       compatible = "zmk,behavior-macro";
 #binding-cells = < 0>;
-      bindings = <&macro_press &kp LSHIFT>, <&macro_tap& kp COMMA>,
+      bindings = <&macro_press &kp LSHIFT>, <&macro_tap &kp COMMA>,
       <&macro_release &kp LSHIFT>;
     };
 
