@@ -92,7 +92,7 @@
     DiviBuyMacro {
       label = "DiviBuyMacro";
       compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
+#binding-cells = < 0>;
       bindings = <&macro_tap &kp SPACE &kp G>;
     };
   DiviOpenSocial:
