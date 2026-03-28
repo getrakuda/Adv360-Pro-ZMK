@@ -19,7 +19,7 @@
 #define raise 2
 #define game 3
 #define gameLower 4
-#define wezHamKar 5
+#define apper 5
 #define functions 6
 #define bluetooth 7
 
@@ -43,6 +43,130 @@
       bindings = <&macro_press &kp LEFT_WIN &kp LSHIFT &kp LCTRL &kp LEFT_COMMAND &kp LALT>,
       <&macro_tap &kp N2>,
       <&macro_release &kp LEFT_WIN &kp LSHIFT &kp LCTRL &kp LEFT_COMMAND &kp LALT>;
+    };
+
+AppSwitch_3:
+    AppSwitch_3 {
+      label = "AppSwitch_3";
+      compatible = "zmk,behavior-macro";
+#binding-cells = < 0>;
+      bindings = <&macro_press &kp LEFT_WIN &kp LSHIFT &kp LCTRL &kp LEFT_COMMAND &kp LALT>,
+      <&macro_tap &kp N3>,
+      <&macro_release &kp LEFT_WIN &kp LSHIFT &kp LCTRL &kp LEFT_COMMAND &kp LALT>;
+    };
+
+AppSwitch_4:
+    AppSwitch_4 {
+      label = "AppSwitch_4";
+      compatible = "zmk,behavior-macro";
+#binding-cells = < 0>;
+      bindings = <&macro_press &kp LEFT_WIN &kp LSHIFT &kp LCTRL &kp LEFT_COMMAND &kp LALT>,
+      <&macro_tap &kp N4>,
+      <&macro_release &kp LEFT_WIN &kp LSHIFT &kp LCTRL &kp LEFT_COMMAND &kp LALT>;
+    };
+
+AppSwitch_5:
+    AppSwitch_5 {
+      label = "AppSwitch_5";
+      compatible = "zmk,behavior-macro";
+#binding-cells = < 0>;
+      bindings = <&macro_press &kp LEFT_WIN &kp LSHIFT &kp LCTRL &kp LEFT_COMMAND &kp LALT>,
+      <&macro_tap &kp N5>,
+      <&macro_release &kp LEFT_WIN &kp LSHIFT &kp LCTRL &kp LEFT_COMMAND &kp LALT>;
+    };
+
+AppSwitch_6:
+    AppSwitch_6 {
+      label = "AppSwitch_6";
+      compatible = "zmk,behavior-macro";
+#binding-cells = < 0>;
+      bindings = <&macro_press &kp LEFT_WIN &kp LSHIFT &kp LCTRL &kp LEFT_COMMAND &kp LALT>,
+      <&macro_tap &kp N6>,
+      <&macro_release &kp LEFT_WIN &kp LSHIFT &kp LCTRL &kp LEFT_COMMAND &kp LALT>;
+    };
+
+AppSwitch_7:
+    AppSwitch_7 {
+      label = "AppSwitch_7";
+      compatible = "zmk,behavior-macro";
+#binding-cells = < 0>;
+      bindings = <&macro_press &kp LEFT_WIN &kp LSHIFT &kp LCTRL &kp LEFT_COMMAND &kp LALT>,
+      <&macro_tap &kp N7>,
+      <&macro_release &kp LEFT_WIN &kp LSHIFT &kp LCTRL &kp LEFT_COMMAND &kp LALT>;
+    };
+
+WebDevModeMinname:WebDevModeMinname {
+      label = "WebDevModeMinname";
+      compatible = "zmk,behavior-macro";
+#binding-cells = < 0>;
+      bindings = 
+      <&macro_press &kp LALT &kp LEFT_COMMAND>,
+      <&macro_tap &kp J>,
+      <&macro_release &kp LALT &kp LEFT_COMMAND>;
+    };
+WebDevModeMid:WebDevModeMid {
+      label = "WebDevModeMid";
+      compatible = "zmk,behavior-macro";
+#binding-cells = < 0>;
+      bindings = 
+      <&macro_press &kp LALT &kp LEFT_COMMAND>,
+      <&macro_tap &kp K>,
+      <&macro_release &kp LALT &kp LEFT_COMMAND>;
+    };
+CurrentLeft:CurrentLeft {
+      label = "CurrentLeft";
+      compatible = "zmk,behavior-macro";
+#binding-cells = < 0>;
+      bindings = 
+      <&macro_press &kp LALT &kp LEFT_COMMAND>,
+      <&macro_tap &kp H>,
+      <&macro_release &kp LALT &kp LEFT_COMMAND>;
+    };
+CurrentRight:CurrentRight {
+      label = "CurrentRight";
+      compatible = "zmk,behavior-macro";
+#binding-cells = < 0>;
+      bindings = 
+      <&macro_press &kp LALT &kp LEFT_COMMAND>,
+      <&macro_tap &kp P>,
+      <&macro_release &kp LALT &kp LEFT_COMMAND>;
+    };
+CurrentFullScr:CurrentFullScr {
+      label = "CurrentFullScr";
+      compatible = "zmk,behavior-macro";
+#binding-cells = < 0>;
+      bindings = 
+      <&macro_press &kp LALT &kp LEFT_COMMAND>,
+      <&macro_tap &kp F>,
+      <&macro_release &kp LALT &kp LEFT_COMMAND>;
+    };
+CurrentMinScr:CurrentMinScr {
+      label = "CurrentMinScr";
+      compatible = "zmk,behavior-macro";
+#binding-cells = < 0>;
+      bindings = 
+      <&macro_press &kp LALT &kp LEFT_COMMAND>,
+      <&macro_tap &kp C>,
+      <&macro_release &kp LALT &kp LEFT_COMMAND>;
+    };
+CurrentMidScr: CurrentMidScr {
+      label = "CurrentMidScr";
+      compatible = "zmk,behavior-macro";
+#binding-cells = < 0>;
+      bindings = 
+      <&macro_press &kp LALT &kp LEFT_COMMAND>,
+      <&macro_tap &kp V>,
+      <&macro_release &kp LALT &kp LEFT_COMMAND>;
+    };
+
+CurrentOtherHide: CurrentOtherHide {
+      label = "CurrentOtherHide";
+      compatible = "zmk,behavior-macro";
+#binding-cells = < 0>;
+      bindings = 
+      <&macro_press &kp LALT &kp LEFT_COMMAND>,
+      <&macro_tap &kp M>,
+      <&macro_release &kp LALT &kp LEFT_COMMAND>;
     };
 
   ArrowBracketsStart:
@@ -138,6 +262,85 @@
       <&macro_tap &kp FSLH &kp P &kp R &kp I &kp N &kp T &kp S &kp E &kp E &kp D &kp S>,
       <&macro_tap &kp ENTER>;
     };
+
+WezSwitchPaneRight: WezSwitchPaneRight{
+    compatible = "zmk,behavior-macro";
+    label = "WezSwitchPaneRight";
+    #binding-cells = <0>;
+    bindings
+        = <&macro_press &kp LCTRL>
+        , <&macro_tap &kp B>
+        , <&macro_release &kp LCTRL>
+        , <&macro_tap &kp P &kp RIGHT>
+        ;
+};
+
+WezSwitchPaneLeft: WezSwitchPaneLeft{
+    compatible = "zmk,behavior-macro";
+    label = "WezSwitchPaneLeft";
+    #binding-cells = <0>;
+    bindings
+        = <&macro_press &kp LCTRL>
+        , <&macro_tap &kp B>
+        , <&macro_release &kp LCTRL>
+        , <&macro_tap &kp P &kp LEFT>
+        ;
+};
+
+WezSwitchWS: WezSwitchWS{
+    compatible = "zmk,behavior-macro";
+    label = "WezSwitchWS";
+    #binding-cells = <0>;
+    bindings
+        = <&macro_press &kp LCTRL>
+        , <&macro_tap &kp B>
+        , <&macro_release &kp LCTRL>
+        , <&macro_tap &kp W>
+        ;
+};
+
+WezNextTab: WezNextTab{
+    compatible = "zmk,behavior-macro";
+    label = "WezNextTab;
+    #binding-cells = <0>;
+    bindings
+        = <&macro_press &kp LEFT_COMMAND>
+        , <&macro_tap &kp RIGHT>
+        , <&macro_release &kp LEFT_COMMAND>
+        ;
+};
+
+WezPrevTab: WezPrevTab{
+    compatible = "zmk,behavior-macro";
+    label = "WezPrevTab";
+    #binding-cells = <0>;
+    bindings
+        = <&macro_press &kp LEFT_COMMAND>
+        , <&macro_tap &kp LEFT>
+        , <&macro_release &kp LEFT_COMMAND>
+        ;
+};
+
+VimSaveClose: VimSaveClose{
+    compatible = "zmk,behavior-macro";
+    label = "VimSaveClose";
+    #binding-cells = <0>;
+    bindings = <&macro_tap &kp COLON &kp W &kp Q>;
+};
+
+VimSave: VimSave{
+    compatible = "zmk,behavior-macro";
+    label = "VimSave";
+    #binding-cells = <0>;
+    bindings = <&macro_tap &kp COLON &kp W>;
+};
+
+VimClose:VimClose {
+    compatible = "zmk,behavior-macro";
+    label = "VimClose";
+    #binding-cells = <0>;
+    bindings = <&macro_tap &kp COLON &kp Q>;
+};
 
     /*alt_1:
         alt_1 {
@@ -1147,15 +1350,15 @@ E & kp E & kp D & kp S>,
       bindings=<&none	&kp N1	&kp N2	&kp N3	&kp N4	&kp N5	&tog game					&tog bluetooth	&kp N6	&kp N7	&kp N8	&kp N9	&kp N0	&none
 &none	&kp Q	&kp W	&kp E	&kp R	&kp T	&kp C_BRIGHTNESS_INC					&kp C_VOL_UP	&kp Y	&kp U	&kp I	&kp O	&none	&none
 &kp CAPS	&kp A	&kp S	&lt lower D	&lt raise F	&kp G	&kp C_BRIGHTNESS_DEC	&kp LEFT_COMMAND	&kp F13	&none	&kp RIGHT_COMMAND	&kp C_VOL_DN	&kp H	&lt raise J	&kp K	&kp L	&kp P	&kp MINUS
-&kp LCTRL	&kp Z	&kp X	&kp C	&kp V	&kp B			&none	&none			&kp N	&lt wezHamKar M	&kp COMMA	&mt LEFT_COMMAND DOT	&kp FSLH	&kp LCTRL
+&kp LCTRL	&kp Z	&kp X	&kp C	&kp V	&kp B			&none	&none			&kp N	&lt apper M	&kp COMMA	&mt LEFT_COMMAND DOT	&kp FSLH	&kp LCTRL
 &mo functions	&kp C_PLAY_PAUSE	&none	&none	&none		&mt LSHIFT SPACE	&mt LALT ESC	&none	&none	&kp ENTER	&kp BSPC		&kp TAB	&none	&none	&none	&mo functions>;
     };
     lower {
-      bindings=<&none	&none	&none	&none	&none	&none	&none					&none	&none	&none	&none	&none	&none	&none
-&none	&none	&none	&none	&none	&none	&none					&none	&none	&none	&none	&none	&none	&none
-&none	&CaretMoveToHome	&kp LEFT	&none	&kp RIGHT	&none	&none	&OsSearch	&kp F13	&none	&kp RIGHT_COMMAND	&none	&none	&kp DOWN	&none	&kp UP	&CaretMoveToEnd	&none
-&kp LCTRL	&none	&none	&none	&none	&none			&none	&none			&none	&none	&none	&kp LEFT_COMMAND	&none	&kp LCTRL
-&none	&none	&none	&none	&none		&trans	&kp LALT	&none	&none	&kp ENTER	&kp DEL		&none	&none	&none	&none	&none>;
+	    bindings=<&none	&none	&none	&none	&none	&none	&none					&none	&none	&none	&none	&none	&none	&none
+&none	&none	&WezSwitchWS	&none	&none	&none	&none					&none	&none	&WezSwitchPaneLeft	&VimSaveClose	&WezSwitchPaneRight	&none	&none
+&none	&CaretMoveToHome	&kp LEFT	&none	&kp RIGHT	&none	&none	&OsSearch	&none	&none	&kp RIGHT_COMMAND	&none	&none	&kp DOWN	&VimSave	&kp UP	&CaretMoveToEnd	&none
+&kp LCTRL	&none	&none	&none	&WezPrevTab	&none			&none	&none			&none	&WezNextTab	&VimClose	&kp LEFT_COMMAND	&none	&kp LCTRL
+&none	&none	&none	&none	&none		&trans	&kp LALT	&none	&none	&kp ENTER	&kp DEL		&none	&none	&none	&none	&none>; 
     };
     raise {
       bindings=<&none	&none	&none	&none	&none	&none	&none					&none	&none	&none	&none	&none	&none	&none
@@ -1178,11 +1381,11 @@ E & kp E & kp D & kp S>,
 &none	&none	&none	&none	&DiviBuyMacro	&ValheimPrint	&none		&none	&none			&none	&none	&none	&none	&none	&none
 &none	&none	&none	&none	&none		&none	&none	&none	&none	&none	&none		&none	&none	&none	&none	&none>;
     };
-    wezHamKar {
+    apper {
       bindings=<&none	&none	&none	&none	&none	&none	&none					&none	&none	&none	&none	&none	&none	&none
 &none	&none	&none	&none	&none	&none	&none					&none	&none	&none	&none	&none	&none	&none
-&none	&AppSwitch_1	&AppSwitch_2	&none	&none	&none	&none	&none	&none	&none	&none	&none	&none	&none	&none	&none	&none	&none
-&none	&none	&none	&none	&none	&none	&none		&none	&none			&none	&none	&none	&none	&none	&none
+&none	&AppSwitch_1	&AppSwitch_2	&AppSwitch_3	&AppSwitch_4	&AppSwitch_5	&none	&none	&none	&none	&none	&none	&none	&none	&none	&none	&none	&none
+&none	&none	&none	&none	&AppSwitch_7	&AppSwitch_6	&none		&none	&none			&none	&none	&none	&none	&none	&none
 &none	&none	&none	&none	&none		&none	&none	&none	&none	&none	&none		&none	&none	&none	&none	&none>;
     };
     functions {
