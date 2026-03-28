@@ -295,7 +295,7 @@ WezSwitchWS: WezSwitchWS{
         = <&macro_press &kp LCTRL>
         , <&macro_tap &kp B>
         , <&macro_release &kp LCTRL>
-        , <&macro_tap &kp W>
+        , <&macro_tap &kp S>
         ;
 };
 
