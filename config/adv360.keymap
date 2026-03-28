@@ -1383,9 +1383,9 @@ E & kp E & kp D & kp S>,
     };
     apper {
       bindings=<&none	&none	&none	&none	&none	&none	&none					&none	&none	&none	&none	&none	&none	&none
-&none	&none	&none	&none	&none	&none	&none					&none	&none	&none	&none	&none	&none	&none
-&none	&AppSwitch_1	&AppSwitch_2	&AppSwitch_3	&AppSwitch_4	&AppSwitch_5	&none	&none	&none	&none	&none	&none	&none	&none	&none	&none	&none	&none
-&none	&none	&none	&none	&AppSwitch_7	&AppSwitch_6	&none		&none	&none			&none	&none	&none	&none	&none	&none
+&none	&none	&CurrentLeft	&none	&CurrentRight	&none	&none					&none	&none	&none	&none	&none	&none	&none
+&none	&AppSwitch_1	&AppSwitch_2	&AppSwitch_3	&AppSwitch_4	&AppSwitch_5	&none	&none	&none	&none	&none	&none	&none	&none	&CurrentFullScr	&CurrentMidScr	&CurrentMinScr	&none
+&none	&none	&CurrentOtherHide	&none	&AppSwitch_7	&AppSwitch_6	&none		&none	&none			&none	&none	&WebDevModeMid	&WebDevModeMin	&none	&none
 &none	&none	&none	&none	&none		&none	&none	&none	&none	&none	&none		&none	&none	&none	&none	&none>;
     };
     functions {
