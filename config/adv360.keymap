@@ -95,8 +95,8 @@ AppSwitch_7:
       <&macro_release &kp LEFT_WIN &kp LSHIFT &kp LCTRL &kp LEFT_COMMAND &kp LALT>;
     };
 
-WebDevModeMinname:WebDevModeMinname {
-      label = "WebDevModeMinname";
+WebDevModeMin:WebDevModeMin {
+      label = "WebDevModeMin";
       compatible = "zmk,behavior-macro";
 #binding-cells = < 0>;
       bindings = 
