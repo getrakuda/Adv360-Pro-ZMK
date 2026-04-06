@@ -589,14 +589,14 @@ CurrentOtherHide: CurrentOtherHide {
 &none	&none	&none	&none	&none		&none	&none	&none	&none	&none	&none		&none	&none	&none	&none	&none>;
     };
     vimPrevSearch {bindings=<&none	&none	&none	&none	&none	&none	&none					&none	&none	&none	&none	&none	&none	&none
-&none	&none	VimPrevSearchRightBLKT	VimPrevSearchRightMBLKT	VimPrevSearchRightParenc	&none	&none					&none	&none	VimPrevSearchFunction	&none	&none	&tog vimPrevSearch	&none
-&none	VimPrevSearchLeftArrow	VimPrevSearchLeftBLKT	VimPrevSearchLeftMBLKT	VimPrevSearchLeftParenc	VimPrevSearchRightArrow	&none	&none	&none	&none	&none	&none	&none	VimPrevSearchAsync	&none	&none	&none	&none
-&none	&none	&none	&none	&none	&none			&none	&none			&none	VimPrevSearchFn	&none	&none	&none	&none
+&none	&none	&VimPrevSearchRightBLKT	&VimPrevSearchRightMBLKT	&VimPrevSearchRightParenc	&none	&none					&none	&none	&VimPrevSearchFunction	&none	&none	&tog vimPrevSearch	&none
+&none	&VimPrevSearchLeftArrow	&VimPrevSearchLeftBLKT	&VimPrevSearchLeftMBLKT	&VimPrevSearchLeftParenc	&VimPrevSearchRightArrow	&none	&none	&none	&none	&none	&none	&none	&VimPrevSearchAsync	&none	&none	&none	&none
+&none	&none	&none	&none	&none	&none			&none	&none			&none	&VimPrevSearchFn	&none	&none	&none	&none
 &none	&none	&none	&none	&none		&none	&tog vimPrevSearch	&none	&none	&none	&none		&none	&none	&none	&none	&none>;};
     vimNextSearch {bindings=<&none	&none	&none	&none	&none	&none	&none					&none	&none	&none	&none	&none	&none	&none
-&none	&none	VimNextSearchRightBLKT	VimNextSearchRightMBLKT	VimNextSearchRightParenc	&none	&none					&none	&none	VimNextSearchFunction	&none	&none	&none	&none
-&none	VimNextSearchRightArrow	VimNextSearchLeftBLKT	VimNextSearchLeftMBLKT	VimNextSearchLeftParenc	VimNextSearchLeftArrow	&none	&none	&none	&none	&none	&none	&none	VimNextSearchAsync	&none	&none	&none	&tog vimNextSearch
-&none	&none	&none	&none	&none	&none			&none	&none			&none	VimNextSearchFn	&none	&none	&none	&none
+&none	&none	&VimNextSearchRightBLKT	&VimNextSearchRightMBLKT	&VimNextSearchRightParenc	&none	&none					&none	&none	&VimNextSearchFunction	&none	&none	&none	&none
+&none	&VimNextSearchRightArrow	&VimNextSearchLeftBLKT	&VimNextSearchLeftMBLKT	&VimNextSearchLeftParenc	&VimNextSearchLeftArrow	&none	&none	&none	&none	&none	&none	&none	&VimNextSearchAsync	&none	&none	&none	&tog vimNextSearch
+&none	&none	&none	&none	&none	&none			&none	&none			&none	&VimNextSearchFn	&none	&none	&none	&none
 &none	&none	&none	&none	&none		&none	&tog vimNextSearch	&none	&none	&none	&none		&none	&none	&none	&none	&none>;};
   };
 };
