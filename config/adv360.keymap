@@ -22,9 +22,165 @@
 #define apper 5
 #define functions 6
 #define bluetooth 7
+#define vimPrevSearch 8
+#define vimNextSearch 9
 
 / {
   macros {
+	VimPrevSearchLeftArrow: VimPrevSearchLeftArrow {
+		compatible = "zmk,behavior-macro";
+		#binding-cells = < 0>;
+		bindings = <&macro_tap &kp QUES &kp LESS_THAN &kp ENTER>;
+	};
+	VimPrevSearchRightArrow: VimPrevSearchRightArrow {
+		compatible = "zmk,behavior-macro";
+		#binding-cells = < 0>;
+		bindings = <&macro_tap &kp QUES &kp GREATER_THAN &kp ENTER>;
+	};
+	VimPrevSearchLeftBLKT: VimPrevSearchLeftBLKT {
+		compatible = "zmk,behavior-macro";
+		#binding-cells = < 0>;
+		bindings = <&macro_tap &kp QUES &kp LBKT &kp ENTER>;
+	};
+	VimPrevSearchRightBLKT: VimPrevSearchRightBLKT {
+		compatible = "zmk,behavior-macro";
+		#binding-cells = < 0>;
+		bindings = <&macro_tap &kp QUES &kp RBKT &kp ENTER>;
+	};
+	VimPrevSearchLeftMBLKT: VimPrevSearchLeftMBLKT {
+		compatible = "zmk,behavior-macro";
+		#binding-cells = < 0>;
+		bindings =
+			<&macro_tap &kp QUES>,
+			<&macro_press &kp LSHIFT>,
+			<&macro_tap &kp LBKT>,
+			<&macro_release &kp LSHIFT>,
+			<&macro_tap &kp ENTER>;
+	};
+	VimPrevSearchRightMBLKT: VimPrevSearchRightMBLKT {
+		compatible = "zmk,behavior-macro";
+		#binding-cells = < 0>;
+		bindings =
+			<&macro_tap &kp QUES>,
+			<&macro_press &kp LSHIFT>,
+			<&macro_tap &kp RBKT>,
+			<&macro_release &kp LSHIFT>,
+			<&macro_tap &kp ENTER>;
+	};
+	VimPrevSearchLeftParenc: VimPrevSearchLeftParenc {
+		compatible = "zmk,behavior-macro";
+		#binding-cells = < 0>;
+		bindings =
+			<&macro_tap &kp QUES>,
+			<&macro_press &kp LSHIFT>,
+			<&macro_tap &kp N9>,
+			<&macro_release &kp LSHIFT>,
+			<&macro_tap &kp ENTER>;
+	};
+	VimPrevSearchRightParenc: VimPrevSearchRightParenc {
+		compatible = "zmk,behavior-macro";
+		#binding-cells = < 0>;
+		bindings =
+			<&macro_tap &kp QUES>,
+			<&macro_press &kp LSHIFT>,
+			<&macro_tap &kp N0>,
+			<&macro_release &kp LSHIFT>,
+			<&macro_tap &kp ENTER>;
+	};
+
+	VimNextSearchLeftArrow: VimNextSearchLeftArrow {
+		compatible = "zmk,behavior-macro";
+		#binding-cells = <0>;
+		bindings = <&macro_tap &kp FSLH &kp LESS_THAN &kp ENTER>;
+	};
+	VimNextSearchRightArrow: VimNextSearchRightArrow {
+		compatible = "zmk,behavior-macro";
+		#binding-cells = <0>;
+		bindings = <&macro_tap &kp FSLH &kp GREATER_THAN &kp ENTER>;
+	};
+	VimNextSearchLeftBLKT: VimNextSearchLeftBLKT {
+		compatible = "zmk,behavior-macro";
+		#binding-cells = < 0>;
+		bindings = <&macro_tap &kp FSLH &kp LBKT &kp ENTER>;
+	};
+	VimNextSearchRightBLKT: VimNextSearchRightBLKT {
+		compatible = "zmk,behavior-macro";
+		#binding-cells = < 0>;
+		bindings = <&macro_tap &kp FSLH &kp RBKT &kp ENTER>;
+	};
+	VimNextSearchLeftMBLKT: VimNextSearchLeftMBLKT {
+		compatible = "zmk,behavior-macro";
+		#binding-cells = < 0>;
+		bindings =
+			<&macro_tap &kp FSLH>,
+			<&macro_press &kp LSHIFT>,
+			<&macro_tap &kp LBKT>,
+			<&macro_release &kp LSHIFT>,
+			<&macro_tap &kp ENTER>;
+	};
+	VimNextSearchRightMBLKT: VimNextSearchRightMBLKT {
+		compatible = "zmk,behavior-macro";
+		#binding-cells = < 0>;
+		bindings =
+			<&macro_tap &kp FSLH>,
+			<&macro_press &kp LSHIFT>,
+			<&macro_tap &kp RBKT>,
+			<&macro_release &kp LSHIFT>,
+			<&macro_tap &kp ENTER>;
+	};
+	VimNextSearchLeftParenc: VimNextSearchLeftParenc {
+		compatible = "zmk,behavior-macro";
+		#binding-cells = < 0>;
+		bindings =
+			<&macro_tap &kp FSLH>,
+			<&macro_press &kp LSHIFT>,
+			<&macro_tap &kp N9>,
+			<&macro_release &kp LSHIFT>,
+			<&macro_tap &kp ENTER>;
+	};
+	VimNextSearchRightParenc: VimNextSearchRightParenc {
+		compatible = "zmk,behavior-macro";
+		#binding-cells = < 0>;
+		bindings =
+			<&macro_tap &kp FSLH>,
+			<&macro_press &kp LSHIFT>,
+			<&macro_tap &kp N0>,
+			<&macro_release &kp LSHIFT>,
+			<&macro_tap &kp ENTER>;
+	};
+
+	VimNextSearchFunction: VimNextSearchFunction {
+		compatible = "zmk,behavior-macro";
+		#binding-cells = < 0>;
+		bindings = <&macro_tap &kp FSLH &kp F &kp U &kp N &kp C &kp T &kp I &kp O &kp N &kp ENTER>;
+	};
+	VimNextSearchAsync: VimNextSearchAsync {
+		compatible = "zmk,behavior-macro";
+		#binding-cells = < 0>;
+		bindings = <&macro_tap &kp FSLH &kp A &kp S &kp Y &kp N &kp C &kp ENTER>;
+	};
+	VimNextSearchFn: VimNextSearchFn {
+		compatible = "zmk,behavior-macro";
+		#binding-cells = < 0>;
+		bindings = <&macro_tap &kp FSLH &kp F &kp N &kp ENTER>;
+	};
+
+	VimPrevSearchFunction: VimPrevSearchFunction {
+		compatible = "zmk,behavior-macro";
+		#binding-cells = < 0>;
+		bindings = <&macro_tap &kp QUES &kp F &kp U &kp N &kp C &kp T &kp I &kp O &kp N &kp ENTER>;
+	};
+	VimPrevSearchAsync: VimPrevSearchAsync {
+		compatible = "zmk,behavior-macro";
+		#binding-cells = < 0>;
+		bindings = <&macro_tap &kp QUES &kp A &kp S &kp Y &kp N &kp C &kp ENTER>;
+	};
+	VimPrevSearchFn: VimPrevSearchFn {
+		compatible = "zmk,behavior-macro";
+		#binding-cells = < 0>;
+		bindings = <&macro_tap &kp QUES &kp F &kp N &kp ENTER>;
+	};
+
   AppSwitch_1:
     AppSwitch_1 {
       label = "AppSwitch_1";
@@ -273,1061 +429,85 @@ CurrentOtherHide: CurrentOtherHide {
       <&macro_tap &kp ENTER>;
     };
 
-WezSwitchPaneRight: WezSwitchPaneRight{
-    compatible = "zmk,behavior-macro";
-    label = "WezSwitchPaneRight";
-    #binding-cells = <0>;
-    bindings
-        = <&macro_press &kp LCTRL>
-        , <&macro_tap &kp B>
-        , <&macro_release &kp LCTRL>
-        , <&macro_tap &kp P &kp RIGHT>
-        ;
-};
-
-WezSwitchPaneLeft: WezSwitchPaneLeft{
-    compatible = "zmk,behavior-macro";
-    label = "WezSwitchPaneLeft";
-    #binding-cells = <0>;
-    bindings
-        = <&macro_press &kp LCTRL>
-        , <&macro_tap &kp B>
-        , <&macro_release &kp LCTRL>
-        , <&macro_tap &kp P &kp LEFT>
-        ;
-};
-
-WezSwitchWS: WezSwitchWS{
-    compatible = "zmk,behavior-macro";
-    label = "WezSwitchWS";
-    #binding-cells = <0>;
-    bindings
-        = <&macro_press &kp LCTRL>
-        , <&macro_tap &kp B>
-        , <&macro_release &kp LCTRL>
-        , <&macro_tap &kp S>
-        ;
-};
-
-WezNextTab: WezNextTab{
-    compatible = "zmk,behavior-macro";
-    label = "WezNextTab";
-    #binding-cells = <0>;
-    bindings
-        = <&macro_press &kp LEFT_COMMAND>
-        , <&macro_tap &kp RIGHT>
-        , <&macro_release &kp LEFT_COMMAND>
-        ;
-};
-
-WezPrevTab: WezPrevTab{
-    compatible = "zmk,behavior-macro";
-    label = "WezPrevTab";
-    #binding-cells = <0>;
-    bindings
-        = <&macro_press &kp LEFT_COMMAND>
-        , <&macro_tap &kp LEFT>
-        , <&macro_release &kp LEFT_COMMAND>
-        ;
-};
-
-VimSaveClose: VimSaveClose{
-    compatible = "zmk,behavior-macro";
-    label = "VimSaveClose";
-    #binding-cells = <0>;
-    bindings = <&macro_tap &kp COLON &kp W &kp Q>;
-};
-
-VimSave: VimSave{
-    compatible = "zmk,behavior-macro";
-    label = "VimSave";
-    #binding-cells = <0>;
-    bindings = <&macro_tap &kp COLON &kp W>;
-};
-
-VimClose:VimClose {
-    compatible = "zmk,behavior-macro";
-    label = "VimClose";
-    #binding-cells = <0>;
-    bindings = <&macro_tap &kp COLON &kp Q>;
-};
-
-    /*alt_1:
-        alt_1 {
-            label = "alt_1";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_press & kp LALT>, <&macro_tap & kp N1>,
-<&macro_release & kp LALT>;
-        };
-    alt_shift_1:
-        alt_shift_1 {
-            label = "rkd_mcr_alt_shift_1";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_press & kp LALT & kp LCTRL>, <&macro_tap & kp
-N1>, <&macro_release & kp LALT & kp LCTRL>;
-        };
-    CtrlM_S:
-        CtrlM_S {
-            label = "CtrlM_S";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_press & kp LCTRL>, <&macro_tap & kp M & kp S>,
-<&macro_release & kp LCTRL>;
-        };
-    CtrlM_E:
-        CtrlM_E {
-            label = "CtrlM_E";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_press & kp LCTRL>, <&macro_tap & kp M & kp E>,
-<&macro_release & kp LCTRL>;
-        };
-    CtrlK_I:
-        CtrlK_I {
-            label = "CtrlK_I";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_press & kp LCTRL>, <&macro_tap & kp K & kp I>,
-<&macro_release & kp LCTRL>;
-        };
-    SelectCodeCaretUp:
-        SelectCodeCaretUp {
-            label = "SelectCodeCaretUp";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_press & kp LCTRL & kp LALT & kp LSHIFT>,
-<&macro_tap & kp LEFT_BRACKET>, <&macro_release & kp LCTRL & kp LALT & kp
-LSHIFT>;
-        };
-    SelectCodeCaretDown:
-        SelectCodeCaretDown {
-            label = "SelectCodeCaretDown";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_press & kp LCTRL & kp LALT & kp LSHIFT>,
-<&macro_tap & kp RIGHT_BRACKET>, <&macro_release & kp LCTRL & kp LALT & kp
-LSHIFT>;
-        };
-    KillApp:
-        KillApp {
-            label = "KillApp";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_press & kp LEFT_COMMAND>, <&macro_tap & kp Q>,
-<&macro_release & kp LEFT_COMMAND>;
-        };
-    MoveCaret:
-        MoveCaret {
-            label = "MoveCaret";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_press & kp LCTRL>, <&macro_tap & kp
-RIGHT_BRACKET>, <&macro_release & kp LCTRL>;
-        };
-    SearchInFiles:
-        SearchInFiles {
-            label = "SearchInFiles";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_press & kp LCTRL & kp LSHIFT>, <&macro_tap & kp
-F>, <&macro_release & kp LCTRL & kp LSHIFT>;
-        };
-    CloseTab:
-        CloseTab {
-            label = "CloseTab";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_press & kp LEFT_COMMAND & kp LCTRL>, <&macro_tap
-& kp N0>, <&macro_release & kp LEFT_COMMAND & kp LCTRL>;
-        };
-    SearchText:
-        SearchText {
-            label = "SearchText";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_press & kp LCTRL & kp LSHIFT & kp LALT>,
-<&macro_tap & kp E>, <&macro_release & kp LCTRL & kp LSHIFT & kp LALT>;
-        };
-    AllSearch:
-        AllSearch {
-            label = "AllSearch";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_tap & kp LSHIFT & kp LSHIFT>;
-        };
-
-    InstantSearch:
-        InstantSearch {
-            label = "InstantSearch";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_press & kp LCTRL>, <&macro_tap & kp I>,
-<&macro_release & kp LCTRL>;
-        };
-    LastEditLocation:
-        LastEditLocation {
-            label = "LastEditLocation";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_press & kp LCTRL & kp LSHIFT>, <&macro_tap & kp
-BSPC>, <&macro_release & kp LCTRL & kp LSHIFT>;
-        };
-
-    NextEditLocation:
-        NextEditLocation {
-            label = "NextEditLocation";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_press & kp LCTRL & kp LSHIFT>, <&macro_tap & kp
-S>, <&macro_release & kp LCTRL & kp LSHIFT>;
-        };
-
-    GitWindow:
-        GitWindow {
-            label = "GitWindow";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_press & kp LALT>, <&macro_tap & kp N9>,
-<&macro_release & kp LALT>;
-        };
-
-    BackBlankLine:
-        BackBlankLine {
-            label = "BackBlankLine";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_press & kp LCTRL & kp LSHIFT>, <&macro_tap & kp
-M>, <&macro_release & kp LCTRL & kp LSHIFT>;
-        };
-    TabSplitToRight:
-        TabSplitToRight {
-            label = "TabSplitToRight";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_press & kp LCTRL & kp LSHIFT & kp LALT>,
-<&macro_tap & kp J>, <&macro_release & kp LCTRL & kp LSHIFT & kp LALT>;
-        };
-    ForWordBlankLine:
-        ForWordBlankLine {
-            label = "ForWordBlankLine";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_press & kp LCTRL & kp LSHIFT>, <&macro_tap & kp
-Y>, <&macro_release & kp LCTRL & kp LSHIFT>;
-        };
-    UnitTest:
-        UnitTest {
-            label = "UnitTest";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_press & kp LALT>, <&macro_tap & kp N8>,
-<&macro_release & kp LALT>;
-        };
-    FindWindow:
-        FindWindow {
-            label = "NodeLabel";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_press & kp LALT>, <&macro_tap & kp N3>,
-<&macro_release & kp LALT>;
-        };
-    PrevTab:
-        PrevTab {
-            label = "PrevTab";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_press & kp LCTRL & kp LALT & kp LSHIFT>,
-<&macro_tap & kp N2>, <&macro_release & kp LCTRL & kp LALT & kp LSHIFT>;
-        };
-    MultiCaret:
-        MultiCaret {
-            label = "MultiCaret";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_press & kp LALT & kp LSHIFT>, <&macro_tap & kp
-G>, <&macro_release & kp LALT & kp LSHIFT>;
-        };
-
-    Option_ArrowLeft:
-        Option_ArrowLeft {
-            label = " Option_ArrowLeft";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_press & kp LALT & kp LEFT_COMMAND>, <&macro_tap &
-kp LEFT>, <&macro_release & kp LALT & kp LEFT_COMMAND>;
-        };
-
-    Option_ArrowRight:
-        Option_ArrowRight {
-            label = "Option_ArrowRight";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_press & kp LALT & kp LEFT_COMMAND>, <&macro_tap &
-kp RIGHT>, <&macro_release & kp LALT & kp LEFT_COMMAND>;
-        };
-
-    Option_ArrowUp:
-        Option_ArrowUp {
-            label = "Option_ArrowUp";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_press & kp LALT>, <&macro_tap & kp UP>,
-<&macro_release & kp LALT>;
-        };
-    Option_ArrowDown:
-        Option_ArrowDown {
-            label = "Option_ArrowDown";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_press & kp LALT>, <&macro_tap & kp DOWN>,
-<&macro_release & kp LALT>;
-        };
-
-    RunWindow:
-        RunWindow {
-            label = "RunWindow";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_press & kp LALT>, <&macro_tap & kp N4>,
-<&macro_release & kp LALT>;
-        };
-    JumpNavigationBar:
-        JumpNavigationBar {
-            label = "JumpNavigationBar";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_press & kp LALT>, <&macro_tap & kp N6>,
-<&macro_release & kp LALT>;
-        };
-    BuildWindow:
-        BuildWindow {
-            label = "BuildWindow";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_press & kp LALT>, <&macro_tap & kp N0>,
-<&macro_release & kp LALT>;
-        };
-    ReOpenTab:
-        ReOpenTab {
-            label = "ReOpenTab";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_press & kp LCTRL & kp LSHIFT & kp LALT>,
-<&macro_tap & kp F4>, <&macro_release & kp LCTRL & kp LSHIFT & kp LALT>;
-        };
-    NextError:
-        NextError {
-            label = "NextError";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_press & kp LCTRL & kp LSHIFT>, <&macro_tap & kp
-N1>, <&macro_release & kp LCTRL & kp LSHIFT>;
-        };
-    PrevError:
-        PrevError {
-            label = "PrevError";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_press & kp LCTRL & kp LSHIFT>, <&macro_tap & kp
-N2>, <&macro_release & kp LCTRL & kp LSHIFT>;
-        };
-    NextTab:
-        NextTab {
-            label = "NextTab";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_press & kp LCTRL & kp LALT & kp LSHIFT>,
-<&macro_tap & kp N3>, <&macro_release & kp LCTRL & kp LALT & kp LSHIFT>;
-        };
-    PrevMethod:
-        PrevMethod {
-            label = "PrevMethod";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_press & kp LALT>, <&macro_tap & kp UP>,
-<&macro_release & kp LALT>;
-        };
-    NextMethod:
-        NextMethod {
-            label = "NextMethod";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_press & kp LALT>, <&macro_tap & kp DOWN>,
-<&macro_release & kp LALT>;
-        };
-    OpenBookMark:
-        OpenBookMark {
-            label = "OpenBookMark";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_press & kp LALT>, <&macro_tap & kp N2>,
-<&macro_release & kp LALT>;
-        };
-    SearchFile:
-        SearchFile {
-            label = "SearchFile";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_press & kp LCTRL & kp LSHIFT>, <&macro_tap & kp
-T>, <&macro_release & kp LCTRL & kp LSHIFT>;
-        };
-
-    JB_Rider_Build:
-        JB_Rider_Build {
-            label = "JB_Rider_Build";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_press & kp LCTRL & kp LSHIFT>, <&macro_tap & kp
-B>, <&macro_release & kp LCTRL & kp LSHIFT>;
-        };
-
-    JB_Rider_Run:
-        JB_Rider_Run {
-            label = "JB_Rider_Run";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_press & kp LCTRL & kp LSHIFT>, <&macro_tap & kp
-F5>, <&macro_release & kp LCTRL & kp LSHIFT>;
-        };
-
-    JB_Rider_Stop:
-        JB_Rider_Stop {
-            label = "JB_Rider_Stop";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_press & kp LSHIFT>, <&macro_tap & kp F5>,
-<&macro_release & kp LSHIFT>;
-        };
-    AppSwitch_1:
-        AppSwitch_1 {
-            label = "AppSwitch_1";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_press & kp LEFT_WIN & kp LSHIFT & kp LCTRL & kp
-LEFT_COMMAND & kp LALT>, <&macro_tap & kp N1>, <&macro_release & kp LEFT_WIN &
-kp LSHIFT & kp LCTRL & kp LEFT_COMMAND & kp LALT>;
-        };
-
-    AppSwitch_2:
-        AppSwitch_2 {
-            label = "AppSwitch_2";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings =
-                <&macro_press & kp LEFT_WIN & kp LSHIFT & kp LCTRL & kp
-LEFT_COMMAND & kp LALT>,
-            <&macro_tap & kp N2>,
-            <&macro_release & kp LEFT_WIN & kp LSHIFT & kp LCTRL & kp
-LEFT_COMMAND & kp LALT>;
-        };
-
-    AppSwitch_3:
-        AppSwitch_3 {
-            label = "AppSwitch_3";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_press & kp LEFT_WIN & kp LSHIFT & kp LCTRL & kp
-LEFT_COMMAND & kp LALT>, <&macro_tap & kp N3>, <&macro_release & kp LEFT_WIN &
-kp LSHIFT & kp LCTRL & kp LEFT_COMMAND & kp LALT>;
-        };
-
-    AppSwitch_4:
-        AppSwitch_4 {
-            label = "AppSwitch_4";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_press & kp LEFT_WIN & kp LSHIFT & kp LCTRL & kp
-LEFT_COMMAND & kp LALT>, <&macro_tap & kp N4>, <&macro_release & kp LEFT_WIN &
-kp LSHIFT & kp LCTRL & kp LEFT_COMMAND & kp LALT>;
-        };
-
-    AppSwitch_5:
-        AppSwitch_5 {
-            label = "AppSwitch_5";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_press & kp LEFT_WIN & kp LSHIFT & kp LCTRL & kp
-LEFT_COMMAND & kp LALT>, <&macro_tap & kp N5>, <&macro_release & kp LEFT_WIN &
-kp LSHIFT & kp LCTRL & kp LEFT_COMMAND & kp LALT>;
-        };
-
-    AppSwitch_6:
-        AppSwitch_6 {
-            label = "AppSwitch_6";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_press & kp LEFT_WIN & kp LSHIFT & kp LCTRL & kp
-LEFT_COMMAND & kp LALT>, <&macro_tap & kp N6>, <&macro_release & kp LEFT_WIN &
-kp LSHIFT & kp LCTRL & kp LEFT_COMMAND & kp LALT>;
-        };
-
-    AppSwitch_7:
-        AppSwitch_7 {
-            label = "AppSwitch_7";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_press & kp LEFT_WIN & kp LSHIFT & kp LCTRL & kp
-LEFT_COMMAND & kp LALT>, <&macro_tap & kp N7>, <&macro_release & kp LEFT_WIN &
-kp LSHIFT & kp LCTRL & kp LEFT_COMMAND & kp LALT>;
-        };
-
-    AppSwitch_8:
-        AppSwitch_8 {
-            label = "AppSwitch_8";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_press & kp LEFT_WIN & kp LSHIFT & kp LCTRL & kp
-LEFT_COMMAND & kp LALT>, <&macro_tap & kp N8>, <&macro_release & kp LEFT_WIN &
-kp LSHIFT & kp LCTRL & kp LEFT_COMMAND & kp LALT>;
-        };
-
-    AppSwitch_9:
-        AppSwitch_9 {
-            label = "AppSwitch_9";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_press & kp LEFT_WIN & kp LSHIFT & kp LCTRL & kp
-LEFT_COMMAND & kp LALT>, <&macro_tap & kp N9>, <&macro_release & kp LEFT_WIN &
-kp LSHIFT & kp LCTRL & kp LEFT_COMMAND & kp LALT>;
-        };
-
-    AppSwitch_10:
-        AppSwitch_10 {
-            label = "AppSwitch_10";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings =
-                <&macro_press & kp LEFT_WIN & kp LSHIFT & kp LCTRL & kp
-LEFT_COMMAND & kp LALT>,
-            <&macro_tap & kp Z>,
-            <&macro_release & kp LEFT_WIN & kp LSHIFT & kp LCTRL & kp
-LEFT_COMMAND & kp LALT>;
-        };
-
-    AppSwitch_11:
-        AppSwitch_11 {
-            label = "AppSwitch_11";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings =
-                <&macro_press & kp LEFT_WIN & kp LSHIFT & kp LCTRL & kp
-LEFT_COMMAND & kp LALT>,
-            <&macro_tap & kp X>,
-            <&macro_release & kp LEFT_WIN & kp LSHIFT & kp LCTRL & kp
-LEFT_COMMAND & kp LALT>;
-        };
-
-    OsSearch:
-        OsSearch {
-            label = "OsSearch";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_press & kp LEFT_COMMAND>, <&macro_tap & kp
-SPACE>, <&macro_release & kp LEFT_COMMAND>;
-        };
-
-    CommentOut:
-        CommentOut {
-            label = "CommentOut";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_press & kp LSHIFT & kp LCTRL>, <&macro_tap & kp
-FSLH>, <&macro_release & kp LSHIFT & kp LCTRL>;
-        };
-    ShadowPlaySS:
-        ShadowPlaySS {
-            label = "ShadowPlaySS";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_press & kp LALT>, <&macro_tap & kp F1>,
-<&macro_release & kp LALT>;
-        };
-    ShadowPlayIR:
-        ShadowPlayIR {
-            label = "ShadowPlayIR";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_press & kp LALT>, <&macro_tap & kp F10>,
-<&macro_release & kp LALT>;
-        };
-    DiviOpenLoadOut:
-        DiviOpenLoadOut {
-            label = "DiviOpenLoadOut";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_tap & kp TAB & kp H>;
-        };
-    DiviBuyMacro:
-        DiviBuyMacro {
-            label = "DiviBuyMacro";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_tap & kp SPACE & kp G>;
-        };
-    DiviOpenSocial:
-        DiviOpenSocial {
-            label = "DiviOpenSocial";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_tap & kp ESC & kp A & kp S & kp SPACE>;
-        };
-    ScrollToCenter:
-        ScrollToCenter {
-            label = "ScrollToCenter";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings =
-                <&macro_press & kp LCTRL>,
-            <&macro_tap & kp M>,
-            <&macro_release & kp LCTRL>,
-            <&macro_tap & kp C>;
-        };
-    SelectWord:
-        SelectWord {
-            label = "SelectWord";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings =
-                <&macro_press & kp LCTRL>,
-            <&macro_tap & kp W>,
-            <&macro_release & kp LCTRL>;
-        };
-    SelectWordReverse:
-        SelectWordReverse {
-            label = "SelectWordReverse";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings =
-                <&macro_press & kp LCTRL & kp LSHIFT>,
-            <&macro_tap & kp W>,
-            <&macro_release & kp LCTRL & kp LSHIFT>;
-        };
-    ValheimPrint:
-        ValheimPrint {
-            label = "ValheimPrint";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings =
-                <&macro_tap & kp ENTER>,
-            <&macro_tap & kp MINUS & kp MINUS>,
-            <&macro_tap & kp ENTER>,
-            <&macro_tap & kp ENTER>,
-            <&macro_tap & kp FSLH & kp P & kp R & kp I & kp N & kp T & kp S & kp
-E & kp E & kp D & kp S>,
-            <&macro_tap & kp ENTER>;
-        };
-
-    SelectParagraphForward:
-        SelectParagraphForward {
-            label = "SelectParagraphForward";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings =
-                <&macro_press & kp LCTRL & kp LSHIFT & kp LALT>,
-            <&macro_tap & kp Y>,
-            <&macro_release & kp LCTRL & kp LSHIFT & kp LALT>;
-        };
-    SelectParagraphBack:
-        SelectParagraphBack {
-            label = "SelectParagraphBack";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings =
-                <&macro_press & kp LCTRL & kp LSHIFT & kp LALT>,
-            <&macro_tap & kp S>,
-            <&macro_release & kp LCTRL & kp LSHIFT & kp LALT>;
-        };
-    QuickDefinition:
-        QuickDefinition {
-            label = "QuickDefinition";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings =
-                <&macro_press & kp LCTRL & kp LALT & kp LSHIFT>,
-            <&macro_tap & kp Z>,
-            <&macro_release & kp LCTRL & kp LALT & kp LSHIFT>;
-        };
-
-    GitCommit:
-        GitCommit {
-            label = "GitCommit";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings =
-                <&macro_press & kp LCTRL & kp LALT>,
-            <&macro_tap & kp K>,
-            <&macro_release & kp LCTRL & kp LALT>;
-        };
-
-    OpenSearchStructure:
-        OpenSearchStructure {
-            label = "OpenSearchStructure";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings =
-                <&macro_press & kp LCTRL & kp LALT & kp LSHIFT>,
-            <&macro_tap & kp F>,
-            <&macro_release & kp LCTRL & kp LALT & kp LSHIFT>;
-        };
-
-    OpenSearchSymbols:
-        OpenSearchSymbols {
-            label = "OpenSearchSymbols";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings =
-                <&macro_press & kp LCTRL & kp LALT & kp LSHIFT>,
-            <&macro_tap & kp T>,
-            <&macro_release & kp LCTRL & kp LALT & kp LSHIFT>;
-        };
-
-    SameWordsSelector:
-        SameWordsSelector {
-            label = "SameWordsSelector";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings =
-                <&macro_press & kp LALT & kp LCTRL>,
-            <&macro_tap & kp N2>,
-            <&macro_release & kp LALT & kp LCTRL>;
-        };
-
-    ToggleDistractionMode:
-        ToggleDistractionMode {
-            label = "ToggleDistractionMode";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings =
-                <&macro_press & kp LALT & kp LCTRL & kp LSHIFT>,
-            <&macro_tap & kp N2>,
-            <&macro_release & kp LALT & kp LCTRL & kp LSHIFT>;
-        };
-
-    LoopPrevShowEditor:
-        LoopPrevShowEditor {
-            label = "LoopPrevShowEditor";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings =
-                <&macro_press & kp LCTRL>,
-            <&macro_tap & kp TAB>,
-            <&macro_release & kp LCTRL>;
-        };
-    ArrowBracketsStart:
-        ArrowBracketsStart {
-            label = "ArrowBracketsStart";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings =
-                <&macro_press & kp LSHIFT>,
-            <&macro_tap & kp COMMA>,
-            <&macro_release & kp LSHIFT>;
-        };
-
-    ArrowBracketsEnd:
-        ArrowBracketsEnd {
-            label = "ArrowBracketsEnd";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings =
-                <&macro_press & kp LSHIFT>,
-            <&macro_tap & kp DOT>,
-            <&macro_release & kp LSHIFT>;
-        };
-
-    SelectMultipleOccurence:
-        SelectMultipleOccurence {
-            label = "SelectMultipleOccurence";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings =
-                <&macro_press & kp LCTRL & kp LALT>,
-            <&macro_tap & kp N2>,
-            <&macro_release & kp LCTRL & kp LALT>;
-        };
-
-    RiderDebug:
-        RiderDebug {
-            label = "RiderDebug";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings =
-                <&macro_press & kp LALT & kp LSHIFT>,
-            <&macro_tap & kp F9>,
-            <&macro_release & kp LALT & kp LSHIFT>;
-        };
-
-    ShowDebug:
-        ShowDebug {
-            label = "ShowDebug";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings =
-                <&macro_press & kp LALT>,
-            <&macro_tap & kp N5>,
-            <&macro_release & kp LALT>;
-        };
-
-    MoveEditNextLocation:
-        MoveEditNextLocation {
-            label = "MoveEditNextLocation";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings =
-                <&macro_press & kp LALT & kp LSHIFT & kp LCTRL>,
-            <&macro_tap & kp J>,
-            <&macro_release & kp LALT & kp LSHIFT & kp LCTRL>;
-        };
-
-    JumpLastLeftWithCmd:
-        JumpLastLeftWithCmd {
-            label = "JumpLastLeftWithCmd";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings =
-                <&macro_press & kp LEFT_COMMAND>,
-            <&macro_tap & kp LEFT>,
-            <&macro_release & kp LEFT_COMMAND>;
-        };
-
-    JumpLastRightWithCmd:
-        JumpLastRightWithCmd {
-            label = "JumpLastRightWithCmd";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings =
-                <&macro_press & kp LEFT_COMMAND>,
-            <&macro_tap & kp RIGHT>,
-            <&macro_release & kp LEFT_COMMAND>;
-        };
-    CtxMenu:
-        CtxMenu {
-            label = "CtxMenu";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings =
-                <&macro_press & kp LEFT_COMMAND & kp LSHIFT>,
-            <&macro_tap & kp H>,
-            <&macro_release & kp LEFT_COMMAND & kp LSHIFT>;
-        };
-
-    CaretMoveToHome:
-        CaretMoveToHome {
-            label = "CaretMoveToHome";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings =
-                <&macro_press & kp LEFT_COMMAND>,
-            <&macro_tap & kp LEFT>,
-            <&macro_release & kp LEFT_COMMAND>;
-        };
-
-    CaretMoveToEnd:
-        CaretMoveToEnd {
-            label = "CaretMoveToEnd";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings =
-                <&macro_press & kp LEFT_COMMAND>,
-            <&macro_tap & kp RIGHT>,
-            <&macro_release & kp LEFT_COMMAND>;
-        };
-
-    ShowApps:
-        ShowApps {
-            label = "ShowApps";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings =
-                <&macro_press & kp LCTRL>,
-            <&macro_tap & kp UP>,
-            <&macro_release & kp LCTRL>;
-        };
-
-    FindUsagesWindow:
-        FindUsagesWindow {
-            label = "FindUsagesWindow";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings =
-                <&macro_press & kp LSHIFT & kp LEFT_COMMAND>,
-            <&macro_tap & kp B>,
-            <&macro_release & kp LSHIFT & kp LEFT_COMMAND>;
-        };
-
-    CaretHistoryBack:
-        CaretHistoryBack {
-            label = "CaretHistoryBack";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_press & kp LSHIFT & kp LEFT_COMMAND>, <&macro_tap
-& kp J>, <&macro_release & kp LSHIFT & kp LEFT_COMMAND>;
-        };
-
-    CaretHistoryNext:
-        CaretHistoryNext {
-            label = "CaretHistoryNext";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings = <&macro_press & kp LSHIFT & kp LEFT_COMMAND>, <&macro_tap
-& kp K>, <&macro_release & kp LSHIFT & kp LEFT_COMMAND>;
-        };
-
-    GoToSymbol:
-        GoToSymbol {
-            label = "GoToSymbol";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings =
-                <&macro_press & kp LEFT_COMMAND & kp LCTRL & kp LSHIFT>,
-            <&macro_tap & kp A>,
-            <&macro_release & kp LEFT_COMMAND & kp LCTRL & kp LSHIFT>;
-        };
-    GoToImplementation:
-        GoToImplementation {
-            label = "GoToImplementation";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings =
-                <&macro_press & kp LEFT_COMMAND & kp LALT>,
-            <&macro_tap & kp B>,
-            <&macro_release & kp LEFT_COMMAND & kp LALT>;
-        };
-
-    OpenAiWindow:
-        OpenAiWindow {
-            label = "OpenAiWindow";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings =
-                <&macro_press & kp LCTRL & kp LSHIFT>,
-            <&macro_tap & kp S>,
-            <&macro_release & kp LCTRL & kp LSHIFT>;
-        };
-
-    AskAiAssistant:
-        AskAiAssistant {
-            label = "AskAiAssistant";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings =
-                <&macro_press & kp LCTRL & kp LSHIFT>,
-            <&macro_tap & kp A>,
-            <&macro_release & kp LCTRL & kp LSHIFT>;
-        };
-
-    ProblemsWindow:
-        ProblemsWindow {
-            label = "ProblemsWindow";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings =
-                <&macro_press & kp LCTRL & kp LALT>,
-            <&macro_tap & kp P>,
-            <&macro_release & kp LCTRL & kp LALT>;
-        };
-
-    SplitToRightTab:
-        SplitToRightTab {
-            label = "SplitToRightTab";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings =
-                <&macro_press & kp LEFT_COMMAND & kp LSHIFT & kp LALT>,
-            <&macro_tap & kp Z>,
-            <&macro_release & kp LEFT_COMMAND & kp LSHIFT & kp LALT>;
-        };
-
-    MoveLeftTab:
-        MoveLeftTab {
-            label = "MoveLeftTab";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings =
-                <&macro_press & kp LEFT_COMMAND & kp LSHIFT & kp LALT>,
-            <&macro_tap & kp J>,
-            <&macro_release & kp LEFT_COMMAND & kp LSHIFT & kp LALT>;
-        };
-
-    MoveRightTab:
-        MoveRightTab {
-            label = "MoveRightTab";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings =
-                <&macro_press & kp LEFT_COMMAND & kp LSHIFT & kp LALT>,
-            <&macro_tap & kp L>,
-            <&macro_release & kp LEFT_COMMAND & kp LSHIFT & kp LALT>;
-        };
-
-    ToolWindowStretchTop:
-        ToolWindowStretchTop {
-            label = "ToolWindowStretchTop";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings =
-                <&macro_press & kp LEFT_COMMAND & kp LSHIFT & kp LALT>,
-            <&macro_tap & kp N2>,
-            <&macro_release & kp LEFT_COMMAND & kp LSHIFT & kp LALT>;
-        };
-
-    ToolWindowStretchDown:
-        ToolWindowStretchDown {
-            label = "ToolWindowStretchDown";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings =
-                <&macro_press & kp LEFT_COMMAND & kp LSHIFT & kp LALT>,
-            <&macro_tap & kp N1>,
-            <&macro_release & kp LEFT_COMMAND & kp LSHIFT & kp LALT>;
-        };
-
-    EditorStretchRight:
-        EditorStretchRight {
-            label = "EditorStretchRight";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings =
-                <&macro_press & kp LEFT_COMMAND & kp LSHIFT & kp LALT>,
-            <&macro_tap & kp N3>,
-            <&macro_release & kp LEFT_COMMAND & kp LSHIFT & kp LALT>;
-        };
-
-    EditorStretchLeft:
-        EditorStretchLeft {
-            label = "EditorStretchLeft";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings =
-                <&macro_press & kp LEFT_COMMAND & kp LSHIFT & kp LALT>,
-            <&macro_tap & kp N4>,
-            <&macro_release & kp LEFT_COMMAND & kp LSHIFT & kp LALT>;
-        };
-
-    ClosePj:
-        ClosePj {
-            label = "ClosePj";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings =
-                <&macro_press & kp LEFT_COMMAND & kp LSHIFT>,
-            <&macro_tap & kp N6>,
-            <&macro_release & kp LEFT_COMMAND & kp LSHIFT>;
-        };
-
-    OpenRecent:
-        OpenRecent {
-            label = "OpenRecent";
-            compatible = "zmk,behavior-macro";
-#binding - cells = < 0>;
-            bindings =
-                <&macro_press & kp LEFT_COMMAND & kp LSHIFT>,
-            <&macro_tap & kp N7>,
-            <&macro_release & kp LEFT_COMMAND & kp LSHIFT>;
-        };*/
-  };
+	WezSwitchPaneRight: WezSwitchPaneRight{
+	    compatible = "zmk,behavior-macro";
+	    label = "WezSwitchPaneRight";
+	    #binding-cells = <0>;
+	    bindings
+		= <&macro_press &kp LCTRL>
+		, <&macro_tap &kp B>
+		, <&macro_release &kp LCTRL>
+		, <&macro_tap &kp P &kp RIGHT>
+		;
+	};
+
+	WezSwitchPaneLeft: WezSwitchPaneLeft{
+	    compatible = "zmk,behavior-macro";
+	    label = "WezSwitchPaneLeft";
+	    #binding-cells = <0>;
+	    bindings
+		= <&macro_press &kp LCTRL>
+		, <&macro_tap &kp B>
+		, <&macro_release &kp LCTRL>
+		, <&macro_tap &kp P &kp LEFT>
+		;
+	};
+
+	WezSwitchWS: WezSwitchWS{
+	    compatible = "zmk,behavior-macro";
+	    label = "WezSwitchWS";
+	    #binding-cells = <0>;
+	    bindings
+		= <&macro_press &kp LCTRL>
+		, <&macro_tap &kp B>
+		, <&macro_release &kp LCTRL>
+		, <&macro_tap &kp S>
+		;
+	};
+
+	WezNextTab: WezNextTab{
+	    compatible = "zmk,behavior-macro";
+	    label = "WezNextTab";
+	    #binding-cells = <0>;
+	    bindings
+		= <&macro_press &kp LEFT_COMMAND>
+		, <&macro_tap &kp RIGHT>
+		, <&macro_release &kp LEFT_COMMAND>
+		;
+	};
+
+	WezPrevTab: WezPrevTab{
+	    compatible = "zmk,behavior-macro";
+	    label = "WezPrevTab";
+	    #binding-cells = <0>;
+	    bindings
+		= <&macro_press &kp LEFT_COMMAND>
+		, <&macro_tap &kp LEFT>
+		, <&macro_release &kp LEFT_COMMAND>
+		;
+	};
+
+	VimSaveClose: VimSaveClose{
+	    compatible = "zmk,behavior-macro";
+	    label = "VimSaveClose";
+	    #binding-cells = <0>;
+	    bindings = <&macro_tap &kp COLON &kp W &kp Q>;
+	};
+
+	VimSave: VimSave{
+	    compatible = "zmk,behavior-macro";
+	    label = "VimSave";
+	    #binding-cells = <0>;
+	    bindings = <&macro_tap &kp COLON &kp W>;
+	};
+
+	VimClose:VimClose {
+	    compatible = "zmk,behavior-macro";
+	    label = "VimClose";
+	    #binding-cells = <0>;
+	    bindings = <&macro_tap &kp COLON &kp Q>;
+	};
+	};
 };
 
 / {
@@ -1358,10 +538,10 @@ E & kp E & kp D & kp S>,
     compatible = "zmk,keymap";
     base {
 	    bindings=<&none	&kp N1	&kp N2	&kp N3	&kp N4	&kp N5	&tog game					&tog bluetooth	&kp N6	&kp N7	&kp N8	&kp N9	&kp N0	&none
-&kp TAB	&kp Q	&kp W	&kp E	&kp R	&kp T	&kp C_BRIGHTNESS_INC					&kp C_VOL_UP	&kp Y	&kp U	&kp I	&kp O	&none	&none
+&kp none	&kp Q	&kp W	&kp E	&kp R	&kp T	&kp C_BRIGHTNESS_INC					&kp C_VOL_UP	&kp Y	&kp U	&kp I	&kp O	&none	&none
 &kp CAPS	&kp A	&kp S	&lt lower D	&lt raise F	&kp G	&kp C_BRIGHTNESS_DEC	&kp LEFT_COMMAND	&none	&none	&kp RIGHT_COMMAND	&kp C_VOL_DN	&kp H	&lt raise J	&kp K	&kp L	&kp P	&none
-&kp LCTRL	&kp Z	&kp X	&kp C	&kp V	&kp B			&none	&none			&kp N	&lt apper M	&kp COMMA	&mt LEFT_COMMAND DOT	&none	&kp LCTRL
-&mo functions	&kp C_PLAY_PAUSE	&none	&none	&none		&mt LSHIFT SPACE	&mt LALT ESC	&none	&none	&kp ENTER	&kp BSPC		&none	&none	&none	&none	&mo functions>;
+&kp LCTRL	&kp Z	&kp X	&kp C	&kp V	&kp B			&none	&none			&kp N	&lt apper M	&kp COMMA	&mt LEFT_COMMAND DOT	&kp FLSH	&kp LCTRL
+&mo functions	&kp C_PLAY_PAUSE	&none	&none	&none		&mt LSHIFT SPACE	&mt LALT ESC	&none	&none	&kp ENTER	&kp BSPC		&kp TAB	&none	&none	&none	&mo functions>;
     };
     lower {bindings=<&none	&none	&none	&none	&none	&none	&none					&none	&none	&none	&none	&none	&none	&none
 &none	&none	&WezSwitchWS	&none	&none	&none	&none					&none	&none	&WezSwitchPaneLeft	&VimSaveClose	&WezSwitchPaneRight	&none	&none
@@ -1409,137 +589,15 @@ E & kp E & kp D & kp S>,
 &none	&none	&bt BT_CLR	&bt BT_CLR_ALL	&bootloader	&none			&none	&none			&none	&none	&none	&none	&none	&none
 &none	&none	&none	&none	&none		&none	&none	&none	&none	&none	&none		&none	&none	&none	&none	&none>;
     };
-
-    /*base_layer {
-        bindings = <
-            &none & kp N1 & kp N2 & kp N3 & kp N4 & kp N5 & tog game & tog
-    bluetooth & kp N6 & kp N7 & kp N8 & kp N9 & kp N0 & kp MINUS & ShowApps & kp
-    Q & kp W & kp E & kp R & kp T & kp C_BRIGHTNESS_INC & kp C_VOL_UP & kp Y &
-    kp U & kp I & kp O & mo jb_func & CommentOut & kp CAPS & kp A & kp S & lt
-    lower D & lt raise F & kp G & kp C_BRIGHTNESS_DEC & kp LEFT_COMMAND & kp F13
-    & none & kp RIGHT_COMMAND & kp C_VOL_DN & kp H & lt raise J & lt lower_sub K
-    & kp L & kp P & InstantSearch & kp LCTRL & kp Z & kp X & kp C & kp V & kp B
-    & none & none & kp N & lt app_switch M & kp COMMA & mt LEFT_COMMAND DOT & kp
-    FSLH & kp LCTRL & mo fn & kp C_PLAY_PAUSE & none & none & none & mt LSHIFT
-    SPACE & mt LALT ESC & none & none & kp ENTER & kp BSPC & kp TAB & none &
-    none & none & mo fn>;
-    };
-
-    lower {
-        bindings = <
-            &none & none & none & none & none & none & none & none & none & none
-    & none & none & none & none & none & none & alt_1 & none & alt_shift_1 &
-    GoToSymbol & none & none & CaretHistoryBack & AllSearch & FindUsagesWindow &
-    kp F12 & GoToImplementation & none & none & CaretMoveToHome & kp LEFT & none
-    & kp RIGHT & CtrlK_I & none & OsSearch & kp F13 & none & kp RIGHT_COMMAND &
-    none & CloseTab & kp DOWN & none & kp UP & CaretMoveToEnd & CtxMenu & none &
-    CtrlM_S & none & none & OpenSearchStructure & none & none & none &
-    CaretHistoryNext & LastEditLocation & NextEditLocation & kp LEFT_COMMAND &
-    CtrlM_E & none & none & none & none & none & none & trans & kp LALT & none &
-    none & kp ENTER & kp DEL & none & none & none & none & none>;
-    };
-
-    raise {
-        bindings = <
-            &none & none & none & none & none & none & none & none & none & none
-    & none & none & none & none & none & kp TILDE & kp UNDERSCORE & kp MINUS &
-    kp PLUS & kp AMPERSAND & none & none & kp PIPE & ArrowBracketsStart & kp
-    FSLH & ArrowBracketsEnd & none & none & kp GRAVE & kp EXCLAMATION & kp
-    AT_SIGN & kp HASH & kp DOUBLE_QUOTES & kp COLON & none & kp LEFT_COMMAND &
-    kp F13 & none & kp RIGHT_COMMAND & none & kp SEMICOLON & kp LEFT_PARENTHESIS
-    & kp ASTERISK & kp RIGHT_PARENTHESIS & kp EQUAL & none & none & kp CARET &
-    none & none & kp SINGLE_QUOTE & kp DLLR & none & none & kp PRCNT & kp LBKT &
-    none & kp RBKT & kp BSLH & none & none & none & none & none & none & mt
-    LSHIFT SPACE & mt ESC LALT & none & none & kp ENTER & kp BSPC & none & none
-    & none & none & none>;
-    };
-
-    lower_sub {
-        bindings = <
-            &none & none & none & none & none & none & none & none & none & none
-    & none & none & none & none & none & none & BackBlankLine &
-    SelectParagraphForward & ForWordBlankLine & UnitTest & none & none &
-    ProblemsWindow & FindWindow & none & QuickDefinition & none & none & none &
-    kp PG_UP & Option_ArrowLeft & MultiCaret & Option_ArrowRight & RunWindow &
-    none & none & none & none & none & none & ReOpenTab & MoveLeftTab & none &
-    MoveRightTab & kp PG_DN & none & none & none & PrevMethod &
-    SelectParagraphBack & NextMethod & BuildWindow & none & none & none & none &
-    none & none & none & none & none & none & none & none & none & none & none &
-    none & none & none & none & none & none & none & none & none>;
-    };
-
-    jb_func {
-        bindings = <
-            &none & none & none & none & none & none & none & none & none & none
-    & none & none & none & none & none & none & JB_Rider_Build & JB_Rider_Run &
-    JB_Rider_Stop & OpenSearchSymbols & none & none & none & EditorStretchLeft &
-    ToolWindowStretchTop & EditorStretchRight & none & none & none &
-    OpenAiWindow & AskAiAssistant & ToggleDistractionMode & GitCommit &
-    GitWindow & none & none & none & none & none & none & none & none &
-    ToolWindowStretchDown & none & none & none & none & none & none & none &
-    ClosePj & OpenRecent & none & none & none & none & none & none & none & none
-    & none & none & none & none & none & none & none & none & none & none & none
-    & none & none & none & none & none>;
-    };
-
-    app_switch {
-        bindings = <
-            &none & none & none & none & none & none & none & none & none & none
-    & none & none & none & none & none & none & PrevError & JumpNavigationBar &
-    NextError & none & none & none & none & none & AppSwitch_10 & AppSwitch_11 &
-    none & none & none & AppSwitch_1 & AppSwitch_2 & AppSwitch_3 & AppSwitch_4 &
-    AppSwitch_5 & none & none & none & none & none & none & none & none & none &
-    ScrollToCenter & none & none & none & none & none & none & AppSwitch_6 &
-    AppSwitch_7 & none & none & none & none & none & none & none & none & none &
-    none & none & none & AppSwitch_8 & AppSwitch_9 & none & none & none & none &
-    none & none & none & none & none & none>;
-    };
-
-    fn {
-        bindings = <
-            &none & kp F1 & kp F2 & kp F3 & kp F4 & kp F5 & none & none & kp F6
-    & kp F7 & kp F8 & kp F9 & kp F10 & kp F11 & none & bl BL_TOG & none & none &
-    none & none & none & none & none & none & none & none & none & none & none &
-    none & none & none & none & none & none & none & none & none & none & none &
-    none & none & none & none & none & none & none & none & none & none & none &
-    none & none & none & none & none & none & none & none & none & none & none &
-    none & none & none & none & none & none & none & none & none & none & none &
-    none & none & none>;
-    };
-
-    bluetooth {
-        bindings = <
-            &none & none & none & none & none & none & none & tog bluetooth &
-    none & none & none & none & none & none & none & none & none & none & none &
-    none & none & none & none & none & none & none & none & none & none & none &
-    bt BT_PRV & none & bt BT_NXT & none & none & none & none & none & none &
-    none & kp N6 & kp N7 & kp N8 & kp N9 & kp N0 & none & none & none & none &
-    bt BT_CLR & bt BT_CLR_ALL & bootloader & none & none & none & none & none &
-    none & none & none & none & none & none & none & none & none & none & none &
-    none & none & none & none & none & none & none & none>;
-    };
-
-    game {
-        bindings = <
-            &none & kp ESC & kp N1 & kp N2 & kp N3 & kp N4 & tog game & none &
-    none & none & none & none & none & none & kp LALT & kp TAB & kp Q & kp W &
-    kp E & kp R & kp Y & none & kp Y & kp U & kp I & kp O & none & none & kp T &
-    kp LSHIFT & kp A & kp S & kp D & kp F & kp G & kp B & kp F13 & none & none &
-    none & kp H & kp J & kp K & kp L & kp P & none & none & kp LCTRL & kp Z & kp
-    X & kp C & kp V & kp B & kp ENTER & kp F1 & kp N & kp M & kp COMMA & kp DOT
-    & none & none & ShadowPlaySS & ShadowPlayIR & none & kp N5 & kp SPACE & mo
-    game_lower & kp F2 & none & none & none & none & none & none & none & none>;
-    };
-    game_lower {
-        bindings = <
-            &none & none & kp F1 & kp F2 & kp F3 & kp F4 & none & none & none &
-    none & none & none & none & none & kp LALT & kp J & kp N6 & kp N7 & kp N8 &
-    kp ENTER & none & none & none & none & none & none & none & none & none & kp
-    BSPC & DiviOpenSocial & DiviOpenLoadOut & none & none & none & none & none &
-    none & none & none & none & none & none & none & none & none & none & none &
-    none & none & DiviBuyMacro & ValheimPrint & none & none & none & none & none
-    & none & none & none & none & none & none & none & none & none & none & none
-    & none & none & none & none & none & none & none & none & none>;
-    };*/
+    vimPrevSearch {bindings=<&none	&none	&none	&none	&none	&none	&none					&none	&none	&none	&none	&none	&none	&none
+&none	&none	VimPrevSearchRightBLKT	VimPrevSearchRightMBLKT	VimPrevSearchRightParenc	&none	&none					&none	&none	VimPrevSearchFunction	&none	&none	&tog vimPrevSearch	&none
+&none	VimPrevSearchLeftArrow	VimPrevSearchLeftBLKT	VimPrevSearchLeftMBLKT	VimPrevSearchLeftParenc	VimPrevSearchRightArrow	&none	&none	&none	&none	&none	&none	&none	VimPrevSearchAsync	&none	&none	&none	&none
+&none	&none	&none	&none	&none	&none			&none	&none			&none	VimPrevSearchFn	&none	&none	&none	&none
+&none	&none	&none	&none	&none		&none	&tog vimPrevSearch	&none	&none	&none	&none		&none	&none	&none	&none	&none>;};
+    vimNextSearch {bindings=<&none	&none	&none	&none	&none	&none	&none					&none	&none	&none	&none	&none	&none	&none
+&none	&none	VimNextSearchRightBLKT	VimNextSearchRightMBLKT	VimNextSearchRightParenc	&none	&none					&none	&none	VimNextSearchFunction	&none	&none	&none	&none
+&none	VimNextSearchRightArrow	VimNextSearchLeftBLKT	VimNextSearchLeftMBLKT	VimNextSearchLeftParenc	VimNextSearchLeftArrow	&none	&none	&none	&none	&none	&none	&none	VimNextSearchAsync	&none	&none	&none	&tog vimNextSearch
+&none	&none	&none	&none	&none	&none			&none	&none			&none	VimNextSearchFn	&none	&none	&none	&none
+&none	&none	&none	&none	&none		&none	&tog vimNextSearch	&none	&none	&none	&none		&none	&none	&none	&none	&none>;};
   };
 };
