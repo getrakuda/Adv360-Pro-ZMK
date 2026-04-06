@@ -30,28 +30,28 @@
 	VimPrevSearchLeftArrow: VimPrevSearchLeftArrow {
 		compatible = "zmk,behavior-macro";
 		#binding-cells = < 0>;
-		bindings = <&macro_tap &kp QUES &kp LESS_THAN &kp ENTER>;
+		bindings = <&macro_tap &kp QUESTION &kp LESS_THAN &kp ENTER>;
 	};
 	VimPrevSearchRightArrow: VimPrevSearchRightArrow {
 		compatible = "zmk,behavior-macro";
 		#binding-cells = < 0>;
-		bindings = <&macro_tap &kp QUES &kp GREATER_THAN &kp ENTER>;
+		bindings = <&macro_tap &kp QUESTION &kp GREATER_THAN &kp ENTER>;
 	};
 	VimPrevSearchLeftBLKT: VimPrevSearchLeftBLKT {
 		compatible = "zmk,behavior-macro";
 		#binding-cells = < 0>;
-		bindings = <&macro_tap &kp QUES &kp LBKT &kp ENTER>;
+		bindings = <&macro_tap &kp QUESTION &kp LBKT &kp ENTER>;
 	};
 	VimPrevSearchRightBLKT: VimPrevSearchRightBLKT {
 		compatible = "zmk,behavior-macro";
 		#binding-cells = < 0>;
-		bindings = <&macro_tap &kp QUES &kp RBKT &kp ENTER>;
+		bindings = <&macro_tap &kp QUESTION &kp RBKT &kp ENTER>;
 	};
 	VimPrevSearchLeftMBLKT: VimPrevSearchLeftMBLKT {
 		compatible = "zmk,behavior-macro";
 		#binding-cells = < 0>;
 		bindings =
-			<&macro_tap &kp QUES>,
+			<&macro_tap &kp QUESTION>,
 			<&macro_press &kp LSHIFT>,
 			<&macro_tap &kp LBKT>,
 			<&macro_release &kp LSHIFT>,
@@ -61,7 +61,7 @@
 		compatible = "zmk,behavior-macro";
 		#binding-cells = < 0>;
 		bindings =
-			<&macro_tap &kp QUES>,
+			<&macro_tap &kp QUESTION>,
 			<&macro_press &kp LSHIFT>,
 			<&macro_tap &kp RBKT>,
 			<&macro_release &kp LSHIFT>,
@@ -71,7 +71,7 @@
 		compatible = "zmk,behavior-macro";
 		#binding-cells = < 0>;
 		bindings =
-			<&macro_tap &kp QUES>,
+			<&macro_tap &kp QUESTION>,
 			<&macro_press &kp LSHIFT>,
 			<&macro_tap &kp N9>,
 			<&macro_release &kp LSHIFT>,
@@ -81,7 +81,7 @@
 		compatible = "zmk,behavior-macro";
 		#binding-cells = < 0>;
 		bindings =
-			<&macro_tap &kp QUES>,
+			<&macro_tap &kp QUESTION>,
 			<&macro_press &kp LSHIFT>,
 			<&macro_tap &kp N0>,
 			<&macro_release &kp LSHIFT>,
@@ -168,17 +168,17 @@
 	VimPrevSearchFunction: VimPrevSearchFunction {
 		compatible = "zmk,behavior-macro";
 		#binding-cells = < 0>;
-		bindings = <&macro_tap &kp QUES &kp F &kp U &kp N &kp C &kp T &kp I &kp O &kp N &kp ENTER>;
+		bindings = <&macro_tap &kp QUESTION &kp F &kp U &kp N &kp C &kp T &kp I &kp O &kp N &kp ENTER>;
 	};
 	VimPrevSearchAsync: VimPrevSearchAsync {
 		compatible = "zmk,behavior-macro";
 		#binding-cells = < 0>;
-		bindings = <&macro_tap &kp QUES &kp A &kp S &kp Y &kp N &kp C &kp ENTER>;
+		bindings = <&macro_tap &kp QUESTION &kp A &kp S &kp Y &kp N &kp C &kp ENTER>;
 	};
 	VimPrevSearchFn: VimPrevSearchFn {
 		compatible = "zmk,behavior-macro";
 		#binding-cells = < 0>;
-		bindings = <&macro_tap &kp QUES &kp F &kp N &kp ENTER>;
+		bindings = <&macro_tap &kp QUESTION &kp F &kp N &kp ENTER>;
 	};
 
   AppSwitch_1:
