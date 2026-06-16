@@ -507,6 +507,57 @@ CurrentOtherHide: CurrentOtherHide {
 	    #binding-cells = <0>;
 	    bindings = <&macro_tap &kp COLON &kp Q>;
 	};
+
+	PubgMuteTog:PubgMuteTog {
+	    compatible = "zmk,behavior-macro";
+	    label = "p";
+	    #binding-cells = <0>;
+	    bindings = <&macro_tap &kp COLON &kp Q>;
+	};
+
+	PubgKrStepLeft:PubgKrStepLeft {
+	    compatible = "zmk,behavior-macro";
+	    label = "PubgKrStepLeft";
+	    #binding-cells = <0>;
+	    bindings = <&macro_tap &kp COLON &kp Q>;
+	};
+
+	PubgKrStepRight:PubgKrStepRight {
+	    compatible = "zmk,behavior-macro";
+	    label = "PubgKrStepRight";
+	    #binding-cells = <0>;
+	    bindings = <&macro_tap &kp COLON &kp Q>;
+	};
+
+	PubgCarSeet1:PubgCarSeet1 {
+	    compatible = "zmk,behavior-macro";
+	    label = "PubgCarSeet1";
+	    #binding-cells = <0>;
+	    bindings = <&macro_tap &kp COLON &kp Q>;
+	};
+
+	PubgCarSeet2:PubgCarSeet2 {
+	    compatible = "zmk,behavior-macro";
+	    label = "PubgCarSeet2";
+	    #binding-cells = <0>;
+	    bindings = <&macro_tap &kp COLON &kp Q>;
+	};
+
+	PubgCarSeet3:PubgCarSeet3 {
+	    compatible = "zmk,behavior-macro";
+	    label = "PubgCarSeet3";
+	    #binding-cells = <0>;
+	    bindings = <&macro_tap &kp COLON &kp Q>;
+	};
+
+	PubgCarSeet4:PubgCarSeet4 {
+	    compatible = "zmk,behavior-macro";
+	    label = "PubgCarSeet4";
+	    #binding-cells = <0>;
+	    bindings = <&macro_tap &kp COLON &kp Q>;
+	};
+
+
 	};
 };
 
@@ -539,7 +590,7 @@ CurrentOtherHide: CurrentOtherHide {
     base {
 	    bindings=<&none	&kp N1	&kp N2	&kp N3	&kp N4	&kp N5	&tog game					&tog bluetooth	&kp N6	&kp N7	&kp N8	&kp N9	&kp N0	&none
 &none	&kp Q	&kp W	&kp E	&kp R	&kp T	&kp C_BRIGHTNESS_INC					&kp C_VOL_UP	&kp Y	&kp U	&kp I	&kp O	&none	&none
-&kp CAPS	&kp A	&kp S	&lt lower D	&lt raise F	&kp G	&kp C_BRIGHTNESS_DEC	&kp LEFT_COMMAND	&none	&none	&kp RIGHT_COMMAND	&kp C_VOL_DN	&kp H	&lt raise J	&kp K	&kp L	&kp P	&none
+&kp CAPS	&kp A	&kp S	&lt lower D	&lt raise F	&kp G	&kp C_BRIGHTNESS_DEC	&kp LEFT_COMMAND	&none	&none	&kp RIGHT_COMMAND	&kp C_VOL_DN	&kp H	&lt raise J	&kp K	&kp L	&kp P	&kp FSLH
 &kp LCTRL	&kp Z	&kp X	&kp C	&kp V	&kp B			&none	&none			&kp N	&lt apper M	&kp COMMA	&mt LEFT_COMMAND DOT	&kp FSLH	&kp LCTRL
 &mo functions	&kp C_PLAY_PAUSE	&none	&none	&none		&mt LSHIFT SPACE	&mt LALT ESC	&none	&none	&kp ENTER	&kp BSPC		&kp TAB	&none	&none	&none	&mo functions>; };
     lower {bindings=<&none	&none	&none	&none	&none	&none	&none					&none	&none	&none	&none	&none	&none	&none
