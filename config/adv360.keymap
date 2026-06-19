@@ -581,7 +581,7 @@ CurrentOtherHide: CurrentOtherHide {
 
 	VimCtrlO: VimCtrlO{
 	    compatible = "zmk,behavior-macro";
-	    label = "VimCtrlI";
+	    label = "VimCtrlO";
 	    #binding-cells = <0>;
 	    bindings
 		= <&macro_press &kp LCTRL>
