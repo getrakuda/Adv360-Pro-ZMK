@@ -533,28 +533,44 @@ CurrentOtherHide: CurrentOtherHide {
 	    compatible = "zmk,behavior-macro";
 	    label = "PubgCarSeet1";
 	    #binding-cells = <0>;
-	    bindings = <&macro_tap &kp COLON &kp Q>;
+	    bindings  
+		= <&macro_press &kp LCTRL>
+		, <&macro_tap &kp N1>
+		, <&macro_release &kp LEFT_COMMAND>
+		;
 	};
 
 	PubgCarSeet2:PubgCarSeet2 {
 	    compatible = "zmk,behavior-macro";
 	    label = "PubgCarSeet2";
 	    #binding-cells = <0>;
-	    bindings = <&macro_tap &kp COLON &kp Q>;
+	    bindings  
+		= <&macro_press &kp LCTRL>
+		, <&macro_tap &kp N2>
+		, <&macro_release &kp LEFT_COMMAND>
+		;
 	};
 
 	PubgCarSeet3:PubgCarSeet3 {
 	    compatible = "zmk,behavior-macro";
 	    label = "PubgCarSeet3";
 	    #binding-cells = <0>;
-	    bindings = <&macro_tap &kp COLON &kp Q>;
+	    bindings  
+		= <&macro_press &kp LCTRL>
+		, <&macro_tap &kp N3>
+		, <&macro_release &kp LEFT_COMMAND>
+		;
 	};
 
 	PubgCarSeet4:PubgCarSeet4 {
 	    compatible = "zmk,behavior-macro";
 	    label = "PubgCarSeet4";
 	    #binding-cells = <0>;
-	    bindings = <&macro_tap &kp COLON &kp Q>;
+	    bindings  
+		= <&macro_press &kp LCTRL>
+		, <&macro_tap &kp N4>
+		, <&macro_release &kp LEFT_COMMAND>
+		;
 	};
 
 	VimCtrlU: VimCtrlU{
@@ -601,7 +617,7 @@ CurrentOtherHide: CurrentOtherHide {
 		;
 	};
 
-	};
+     };
 };
 
 / {
@@ -656,9 +672,9 @@ CurrentOtherHide: CurrentOtherHide {
 &none	&ShadowPlaySS	&ShadowPlayIR	&none	&kp N5		&kp SPACE	&mo gameLower	&none	&none	&kp ENTER	&kp BSPC		&none	&none	&none	&none	&none>;
     };
     gameLower {bindings=<&none	&kp F1	&kp F2	&kp F3	&kp F4	&kp F5	&none					&none	&none	&none	&none	&none	&none	&none
-&none	&kp LALT	&kp N6	&kp N7	&kp N8	&kp ENTER	&none					&none	&none	&none	&none	&none	&none	&none
-&none	&none	&none	&none	&none	&none	&none	&none	&none	&none	&none	&none	&none	&none	&none	&none	&none	&none
-&none &kp H	&kp J	&kp K	&kp L	&kp N			&none	&none			&none	&none	&none	&none	&none	&none
+&kp LALT	&kp N6	&kp N7	&kp N8	&kp N9	&kp ENTER	&none					&none	&none	&none	&none	&none	&none	&none
+&kp LS(LALT)	&PubgCarSeet1	&PubgCarSeet2	&PubgCarSeet3	&PubgCarSeet4	&none	&none	&none	&none	&none	&none	&none	&none	&none	&none	&none	&none	&none
+&none	&kp H	&kp J	&kp K	&kp L	&kp N			&none	&none			&none	&none	&none	&none	&none	&none
 &none	&none	&none	&none	&none		&none	&none	&none	&none	&none	&none		&none	&none	&none	&none	&none>;
     };
     apper {
