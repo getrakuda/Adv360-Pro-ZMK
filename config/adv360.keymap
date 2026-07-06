@@ -630,9 +630,7 @@ CurrentOtherHide: CurrentOtherHide {
                 , <&macro_wait_time 20>
                 , <&macro_tap &kp C>
                 , <&macro_wait_time 20>
-                
-                // 3. マクロの最後で、W と LSHIFT を再びプレス（押しっぱなし）状態に戻す
-                , <&macro_press &kp W &kp LSHIFT>;
+		, <&macro_tap &kp W &kp LSHIFT>;
         };
 
      };
