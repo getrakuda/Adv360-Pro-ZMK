@@ -759,7 +759,7 @@ CurrentOtherHide: CurrentOtherHide {
 &none	&none	&none	&none	&none		&none	&none	&none	&none	&none	&none		&none	&none	&none	&none	&none>;
     };
 
-wezWsSwitchLayer{bindings<
+wezWsSwitchLayer{bindings=<
 	&none	&none	&none	&none	&none	&none	&none					&none	&none	&none	&none	&none	&none	&none
 &none	&none	&none	&none	&none	&none	&none					&none	&none	&none	&none	&none	&none	&none
 &none	&WezWs1	&WezWs2	&WezWs3	&WezWs4	&WezWs5	&none	&none	&none	&none	&none	&none	&none	&none	&none	&none	&none	&none
