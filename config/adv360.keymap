@@ -725,11 +725,11 @@ CurrentOtherHide: CurrentOtherHide {
 &none	&none	&none	&none	&none		&mt LSHIFT SPACE	&mt ESC LALT	&none	&none	&kp ENTER	&kp BSPC		&none	&none	&none	&none	&none>;
     };
     game {
-	    bindings=<&kp U	&kp N1	&kp N2	&kp N3	&kp N4	&kp N5	&kp N6					&none	&none	&none	&none	&none	&none	&none
-&kp I	&kp TAB	&kp Q	&kp W	&kp E	&kp R	&kp Y					&none	&none	&none	&none	&none	&none	&none
+	    bindings=<&none	&kp ESC	&kp N1	&kp N2	&kp N3	&kp N4	&mo gameLower					&none	&none	&none	&none	&none	&none	&none
+&none	&kp TAB	&kp Q	&kp W	&kp E	&kp R	&kp Y					&none	&none	&none	&none	&none	&none	&none
 &kp T	&kp LSHIFT	&kp A	&kp S	&kp D	&kp F	&kp G	&kp B	&none	&none	&none	&none	&none	&none	&none	&none	&none	&none
-&kp O	&kp LCTRL	&kp Z	&kp X	&kp C	&kp V			&none	&none			&none	&kp M	&kp COMMA	&kp DOT	&kp FSLH	&none
-&none	&ShadowPlaySS	&ShadowPlayIR	&kp P	&kp LALT		&kp SPACE	&mo gameLower	&tog game	&none	&kp ENTER	&kp BSPC		&none	&none	&none	&none	&none>;
+&kp LALT	&kp LCTRL	&kp Z	&kp X	&kp C	&kp V			&none	&none			&none	&kp M	&kp COMMA	&kp DOT	&kp FSLH	&none
+&none	&ShadowPlaySS	&ShadowPlayIR	&kp P	&kp N5		&kp SPACE	&none	&tog game	&none	&kp ENTER	&kp BSPC		&none	&none	&none	&none	&none>;
     };
     gameLower {bindings=<&none	&none	&none	&none	&none	&none	&none					&none	&none	&none	&none	&none	&none	&none
 &none	&kp N6	&kp N7	&kp N8	&kp N9	&kp N0	&none					&none	&none	&none	&none	&none	&none	&none
