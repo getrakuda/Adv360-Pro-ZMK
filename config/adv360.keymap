@@ -22,8 +22,7 @@
 #define apper 5
 #define functions 6
 #define bluetooth 7
-#define vimPrevSearch 8
-#define vimNextSearch 9
+#define wezWsSwitchLayer 8
 
 / {
   macros {
@@ -618,21 +617,65 @@ CurrentOtherHide: CurrentOtherHide {
 		;
 	};
 
-	// タップするだけで一連のフローを完結させるマクロ
-        KrSteps: KrSteps {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                // 1. いま押されている可能性のある移動キーをすべて強制リリース（一瞬だけ移動を止める）
-                = <&macro_release &kp W &kp A &kp D &kp LSHIFT>
-                
-                // 2. Cキーを2回タップ（認識できるよう、ごくわずかなウェイトを入れる）
-                , <&macro_tap &kp C>
-                , <&macro_wait_time 20>
-                , <&macro_tap &kp C>
-                , <&macro_wait_time 20>
-		, <&macro_tap &kp W &kp LSHIFT>;
-        };
+	WezWs1: WezWs1{
+	    compatible = "zmk,behavior-macro";
+	    label = "WezWs1";
+	    #binding-cells = <0>;
+	    bindings
+		= <&macro_press &kp LALT>
+		, <&macro_tap &kp B>
+		, <&macro_release &kp LALT>
+		, <&macro_tap &kp N1>
+		;
+	};
+
+	WezWs2: WezWs2{
+	    compatible = "zmk,behavior-macro";
+	    label = "WezWs2";
+	    #binding-cells = <0>;
+	    bindings
+		= <&macro_press &kp LALT>
+		, <&macro_tap &kp B>
+		, <&macro_release &kp LALT>
+		, <&macro_tap &kp N2>
+		;
+	};
+
+	WezWs3: WezWs3{
+	    compatible = "zmk,behavior-macro";
+	    label = "WezWs3";
+	    #binding-cells = <0>;
+	    bindings
+		= <&macro_press &kp LALT>
+		, <&macro_tap &kp B>
+		, <&macro_release &kp LALT>
+		, <&macro_tap &kp N3>
+		;
+	};
+
+	WezWs4: WezWs4{
+	    compatible = "zmk,behavior-macro";
+	    label = "WezWs4";
+	    #binding-cells = <0>;
+	    bindings
+		= <&macro_press &kp LALT>
+		, <&macro_tap &kp B>
+		, <&macro_release &kp LALT>
+		, <&macro_tap &kp N4>
+		;
+	};
+
+	WezWs5: WezWs5{
+	    compatible = "zmk,behavior-macro";
+	    label = "WezWs5";
+	    #binding-cells = <0>;
+	    bindings
+		= <&macro_press &kp LALT>
+		, <&macro_tap &kp B>
+		, <&macro_release &kp LALT>
+		, <&macro_tap &kp N5>
+		;
+	};
 
      };
 };
@@ -665,7 +708,7 @@ CurrentOtherHide: CurrentOtherHide {
     compatible = "zmk,keymap";
     base {
 	    bindings=<&none	&kp N1	&kp N2	&kp N3	&kp N4	&kp N5	&tog game					&tog bluetooth	&kp N6	&kp N7	&kp N8	&kp N9	&kp N0	&none
-&none	&kp Q	&kp W	&kp E	&kp R	&kp T	&kp C_BRIGHTNESS_INC					&kp C_VOL_UP	&kp Y	&kp U	&kp I	&kp O	&none	&none
+&none	&kp Q	&kp W	&kp E	&kp R	&kp T	&kp C_BRIGHTNESS_INC					&kp C_VOL_UP	&kp Y	&kp U	&kp I	&kp O	&mo wezWsSwitchLayer	&none
 &kp CAPS	&kp A	&kp S	&lt lower D	&lt raise F	&kp G	&kp C_BRIGHTNESS_DEC	&kp LEFT_COMMAND	&none	&none	&kp RIGHT_COMMAND	&kp C_VOL_DN	&kp H	&lt raise J	&kp K	&kp L	&kp P	&kp FSLH
 &kp LCTRL	&kp Z	&kp X	&kp C	&kp V	&kp B			&none	&none			&kp N	&lt apper M	&kp COMMA	&mt LEFT_COMMAND DOT	&kp FSLH	&kp LCTRL
 &mo functions	&kp C_PLAY_PAUSE	&none	&none	&none		&mt LSHIFT SPACE	&mt LALT ESC	&none	&none	&kp ENTER	&kp BSPC		&kp TAB	&none	&none	&none	&mo functions>; };
@@ -682,16 +725,16 @@ CurrentOtherHide: CurrentOtherHide {
 &none	&none	&none	&none	&none		&mt LSHIFT SPACE	&mt ESC LALT	&none	&none	&kp ENTER	&kp BSPC		&none	&none	&none	&none	&none>;
     };
     game {
-	    bindings=<&none	&kp ESC	&kp N1	&kp N2	&kp N3	&kp N4	&tog game					&none	&kp N6	&kp N7	&kp N8	&kp N9	&kp N0	&none
-&kp LALT	&kp TAB	&kp Q	&kp W	&kp E	&kp R	&kp Y					&none	&kp Y	&kp U	&kp I	&kp O	&none	&none
-&kp T	&kp LSHIFT	&kp A	&kp S	&kp D	&kp F	&kp G	&kp B	&none	&none	&none	&none	&kp H	&kp J	&kp K	&kp L	&kp P	&none
-&none	&kp LCTRL	&kp Z	&kp X	&kp C	&kp V			&none	&none			&kp N	&kp M	&kp COMMA	&kp DOT	&kp FSLH	&none
-&none	&ShadowPlaySS	&ShadowPlayIR	&none	&kp N5		&kp SPACE	&mo gameLower	&none	&none	&kp ENTER	&kp BSPC		&none	&none	&none	&none	&none>;
+	    bindings=<&kp U	&kp N1	&kp N2	&kp N3	&kp N4	&kp N5	&kp N6					&none	&none	&none	&none	&none	&none	&none
+&kp I	&kp TAB	&kp Q	&kp W	&kp E	&kp R	&kp Y					&none	&none	&none	&none	&none	&none	&none
+&kp T	&kp LSHIFT	&kp A	&kp S	&kp D	&kp F	&kp G	&kp B	&none	&none	&none	&none	&none	&none	&none	&none	&none	&none
+&kp O	&kp LCTRL	&kp Z	&kp X	&kp C	&kp V			&none	&none			&none	&kp M	&kp COMMA	&kp DOT	&kp FSLH	&none
+&none	&ShadowPlaySS	&ShadowPlayIR	&kp P	&kp LALT		&kp SPACE	&mo gameLower	&tog game	&none	&kp ENTER	&kp BSPC		&none	&none	&none	&none	&none>;
     };
-    gameLower {bindings=<&none	&kp F1	&kp F2	&kp F3	&kp F4	&kp F5	&none					&none	&none	&none	&none	&none	&none	&none
-&kp LALT	&kp N6	&kp N7	&kp N8	&kp N9	&kp ENTER	&none					&none	&none	&none	&none	&none	&none	&none
-&none	&PubgCarSeet1	&PubgCarSeet2	&PubgCarSeet3	&PubgCarSeet4	&none	&none	&none	&none	&none	&none	&none	&none	&none	&none	&none	&none	&none
-&none	&kp H	&kp J	&kp K	&kp L	&kp N			&none	&none			&none	&none	&none	&none	&none	&none
+    gameLower {bindings=<&none	&none	&none	&none	&none	&none	&none					&none	&none	&none	&none	&none	&none	&none
+&none	&kp N6	&kp N7	&kp N8	&kp N9	&kp N0	&none					&none	&none	&none	&none	&none	&none	&none
+&none	&kp F1	&kp F2	&kp F3	&kp F4	&kp F5	&none	&none	&none	&none	&none	&none	&none	&none	&none	&none	&none	&none
+&kp N	&kp H	&kp J	&kp K	&kp L	&none			&none	&none			&none	&none	&none	&none	&none	&none
 &none	&none	&none	&none	&none		&none	&none	&none	&none	&none	&none		&none	&none	&none	&none	&none>;
     };
     apper {
@@ -715,15 +758,15 @@ CurrentOtherHide: CurrentOtherHide {
 &none	&none	&bt BT_CLR	&bt BT_CLR_ALL	&bootloader	&none			&none	&none			&none	&none	&none	&none	&none	&none
 &none	&none	&none	&none	&none		&none	&none	&none	&none	&none	&none		&none	&none	&none	&none	&none>;
     };
-    vimPrevSearch {bindings=<&none	&none	&none	&none	&none	&none	&none					&none	&none	&none	&none	&none	&none	&none
-&none	&none	&VimPrevSearchRightBLKT	&VimPrevSearchRightMBLKT	&VimPrevSearchRightParenc	&none	&none					&none	&none	&VimPrevSearchFunction	&none	&none	&tog vimPrevSearch	&none
-&none	&VimPrevSearchLeftArrow	&VimPrevSearchLeftBLKT	&VimPrevSearchLeftMBLKT	&VimPrevSearchLeftParenc	&VimPrevSearchRightArrow	&none	&none	&none	&none	&none	&none	&none	&VimPrevSearchAsync	&none	&none	&none	&none
-&none	&none	&none	&none	&none	&none			&none	&none			&none	&VimPrevSearchFn	&none	&none	&none	&none
-&none	&none	&none	&none	&none		&none	&tog vimPrevSearch	&none	&none	&none	&none		&none	&none	&none	&none	&none>;};
-    vimNextSearch {bindings=<&none	&none	&none	&none	&none	&none	&none					&none	&none	&none	&none	&none	&none	&none
-&none	&none	&VimNextSearchRightBLKT	&VimNextSearchRightMBLKT	&VimNextSearchRightParenc	&none	&none					&none	&none	&VimNextSearchFunction	&none	&none	&none	&none
-&none	&VimNextSearchRightArrow	&VimNextSearchLeftBLKT	&VimNextSearchLeftMBLKT	&VimNextSearchLeftParenc	&VimNextSearchLeftArrow	&none	&none	&none	&none	&none	&none	&none	&VimNextSearchAsync	&none	&none	&none	&tog vimNextSearch
-&none	&none	&none	&none	&none	&none			&none	&none			&none	&VimNextSearchFn	&none	&none	&none	&none
-&none	&none	&none	&none	&none		&none	&tog vimNextSearch	&none	&none	&none	&none		&none	&none	&none	&none	&none>;};
+
+wezWsSwitchLayer{bindings<
+	&none	&none	&none	&none	&none	&none	&none					&none	&none	&none	&none	&none	&none	&none
+&none	&none	&none	&none	&none	&none	&none					&none	&none	&none	&none	&none	&none	&none
+&none	&WezWs1	&WezWs2	&WezWs3	&WezWs4	&WezWs5	&none	&none	&none	&none	&none	&none	&none	&none	&none	&none	&none	&none
+&none	&none	&none	&none	&none	&none			&none	&none			&none	&none	&none	&none	&none	&none
+&none	&none	&none	&none	&none		&none	&none	&none	&none	&none	&none		&none	&none	&none	&none	&none
+>;};
+
+
   };
 };
