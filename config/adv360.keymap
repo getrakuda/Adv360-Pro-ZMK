@@ -26,160 +26,6 @@
 
 / {
   macros {
-	VimPrevSearchLeftArrow: VimPrevSearchLeftArrow {
-		compatible = "zmk,behavior-macro";
-		#binding-cells = < 0>;
-		bindings = <&macro_tap &kp QUESTION &kp LESS_THAN &kp ENTER>;
-	};
-	VimPrevSearchRightArrow: VimPrevSearchRightArrow {
-		compatible = "zmk,behavior-macro";
-		#binding-cells = < 0>;
-		bindings = <&macro_tap &kp QUESTION &kp GREATER_THAN &kp ENTER>;
-	};
-	VimPrevSearchLeftBLKT: VimPrevSearchLeftBLKT {
-		compatible = "zmk,behavior-macro";
-		#binding-cells = < 0>;
-		bindings = <&macro_tap &kp QUESTION &kp LBKT &kp ENTER>;
-	};
-	VimPrevSearchRightBLKT: VimPrevSearchRightBLKT {
-		compatible = "zmk,behavior-macro";
-		#binding-cells = < 0>;
-		bindings = <&macro_tap &kp QUESTION &kp RBKT &kp ENTER>;
-	};
-	VimPrevSearchLeftMBLKT: VimPrevSearchLeftMBLKT {
-		compatible = "zmk,behavior-macro";
-		#binding-cells = < 0>;
-		bindings =
-			<&macro_tap &kp QUESTION>,
-			<&macro_press &kp LSHIFT>,
-			<&macro_tap &kp LBKT>,
-			<&macro_release &kp LSHIFT>,
-			<&macro_tap &kp ENTER>;
-	};
-	VimPrevSearchRightMBLKT: VimPrevSearchRightMBLKT {
-		compatible = "zmk,behavior-macro";
-		#binding-cells = < 0>;
-		bindings =
-			<&macro_tap &kp QUESTION>,
-			<&macro_press &kp LSHIFT>,
-			<&macro_tap &kp RBKT>,
-			<&macro_release &kp LSHIFT>,
-			<&macro_tap &kp ENTER>;
-	};
-	VimPrevSearchLeftParenc: VimPrevSearchLeftParenc {
-		compatible = "zmk,behavior-macro";
-		#binding-cells = < 0>;
-		bindings =
-			<&macro_tap &kp QUESTION>,
-			<&macro_press &kp LSHIFT>,
-			<&macro_tap &kp N9>,
-			<&macro_release &kp LSHIFT>,
-			<&macro_tap &kp ENTER>;
-	};
-	VimPrevSearchRightParenc: VimPrevSearchRightParenc {
-		compatible = "zmk,behavior-macro";
-		#binding-cells = < 0>;
-		bindings =
-			<&macro_tap &kp QUESTION>,
-			<&macro_press &kp LSHIFT>,
-			<&macro_tap &kp N0>,
-			<&macro_release &kp LSHIFT>,
-			<&macro_tap &kp ENTER>;
-	};
-
-	VimNextSearchLeftArrow: VimNextSearchLeftArrow {
-		compatible = "zmk,behavior-macro";
-		#binding-cells = <0>;
-		bindings = <&macro_tap &kp FSLH &kp LESS_THAN &kp ENTER>;
-	};
-	VimNextSearchRightArrow: VimNextSearchRightArrow {
-		compatible = "zmk,behavior-macro";
-		#binding-cells = <0>;
-		bindings = <&macro_tap &kp FSLH &kp GREATER_THAN &kp ENTER>;
-	};
-	VimNextSearchLeftBLKT: VimNextSearchLeftBLKT {
-		compatible = "zmk,behavior-macro";
-		#binding-cells = < 0>;
-		bindings = <&macro_tap &kp FSLH &kp LBKT &kp ENTER>;
-	};
-	VimNextSearchRightBLKT: VimNextSearchRightBLKT {
-		compatible = "zmk,behavior-macro";
-		#binding-cells = < 0>;
-		bindings = <&macro_tap &kp FSLH &kp RBKT &kp ENTER>;
-	};
-	VimNextSearchLeftMBLKT: VimNextSearchLeftMBLKT {
-		compatible = "zmk,behavior-macro";
-		#binding-cells = < 0>;
-		bindings =
-			<&macro_tap &kp FSLH>,
-			<&macro_press &kp LSHIFT>,
-			<&macro_tap &kp LBKT>,
-			<&macro_release &kp LSHIFT>,
-			<&macro_tap &kp ENTER>;
-	};
-	VimNextSearchRightMBLKT: VimNextSearchRightMBLKT {
-		compatible = "zmk,behavior-macro";
-		#binding-cells = < 0>;
-		bindings =
-			<&macro_tap &kp FSLH>,
-			<&macro_press &kp LSHIFT>,
-			<&macro_tap &kp RBKT>,
-			<&macro_release &kp LSHIFT>,
-			<&macro_tap &kp ENTER>;
-	};
-	VimNextSearchLeftParenc: VimNextSearchLeftParenc {
-		compatible = "zmk,behavior-macro";
-		#binding-cells = < 0>;
-		bindings =
-			<&macro_tap &kp FSLH>,
-			<&macro_press &kp LSHIFT>,
-			<&macro_tap &kp N9>,
-			<&macro_release &kp LSHIFT>,
-			<&macro_tap &kp ENTER>;
-	};
-	VimNextSearchRightParenc: VimNextSearchRightParenc {
-		compatible = "zmk,behavior-macro";
-		#binding-cells = < 0>;
-		bindings =
-			<&macro_tap &kp FSLH>,
-			<&macro_press &kp LSHIFT>,
-			<&macro_tap &kp N0>,
-			<&macro_release &kp LSHIFT>,
-			<&macro_tap &kp ENTER>;
-	};
-
-	VimNextSearchFunction: VimNextSearchFunction {
-		compatible = "zmk,behavior-macro";
-		#binding-cells = < 0>;
-		bindings = <&macro_tap &kp FSLH &kp F &kp U &kp N &kp C &kp T &kp I &kp O &kp N &kp ENTER>;
-	};
-	VimNextSearchAsync: VimNextSearchAsync {
-		compatible = "zmk,behavior-macro";
-		#binding-cells = < 0>;
-		bindings = <&macro_tap &kp FSLH &kp A &kp S &kp Y &kp N &kp C &kp ENTER>;
-	};
-	VimNextSearchFn: VimNextSearchFn {
-		compatible = "zmk,behavior-macro";
-		#binding-cells = < 0>;
-		bindings = <&macro_tap &kp FSLH &kp F &kp N &kp ENTER>;
-	};
-
-	VimPrevSearchFunction: VimPrevSearchFunction {
-		compatible = "zmk,behavior-macro";
-		#binding-cells = < 0>;
-		bindings = <&macro_tap &kp QUESTION &kp F &kp U &kp N &kp C &kp T &kp I &kp O &kp N &kp ENTER>;
-	};
-	VimPrevSearchAsync: VimPrevSearchAsync {
-		compatible = "zmk,behavior-macro";
-		#binding-cells = < 0>;
-		bindings = <&macro_tap &kp QUESTION &kp A &kp S &kp Y &kp N &kp C &kp ENTER>;
-	};
-	VimPrevSearchFn: VimPrevSearchFn {
-		compatible = "zmk,behavior-macro";
-		#binding-cells = < 0>;
-		bindings = <&macro_tap &kp QUESTION &kp F &kp N &kp ENTER>;
-	};
-
   AppSwitch_1:
     AppSwitch_1 {
       label = "AppSwitch_1";
@@ -515,20 +361,6 @@ CurrentOtherHide: CurrentOtherHide {
 	    bindings = <&macro_tap &kp COLON &kp Q>;
 	};
 
-	PubgKrStepLeft:PubgKrStepLeft {
-	    compatible = "zmk,behavior-macro";
-	    label = "PubgKrStepLeft";
-	    #binding-cells = <0>;
-	    bindings = <&macro_tap &kp COLON &kp Q>;
-	};
-
-	PubgKrStepRight:PubgKrStepRight {
-	    compatible = "zmk,behavior-macro";
-	    label = "PubgKrStepRight";
-	    #binding-cells = <0>;
-	    bindings = <&macro_tap &kp COLON &kp Q>;
-	};
-
 	PubgCarSeet1:PubgCarSeet1 {
 	    compatible = "zmk,behavior-macro";
 	    label = "PubgCarSeet1";
@@ -569,50 +401,6 @@ CurrentOtherHide: CurrentOtherHide {
 	    bindings  
 		= <&macro_press &kp LCTRL>
 		, <&macro_tap &kp N4>
-		, <&macro_release &kp LCTRL>
-		;
-	};
-
-	VimCtrlU: VimCtrlU{
-	    compatible = "zmk,behavior-macro";
-	    label = "VimCtrlU";
-	    #binding-cells = <0>;
-	    bindings
-		= <&macro_press &kp LCTRL>
-		, <&macro_tap &kp U>
-		, <&macro_release &kp LCTRL>
-		;
-	};
-
-	VimCtrlI: VimCtrlI{
-	    compatible = "zmk,behavior-macro";
-	    label = "VimCtrlI";
-	    #binding-cells = <0>;
-	    bindings
-		= <&macro_press &kp LCTRL>
-		, <&macro_tap &kp I>
-		, <&macro_release &kp LCTRL>
-		;
-	};
-
-	VimCtrlO: VimCtrlO{
-	    compatible = "zmk,behavior-macro";
-	    label = "VimCtrlO";
-	    #binding-cells = <0>;
-	    bindings
-		= <&macro_press &kp LCTRL>
-		, <&macro_tap &kp O>
-		, <&macro_release &kp LCTRL>
-		;
-	};
-
-	VimCtrlD: VimCtrlD{
-	    compatible = "zmk,behavior-macro";
-	    label = "VimCtrlD";
-	    #binding-cells = <0>;
-	    bindings
-		= <&macro_press &kp LCTRL>
-		, <&macro_tap &kp D>
 		, <&macro_release &kp LCTRL>
 		;
 	};
@@ -677,6 +465,18 @@ CurrentOtherHide: CurrentOtherHide {
 		;
 	};
 
+	ShowAllBootedApps: ShowAllBootedApps{
+	    compatible = "zmk,behavior-macro";
+	    label = "ShowAllBootedApps";
+	    #binding-cells = <0>;
+	    bindings
+		= <&macro_press &kp LSHIFT &kp LCTRL>
+		, <&macro_tap &kp UP>
+		, <&macro_release &kp LSHIFT &kp LCTRL>
+		;
+	};
+
+
      };
 };
 
@@ -708,14 +508,14 @@ CurrentOtherHide: CurrentOtherHide {
     compatible = "zmk,keymap";
     base {
 	    bindings=<&none	&kp N1	&kp N2	&kp N3	&kp N4	&kp N5	&tog game					&tog bluetooth	&kp N6	&kp N7	&kp N8	&kp N9	&kp N0	&none
-&none	&kp Q	&kp W	&kp E	&kp R	&kp T	&kp C_BRIGHTNESS_INC					&kp C_VOL_UP	&kp Y	&kp U	&kp I	&kp O	&mo wezWsSwitchLayer	&none
-&kp CAPS	&kp A	&kp S	&lt lower D	&lt raise F	&kp G	&kp C_BRIGHTNESS_DEC	&kp LEFT_COMMAND	&none	&none	&kp RIGHT_COMMAND	&kp C_VOL_DN	&kp H	&lt raise J	&kp K	&kp L	&kp P	&kp FSLH
-&kp LCTRL	&kp Z	&kp X	&kp C	&kp V	&kp B			&none	&none			&kp N	&lt apper M	&kp COMMA	&mt LEFT_COMMAND DOT	&kp FSLH	&kp LCTRL
-&mo functions	&kp C_PLAY_PAUSE	&none	&none	&none		&mt LSHIFT SPACE	&mt LALT ESC	&none	&none	&kp ENTER	&kp BSPC		&kp TAB	&none	&none	&none	&mo functions>; };
+&ShowAllBootedApps	&kp Q	&kp W	&kp E	&kp R	&kp T	&kp C_BRIGHTNESS_INC					&kp C_VOL_UP	&kp Y	&kp U	&kp I	&kp O	&mo wezWsSwitchLayer	&none
+&kp CAPS	&kp A	&kp S	&lt lower D	&lt raise F	&kp G	&kp C_BRIGHTNESS_DEC	&kp LCTRL	&kp LEFT_COMMAND	&kp RIGHT_COMMAND	&kp LCTRL	&kp C_VOL_DN	&kp H	&lt raise J	&kp K	&kp L	&kp P	&kp FSLH
+&kp LSHIFT	&kp Z	&kp X	&kp C	&kp V	&kp B			&none	&none			&kp N	&lt apper M	&kp COMMA	&mt LEFT_COMMAND DOT	&kp FSLH	&kp LSHIFT
+&mo functions	&kp C_PLAY_PAUSE	&none	&none	&none		&kp SPACE	&mt LALT ESC	&none	&none	&kp ENTER	&kp BSPC		&kp TAB	&none	&none	&none	&mo functions>; };
     lower {bindings=<&none	&none	&none	&none	&none	&none	&none					&none	&none	&none	&none	&none	&none	&none
 &none	&none	&none	&none	&none	&none	&none					&none	&none	&WezSwitchPaneLeft	&VimSaveClose	&WezSwitchPaneRight	&none	&none
-&none	&CaretMoveToHome	&kp LEFT	&none	&kp RIGHT	&none	&none	&OsSearch	&none	&none	&kp RIGHT_COMMAND	&none	&none	&kp DOWN	&VimSave	&kp UP	&CaretMoveToEnd	&none
-&kp LCTRL	&none	&none	&none	&none	&none			&none	&none			&none	&none	&VimClose	&kp LEFT_COMMAND	&none	&kp LCTRL
+&none	&CaretMoveToHome	&kp LEFT	&none	&kp RIGHT	&none	&none	&trans	&trans	&trans	&trans	&none	&none	&kp DOWN	&VimSave	&kp UP	&CaretMoveToEnd	&none
+&trans	&none	&none	&none	&none	&none			&none	&none			&none	&none	&VimClose	&kp LEFT_COMMAND	&none	&trans
 &none	&none	&none	&none	&none		&trans	&kp LALT	&none	&none	&kp ENTER	&kp DEL		&none	&none	&none	&none	&none>;
     };
     raise {bindings=<&none	&none	&none	&none	&none	&none	&none					&none	&none	&none	&none	&none	&none	&none
