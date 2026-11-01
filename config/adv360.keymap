@@ -107,6 +107,17 @@ AppSwitch_7:
       <&macro_release &kp LEFT_COMMAND &kp LALT>;
     };
 
+    AppSwitch_9:
+    AppSwitch_9 {
+      label = "AppSwitch_9";
+      compatible = "zmk,behavior-macro";
+#binding-cells = < 0>;
+      bindings = <&macro_press &kp LEFT_COMMAND &kp LALT>,
+      <&macro_tap &kp N9>,
+      <&macro_release &kp LEFT_COMMAND &kp LALT>;
+    };
+
+
 WebDevModeMin:WebDevModeMin {
       label = "WebDevModeMin";
       compatible = "zmk,behavior-macro";
@@ -593,7 +604,7 @@ Hp5: Hp5{
 	    bindings=<&none	&none	&none	&none	&none	&none	&none					&none	&none	&none	&none	&none	&none	&none
 &none	&AppSwitch_8	&CurrentLeft	&none	&CurrentRight	&none	&none					&none	&none	&none	&none	&none	&none	&none
 &none	&AppSwitch_1	&AppSwitch_2	&AppSwitch_3	&AppSwitch_4	&AppSwitch_5	&none	&none	&none	&none	&none	&none	&none	&none	&Hp1	&Hp2	&Hp3	&none
-&none	&none	&CurrentOtherHide	&none	&AppSwitch_7	&AppSwitch_6			&none	&none			&none	&none	&none	&Hp5	&Hp4	&none
+&none	&AppSwitch_9	&CurrentOtherHide	&AppSwitch_8	&AppSwitch_7	&AppSwitch_6			&none	&none			&none	&none	&none	&Hp5	&Hp4	&none
 &none	&none	&none	&none	&none		&none	&none	&none	&none	&none	&none		&none	&none	&none	&none	&none>;
     };
     functions {
